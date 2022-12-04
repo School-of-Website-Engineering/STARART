@@ -156,7 +156,7 @@ JavaScript 和 Web 开发人员的最佳选择，具有几乎可支持任何编�
 //然后安装依赖，通过以下命令
 # cnpm install
 
-//Dev 服务器测试
+//serve 服务器测试
 # cnpm run serve
 
 //构建模块
