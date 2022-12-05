@@ -24,7 +24,7 @@ $font-family-regular: 'PingFangSC-Regular', Helvetica, Tahoma, Arial, 'Microsoft
     @include font-class($font-family-regular, $size, $color, $isBlod);
 }
 
-// 居中
+/* 居中*/
 @mixin center {
     position: absolute;
     left: 50%;
