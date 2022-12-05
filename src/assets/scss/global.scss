@@ -1,7 +1,6 @@
-@import './reset.scss';
-@import './variables.scss';
-@import './color.scss';
-
+@import './_reset.scss';
+@import './_variables.scss';
+@use 'color';
 * {
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
