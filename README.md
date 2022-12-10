@@ -1,4 +1,4 @@
-# Progressive-Tune
+# TinyWaste
 
 
 <!-- ![](https://img.shields.io/badge/%E7%8A%B6%E6%80%81-%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%8F%91%E4%B8%AD-green) -->
@@ -20,7 +20,7 @@ TinyWaste的重写版本
 
 ## 内容列表
 
-- [Progressive-Tune](#progressive-tune)
+- [TinyWaste](#tinywaste)
   - [内容列表](#内容列表)
   - [背景](#背景)
 - [Git规范](#git规范)
