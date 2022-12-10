@@ -10,7 +10,7 @@
 ![](https://img.shields.io/badge/Node-%20%5E16.18.0-brightgreen)
 ![](https://img.shields.io/badge/npm-%5E8.19.2-blue)
 
-Progressive-Tune的 Web 页面
+TinyWaste的重写版本
 
 ---
 
@@ -38,9 +38,9 @@ Progressive-Tune的 Web 页面
 
 ## 背景
 
-`Progressive-Tune` 最开始因为 [@JDSA Ling](https://github.com/LingASDJ)
+`TinyWaste` 最开始因为 [@JDSA Ling](https://github.com/LingASDJ)
 在 [Rosy-DR-Code-Ling](https://github.com/School-of-Website-Engineering/Rosy-DR-Code-Ling)
-项目中了解到[@Aislandz](https://github.com/Aislandz)的 `Progressive-Tune`项目Web 界面需要优化，因此我们一拍即合，这个项目也就从这开始了。
+项目中了解到[@Aoyang Liao](https://github.com/liaoaoyang)的 `TinyWaste`项目需要优化，因此我们一拍即合，这个项目也就从这开始了。
 
 # Git规范
 
