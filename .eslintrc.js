@@ -14,6 +14,7 @@ module.exports = {
 	plugins      : ["vue"],
 	// 在此处添加自定义规则
 	rules        : {
+
 		eqeqeq: "off", // 要求使用 `===` 和 `!==`
 
 		curly: "error", // 强制所有控制语句使用一致的括号风格
@@ -24,7 +25,7 @@ module.exports = {
 
 		"generator-star-spacing": 0, // allow async-await
 
-		"no-unused-vars": "error", // disabled no ununsed var  `V1.1`
+		"no-unused-vars": "warn", // 定义未使用
 
 		"no-debugger": process.env.NODE_ENV === "production" ? "error" : "off", // no use debugger in production
 
@@ -58,10 +59,6 @@ module.exports = {
 
 		// if后面强制花括号
 		curly: ["error", "all"],
-
-		// # Strict Mode
-		// # Variables
-		"no-unused-vars": ["warn"],
 
 		// # Stylistic Issues
 
