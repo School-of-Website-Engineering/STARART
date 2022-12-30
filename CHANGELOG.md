@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.3](https://github.com/School-of-Website-Engineering/TinyWaste/compare/v1.0.2...v1.0.3) (2022-12-19)
+
+
+### Build System
+
+* **deps:** bump akhilmhdh/contributors-readme-action ([41f22db](https://github.com/School-of-Website-Engineering/TinyWaste/commit/41f22db4674e51e2e15d2b0234329a5f031f4d32))
+
 ## [1.0.2](https://github.com/School-of-Website-Engineering/Progressive-Tune/compare/v1.0.1...v1.0.2) (2022-12-02)
 
 
