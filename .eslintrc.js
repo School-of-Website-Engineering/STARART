@@ -73,10 +73,10 @@ module.exports = {
 		"space-infix-ops": ["error"],
 
 		// 提醒尾逗号 , 微信浏览器 , uc浏览器的问题
-		"comma-dangle": ["warn", "never"]
-		// # ECMAScript 6
-		// # Deprecated
-		// # Removed
+		"comma-dangle": ["warn", "never"],
+
+		//根据操作系统，它将采用适当的行结尾。
+		"linebreak-style": ["error", process.platform === "win32" ? "windows" : "unix"]
 	},
 	overrides: [
 		{
