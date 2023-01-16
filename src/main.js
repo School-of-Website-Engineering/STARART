@@ -1,12 +1,13 @@
-import Vue from "vue"
-import App from "./App.vue"
-import element from "element-ui"
-import "element-ui/lib/theme-chalk/index.css"
-import globalStyle from "./assets/scss/global.scss"
+import Vue from "vue";
+import App from "./App.vue";
+import element from "element-ui";
+import "element-ui/lib/theme-chalk/index.css";
 
-Vue.use(globalStyle)
-Vue.use(element)
+//全局样式表
+import "./assets/scss/global.scss";
 
-Vue.config.productionTip = false
+Vue.use(element);
 
-new Vue({render: h => h(App)}).$mount("#app")
+Vue.config.productionTip = false;
+
+new Vue({ render: (h) => h(App) }).$mount("#app");
