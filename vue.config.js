@@ -1,11 +1,16 @@
-const { defineConfig } = require("@vue/cli-service")
-module.exports = defineConfig({transpileDependencies: true})
+// vue.config.js
+
+const { defineConfig } = require("@vue/cli-service");
+module.exports = defineConfig({
+	transpileDependencies: true
+});
+
 module.exports = {
+	publicPath: "/Vue-project-template/",
 	lintOnSave: false,
-	publicPath: "/TinyWaste/"
 	// publicPath: process.env.NODE_ENV === "production" ? "./" : "/",
-	//
-	// // //代理服务器
+
+	//代理服务器
 	// devServer: {
 	// 	proxy: {
 	// 		"/api": {

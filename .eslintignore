@@ -3,12 +3,3 @@
 # Ignore built files except build/index.js
 build/*
 !build/index.js
-/dist/*
-.local
-.output.js
-/node_modules/**
-
-**/*.svg
-**/*.sh
-
-/public/*

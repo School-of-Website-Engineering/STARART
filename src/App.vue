@@ -1,41 +1,25 @@
 <template>
-  <div id="app">
-	  <el-container>
-		  <el-aside width="25vw">Aside</el-aside>
-		  <el-container>
-			  <el-header>Header</el-header>
-			  <el-main>Main</el-main>
-			  <el-footer>Footer</el-footer>
-		  </el-container>
-	  </el-container>
-  </div>
+	<div class="root">
+		<Header></Header>
+		<!-- 路由出口 -->
+		<router-view></router-view>
+		<Footer></Footer>
+	</div>
 </template>
 
 <script>
-export default {name: "App"}
+// 引入页面
+import Header from "./components/Header/Header";
+import Footer from "./components/Footer/Footer";
+
+export default {
+	name      : "App",
+	//注册组件
+	components: {
+		Header,
+		Footer
+	}
+};
 </script>
 
-<style scoped lang="scss">
-.el-container {
-  height: 100vh;
-	background-color: #B3C0D1;
-}
-.el-header, .el-footer {
-	height:20vh !important;
-	background-color: #B3C0D1;
-	color: #333;
-	text-align: center;
-}
-
-.el-aside {
-	background-color: #D3DCE6;
-	color: #333;
-	text-align: center;
-}
-
-.el-main {
-	background-color: #E9EEF3;
-	color: #333;
-	text-align: center;
-}
-</style>
+<style lang="scss" scoped></style>

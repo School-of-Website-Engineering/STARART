@@ -1,5 +1,6 @@
 @import './_reset.scss';
-@import './_color.scss';
+@import './_variables.scss';
+@import './color';
 * {
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
@@ -17,9 +18,11 @@ html {
 }
 
 body {
+    font-family: $font-family-regular;
     margin: 0;
     padding: 0;
     width: 100%;
+    min-width: $content-width;
     height: 100%;
     background-color: $white;
     color: $black;
@@ -28,5 +31,6 @@ body {
 }
 
 .layout {
+    width: $content-width;
     margin: 0 auto;
 }
