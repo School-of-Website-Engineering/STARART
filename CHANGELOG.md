@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.6](https://github.com/School-of-Website-Engineering/TinyWaste/compare/v1.0.5...v1.0.6) (2023-01-28)
+
+
+### Bug Fixes
+
+* update to packjson ([84f6693](https://github.com/School-of-Website-Engineering/TinyWaste/commit/84f66939b5e5687fc71a188e2db16097a8942eaf))
+
 ## [1.0.5](https://github.com/School-of-Website-Engineering/TinyWaste/compare/v1.0.4...v1.0.5) (2023-01-28)
 
 
