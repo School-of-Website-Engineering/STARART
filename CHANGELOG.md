@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.5](https://github.com/School-of-Website-Engineering/TinyWaste/compare/v1.0.4...v1.0.5) (2023-01-28)
+
+
+### update
+
+* 修改配置文件 ([00f587c](https://github.com/School-of-Website-Engineering/TinyWaste/commit/00f587cbf5fc593e470e4c04da92d4eda5964d6b))
+
 ## [1.0.4](https://github.com/School-of-Website-Engineering/TinyWaste/compare/v1.0.3...v1.0.4) (2022-12-30)
 
 
