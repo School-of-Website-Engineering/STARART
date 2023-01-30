@@ -11,7 +11,7 @@ TinyWaste 的重写版本
 
 ---
 
-(预览页面)--[Demo-Page]()
+(预览页面)--[Demo-Page](http://sowe.social/TinyWaste/#/)
 
 ---
 
