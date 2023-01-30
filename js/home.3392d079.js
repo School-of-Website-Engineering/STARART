@@ -1,0 +1,2 @@
+"use strict";(self["webpackChunktinywaste"]=self["webpackChunktinywaste"]||[]).push([[177],{990:function(n,t,e){e.r(t),e.d(t,{default:function(){return l}});var s=function(){var n=this;n._self._c;return n._m(0)},u=[function(){var n=this,t=n._self._c;return t("div",{staticClass:"home"},[t("span",[n._v("欢迎")])])}],a={name:"Home"},r=a,i=e(1),c=(0,i.Z)(r,s,u,!1,null,"05721137",null),l=c.exports}}]);
+//# sourceMappingURL=home.3392d079.js.map
