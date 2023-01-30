@@ -2,13 +2,24 @@ export default [
 	//重定向
 	// {
 	// 	path    : "/",
-	// 	redirect: "/login"
+	// 	redirect: "isloading"
 	// },
-	//导入登录组件
 	{
-		path     : "/Header",
+		path     : "/codeling",
 		component: () =>
-			import(/* webpackChunkName: "login_home_welcome" */ "@/components/Header/Header.vue"),
-		name: "Header"
+			import(/* webpackChunkName: "eggs" */ "@/components/Header/Header.vue"),
+		name: "codeling"
 	},
+	{
+		path     : "/isloading",
+		component: () =>
+			import(/* webpackChunkName: "loading" */ "@/components/isLoading"),
+		name: "isloading"
+	},
+	{
+		path     : "/home",
+		component: () =>
+			import(/* webpackChunkName: "home" */ "@/views/Home"),
+		name: "home"
+	}
 ];
