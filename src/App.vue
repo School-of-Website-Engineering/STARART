@@ -1,9 +1,11 @@
 <template>
 	<div class="root">
-		<Header></Header>
+		<!-- 加载动画 -->
+		<isLoading></isLoading>
+		<Header v-show="this.$route.path==='/codeling'"></Header>
 		<!-- 路由出口 -->
 		<router-view></router-view>
-		<Footer></Footer>
+		<Footer v-show="this.$route.path==='/codeling'"></Footer>
 	</div>
 </template>
 
@@ -11,15 +13,21 @@
 // 引入页面
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
+import isLoading from "@/components/isLoading/index.vue";
 
 export default {
 	name      : "App",
 	//注册组件
 	components: {
 		Header,
-		Footer
+		Footer,
+		isLoading
 	}
+	
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.root {
+}
+</style>
