@@ -17,9 +17,9 @@ export default [
 		name: "isloading"
 	},
 	{
-		path     : "/home",
+		path     : "/views",
 		component: () =>
-			import(/* webpackChunkName: "home" */ "@/views/Home"),
-		name: "home"
+			import(/* webpackChunkName: "views" */ "@/views"),
+		name: "views"
 	}
 ];
