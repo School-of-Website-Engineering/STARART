@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.8](https://github.com/School-of-Website-Engineering/TinyWaste/compare/v1.0.7...v1.0.8) (2023-01-31)
+
+
+### Docs
+
+* **contributor:** contrib-readme-action has updated readme ([6fcc8a1](https://github.com/School-of-Website-Engineering/TinyWaste/commit/6fcc8a15007b47d88a3c3e9baa1ee610589a4c39))
+
 ## [1.0.7](https://github.com/School-of-Website-Engineering/TinyWaste/compare/v1.0.6...v1.0.7) (2023-01-30)
 
 
