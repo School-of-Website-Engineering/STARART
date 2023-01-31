@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.9](https://github.com/School-of-Website-Engineering/TinyWaste/compare/v1.0.8...v1.0.9) (2023-01-31)
+
+
+### update
+
+* 增加postcss配置、载入动画 ([7b63103](https://github.com/School-of-Website-Engineering/TinyWaste/commit/7b63103136caf5f3e44c351650b4c35d8c3ba799))
+
 ## [1.0.8](https://github.com/School-of-Website-Engineering/TinyWaste/compare/v1.0.7...v1.0.8) (2023-01-31)
 
 
