@@ -1,47 +1,54 @@
 <template>
-	<div class="isloding" v-show="Loading">
-		<div class="hex" style="--d:0;">
-			<span>L</span>
-		</div>
-		<div class="hex" style="--d:1;">
-			<span>O</span>
-		</div>
-		<div class="hex" style="--d:2;">
-			<span>A</span>
-		</div>
-		<div class="hex" style="--d:3;">
-			<span>D</span>
-		</div>
-		<div class="hex" style="--d:4;">
-			<span>I</span>
-		</div>
-		<div class="hex" style="--d:5;">
-			<span>N</span>
-		</div>
-		<div class="hex" style="--d:6;">
-			<span>G</span>
+	<div class="loading" v-show="Loading">
+		<div class="isloding">
+			<div class="hex" style="--d:0;">
+				<span>L</span>
+			</div>
+			<div class="hex" style="--d:1;">
+				<span>O</span>
+			</div>
+			<div class="hex" style="--d:2;">
+				<span>A</span>
+			</div>
+			<div class="hex" style="--d:3;">
+				<span>D</span>
+			</div>
+			<div class="hex" style="--d:4;">
+				<span>I</span>
+			</div>
+			<div class="hex" style="--d:5;">
+				<span>N</span>
+			</div>
+			<div class="hex" style="--d:6;">
+				<span>G</span>
+			</div>
 		</div>
 	</div>
 </template>
 
 <script>
 import {mapMutations, mapState} from "vuex";
+import {getItem} from "@/utils/storage";
 
 export default {
 	name: "Loading",
+	data() {
+		return {first: getItem("isShowLoading")};
+	},
 	mounted() {
 		this.isLoading();
-	},
-	//动画加载完后销毁组件
-	beforeDestroy() {
-		this.$destroy();
 	},
 	methods: {
 		...mapMutations({showLoading: "isShowLoading/setIsShowLoading"}),
 		isLoading() {
-			setTimeout(() => {
-				this.showLoading(false);
-			}, 6500);
+			//第一次进入页面，显示加载动画
+			if (this.first === null) {
+				this.showLoading(true);
+				this.first = false;
+				setTimeout(() => {
+					this.showLoading(false);
+				}, 6500);
+			}
 		}
 	},
 	computed: {...mapState({Loading: state => state.isShowLoading.isShowLoading})}
@@ -49,6 +56,17 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+//遮罩，覆盖整个页面
+.loading {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #fff;
+	z-index: 999;
+}
+
 .isloding {
 	display: flex;
 	position: absolute;

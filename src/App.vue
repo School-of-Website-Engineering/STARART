@@ -5,7 +5,6 @@
 		<Header v-show="this.$route.path==='/codeling'"></Header>
 		<!-- 路由出口 -->
 		<router-view></router-view>
-		<Views></Views>
 		<Footer v-show="this.$route.path==='/codeling'"></Footer>
 	</div>
 </template>
@@ -15,7 +14,6 @@
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import isLoading from "@/components/isLoading/index.vue";
-import Views from "@/views/index.vue"
 
 export default {
 	name      : "App",
@@ -23,8 +21,7 @@ export default {
 	components: {
 		Header,
 		Footer,
-		isLoading,
-		Views
+		isLoading
 	}
 	
 };
