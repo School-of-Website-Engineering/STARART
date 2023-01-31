@@ -1,9 +1,9 @@
 export default [
 	//重定向
-	// {
-	// 	path    : "/",
-	// 	redirect: "isloading"
-	// },
+	{
+		path    : "/",
+		redirect: "/index"
+	},
 	{
 		path     : "/codeling",
 		component: () =>
@@ -11,15 +11,9 @@ export default [
 		name: "codeling"
 	},
 	{
-		path     : "/isloading",
+		path     : "/index",
 		component: () =>
-			import(/* webpackChunkName: "loading" */ "@/components/isLoading"),
-		name: "isloading"
-	},
-	{
-		path     : "/views",
-		component: () =>
-			import(/* webpackChunkName: "views" */ "@/views"),
-		name: "views"
+			import(/* webpackChunkName: "index" */ "@/views/index/index.vue"),
+		name: "index"
 	}
 ];
