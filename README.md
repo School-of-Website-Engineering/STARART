@@ -118,6 +118,13 @@ Progressive-Tune 遵循 [Contributor Covenant](http://contributor-covenant.org/v
             <br />
             <sub><b>JDSA Ling</b></sub>
         </a>
+    </td>
+    <td align="center">
+        <a href="https://github.com/liusxs">
+            <img src="https://avatars.githubusercontent.com/u/101164913?v=4" width="100;" alt="liusxs"/>
+            <br />
+            <sub><b>Liuliu66</b></sub>
+        </a>
     </td></tr>
 </table>
 <!-- readme: collaborators,contributors -end -->
