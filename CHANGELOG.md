@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.0](https://github.com/School-of-Website-Engineering/TinyWaste/compare/v1.0.10...v1.1.0) (2023-01-31)
+
+
+### Features
+
+* 本地存储更改为会话存储 ([51b81a4](https://github.com/School-of-Website-Engineering/TinyWaste/commit/51b81a4b524abb10bcde48cee255c1627a88cd77))
+
 ## [1.0.10](https://github.com/School-of-Website-Engineering/TinyWaste/compare/v1.0.9...v1.0.10) (2023-01-31)
 
 
