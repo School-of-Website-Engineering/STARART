@@ -106,17 +106,17 @@ Progressive-Tune 遵循 [Contributor Covenant](http://contributor-covenant.org/v
         </a>
     </td>
     <td align="center">
-        <a href="https://github.com/ImgBotApp">
-            <img src="https://avatars.githubusercontent.com/u/31427850?v=4" width="100;" alt="ImgBotApp"/>
-            <br />
-            <sub><b>Imgbot</b></sub>
-        </a>
-    </td>
-    <td align="center">
         <a href="https://github.com/LingASDJ">
             <img src="https://avatars.githubusercontent.com/u/70191651?v=4" width="100;" alt="LingASDJ"/>
             <br />
             <sub><b>JDSA Ling</b></sub>
+        </a>
+    </td>
+    <td align="center">
+        <a href="https://github.com/ImgBotApp">
+            <img src="https://avatars.githubusercontent.com/u/31427850?v=4" width="100;" alt="ImgBotApp"/>
+            <br />
+            <sub><b>Imgbot</b></sub>
         </a>
     </td>
     <td align="center">

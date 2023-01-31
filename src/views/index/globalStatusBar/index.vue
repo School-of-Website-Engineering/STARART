@@ -1,6 +1,9 @@
 <template>
 	<div>
-		全局状态栏
+		<div class="container">
+			<div class="globalStatus rounded">
+			</div>
+		</div>
 	</div>
 </template>
 
@@ -9,5 +12,11 @@ export default {name: "globalStatusBar"}
 </script>
 
 <style lang="scss" scoped>
-
+.btn{
+	font-size: 10px;
+}
+.globalStatus{
+	background: cadetblue;
+	height: 60px;
+}
 </style>

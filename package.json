@@ -1,6 +1,6 @@
 {
   "name": "tinywaste",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve --mode dev",
@@ -10,6 +10,9 @@
   },
   "dependencies": {
     "amfe-flexible": "^2.2.1",
+    "axios": "^1.2.6",
+    "bootstrap": "^5.2.3",
+    "bootstrap-vue": "^2.23.1",
     "core-js": "^3.8.3",
     "vant": "^2.12.53",
     "vue": "^2.6.14",

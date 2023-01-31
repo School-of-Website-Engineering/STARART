@@ -4,8 +4,8 @@
 		<globalStatusBar></globalStatusBar>
 		<!-- 快捷栏 -->
 		<shortcutBar></shortcutBar>
-		<!-- 文本输出 -->
-		<textOutput></textOutput>
+		<!-- 文本输出
+		<textOutput></textOutput> -->
 		<!-- 事件 -->
 		<event></event>
 		<!-- 底部菜单 -->
