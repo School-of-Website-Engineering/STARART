@@ -1,10 +1,8 @@
 <template>
 	<div>
-		<div class="container d-flex">
-			<div class="quick rounded">
-				
-			</div>
-		</div>
+		<van-row type="flex" justify="space-around">
+			<van-col span="24" class="quick">快捷栏</van-col>
+		</van-row>
 	</div>
 </template>
 
@@ -15,7 +13,8 @@ export default {name: "shortcutBar"}
 <style lang="scss" scoped>
 .quick{
 	background: rgb(15, 90, 91);
-	width: 10.4rem;
-	height: 1.6rem;
+		height: 80px;
+		line-height: 80px;
+		text-align: center;
 }
 </style>

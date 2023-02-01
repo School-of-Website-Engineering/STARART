@@ -1,15 +1,11 @@
 <template>
 	<div>
-		<div class="container ">
-			<div class="row">
-				<div class="bottom rounded d-flex">
-					<b-button>Menu</b-button>
-					<b-button>More</b-button>
-				</div>
-		</div>
+		<van-row type="flex" justify="space-around">
+			<van-col span="12" class="textOutput">文本输出</van-col>
+			<van-col span="12" class="more">更多</van-col>
+		</van-row>
 	</div>
-	</div>
-	
+
 </template>
 
 <script>
@@ -17,7 +13,17 @@ export default {name: "bottomMenu"}
 </script>
 
 <style lang="scss" scoped>
-.bottom{
-	font-size: 10px;
+.textOutput {
+	background: #2b579a;
+	height: 177px;
+	text-align: center;
+	line-height: 177px;
+}
+
+.more {
+	background: #05a6f0;
+	height: 177px;
+	text-align: center;
+	line-height: 177px;
 }
 </style>
