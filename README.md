@@ -127,13 +127,6 @@ Progressive-Tune 遵循 [Contributor Covenant](http://contributor-covenant.org/v
             <br />
             <sub><b>Liuliu66</b></sub>
         </a>
-    </td>
-    <td align="center">
-        <a href="https://github.com/DaoXuan233">
-            <img src="https://avatars.githubusercontent.com/u/102936237?v=4" width="100;" alt="daoxuan233"/>
-            <br />
-            <sub><b>DaoXuan233</b></sub>
-        </a>
     </td></tr>
 </table>
 <!-- readme: collaborators,contributors -end -->
