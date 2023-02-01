@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.1](https://github.com/School-of-Website-Engineering/TinyWaste/compare/v1.1.0...v1.1.1) (2023-02-01)
+
+
+### update
+
+* 添加媒体查询、更新布局 ([c733536](https://github.com/School-of-Website-Engineering/TinyWaste/commit/c7335369b3b88a3b68f49a0fc0f37804685a9ea2))
+
 ## [1.1.0](https://github.com/School-of-Website-Engineering/TinyWaste/compare/v1.0.10...v1.1.0) (2023-01-31)
 
 
