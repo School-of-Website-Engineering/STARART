@@ -13,8 +13,8 @@ export default {name: "shortcutBar"}
 <style lang="scss" scoped>
 .quick{
 	background: rgb(15, 90, 91);
-		height: 80px;
-		line-height: 80px;
-		text-align: center;
+	height: 80px;
+	line-height: 80px;
+	text-align: center;
 }
 </style>
