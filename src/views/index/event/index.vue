@@ -1,13 +1,9 @@
 <template>
 	<div>
-		<div class="container d-flex">
-			<div class="text rounded">
-				
-			</div>
-			<div class="event rounded">
-			</div>
-			
-		</div>
+		<van-row type="flex" >
+			<van-col span="8" class="text">快捷栏</van-col>
+			<van-col span="16" class="event">文字栏</van-col>
+		</van-row>
 	</div>
 </template>
 
@@ -18,13 +14,14 @@ export default {name: "event"}
 <style lang="scss" scoped>
 .event{
 	background: cadetblue;
-	height: 200px;
-	width: 250px;
+	height: 250px;
+	text-align: center;
+	line-height: 250px;
 }
 .text{
 	background: rgb(160, 95, 95);
-	height: 200px;
-	width: 80px;
-	padding-right: 20px;
+	height: 250px;
+	text-align: center;
+	line-height: 250px;
 }
 </style>
