@@ -1,4 +1,4 @@
-import {getItem, setItem} from "@/utils/storage";
+import {getItem, setItem} from "@/utils/sessionStorage";
 //健康值
 export default {
 	namespaced: true,

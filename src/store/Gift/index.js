@@ -1,4 +1,4 @@
-import {getItem, setItem} from "@/utils/storage";
+import {getItem, setItem} from "@/utils/sessionStorage";
 //天赋点
 export default {
 	namespaced: true,

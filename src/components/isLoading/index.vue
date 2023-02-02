@@ -28,7 +28,7 @@
 
 <script>
 import {mapMutations, mapState} from "vuex";
-import {getItem} from "@/utils/storage";
+import {getItem} from "@/utils/sessionStorage";
 
 export default {
 	name: "Loading",
