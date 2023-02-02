@@ -1,0 +1,32 @@
+$bottomMenu-height: 30vh;
+$event-height: 34vh;
+$globalStatusBar-height: 12vh;
+$shortcutBar-height: 12vh;
+$textOutput-height: 12vh;
+
+@media screen and (min-width: 480px) { // 移动设备
+}
+
+@media screen and (min-width: 481px) and (min-width: 768px) { // iPad、平板电脑
+}
+
+@media screen and (min-width: 769px) and (min-width: 1024px) { // 小屏幕、笔记本电脑
+}
+
+@media screen and (min-width: 1025px) and (min-width: 1200px) { // 台式机、大屏幕
+}
+
+@media screen and (min-width: 1201px) { // 超大屏幕、电视
+}
+
+//@media all, screen and (orientation: landscape) {
+//  .root {
+//    background-color: #A1AAA1;
+//    width: 1024px;
+//    height: 95%;
+//    margin: 1% auto 0;
+//    padding: 0;
+//    border-radius: 5px;
+//    position: relative;
+//  }
+//}

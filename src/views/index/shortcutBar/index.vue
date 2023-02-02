@@ -11,10 +11,10 @@ export default {name: "shortcutBar"}
 </script>
 
 <style lang="scss" scoped>
+@import "@/assets/scss/_media.scss";
 .quick{
 	background: rgb(15, 90, 91);
-	height: 80px;
-	line-height: 80px;
+	height: $shortcutBar-height;
 	text-align: center;
 }
 </style>
