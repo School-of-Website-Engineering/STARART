@@ -32,6 +32,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.root {
+.root{
+	width: 100vw;
+	height: 100vh;
 }
 </style>

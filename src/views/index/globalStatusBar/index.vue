@@ -11,10 +11,10 @@ export default {name: "globalStatusBar"}
 </script>
 
 <style lang="scss" scoped>
+@import "@/assets/scss/_media.scss";
 .globalStatus {
 	background: cadetblue;
-	height: 80px;
-	line-height: 80px;
+	height: $globalStatusBar-height;
 	text-align: center;
 }
 </style>

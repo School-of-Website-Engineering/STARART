@@ -11,10 +11,10 @@ export default {name: "textOutput"}
 </script>
 
 <style lang="scss" scoped>
+@import "@/assets/scss/_media.scss";
 .textOutput{
 	background: rgb(82, 125, 126);
-	height: 80px;
-	line-height: 80px;
+	height: $textOutput-height;
 	text-align: center;
 }
 </style>
