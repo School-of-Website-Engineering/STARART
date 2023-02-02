@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.0](https://github.com/School-of-Website-Engineering/TinyWaste/compare/v1.1.2...v1.2.0) (2023-02-02)
+
+
+### Features
+
+* 兼容各设备屏幕大小 ([b5f2ec1](https://github.com/School-of-Website-Engineering/TinyWaste/commit/b5f2ec196b8aa0b201df19d4fdeb05a2bad93bb5))
+
 ## [1.1.2](https://github.com/School-of-Website-Engineering/TinyWaste/compare/v1.1.1...v1.1.2) (2023-02-01)
 
 
