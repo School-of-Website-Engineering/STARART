@@ -1,4 +1,4 @@
-import {getItem, setItem} from "@/utils/storage";
+import {getItem, setItem} from "@/utils/sessionStorage";
 //防御力
 export default {
 	namespaced: true,
