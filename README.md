@@ -77,14 +77,16 @@ TinyWaste 的重写版本
 
 -   [Rosy-DR-Code-Ling](https://github.com/School-of-Website-Engineering/Rosy-DR-Code-Ling) — 💌 Rosy-DR-Code-Ling 的 Web 页面
 -   [E-commerce](https://github.com/Galaxy-Wish-Star/E-commerce) — 助农电商项目-Vue
--   [magic-ling-pixel-dungeon](https://github.com/AnsdoShip/Magic-Ling-Pixel-Dungeon) — 魔绫像素地牢
+-   [Magic-Ling-Pixel-Dungeon](https://github.com/AnsdoShip/Magic-Ling-Pixel-Dungeon) — 魔绫像素地牢
 -   [SkyHell](https://github.com/LingASDJ/SkyHell) — 天狱之境-TR
+-   [StarRiver](https://github.com/LingASDJ/StarRiver-EndlessJourney-RW-MODS) — 星河征途-铁锈战争
 
 ## 维护者
 
 [@mason369](https://github.com/mason369)
 [@liusxs](https://github.com/liusxs)
 [@LingASDJ](https://github.com/LingASDJ)
+[@DaoXuan233](https://github.com/DaoXuan233)
 
 ## 如何贡献
 

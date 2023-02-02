@@ -1,5 +1,33 @@
 # Changelog
 
+## [1.2.0](https://github.com/School-of-Website-Engineering/TinyWaste/compare/v1.1.2...v1.2.0) (2023-02-02)
+
+
+### Features
+
+* 兼容各设备屏幕大小 ([b5f2ec1](https://github.com/School-of-Website-Engineering/TinyWaste/commit/b5f2ec196b8aa0b201df19d4fdeb05a2bad93bb5))
+
+## [1.1.2](https://github.com/School-of-Website-Engineering/TinyWaste/compare/v1.1.1...v1.1.2) (2023-02-01)
+
+
+### Docs
+
+* **contributor:** contrib-readme-action has updated readme ([03d6e4a](https://github.com/School-of-Website-Engineering/TinyWaste/commit/03d6e4a8a94f5fbf3193935683369f4fe9529898))
+
+## [1.1.1](https://github.com/School-of-Website-Engineering/TinyWaste/compare/v1.1.0...v1.1.1) (2023-02-01)
+
+
+### update
+
+* 添加媒体查询、更新布局 ([c733536](https://github.com/School-of-Website-Engineering/TinyWaste/commit/c7335369b3b88a3b68f49a0fc0f37804685a9ea2))
+
+## [1.1.0](https://github.com/School-of-Website-Engineering/TinyWaste/compare/v1.0.10...v1.1.0) (2023-01-31)
+
+
+### Features
+
+* 本地存储更改为会话存储 ([51b81a4](https://github.com/School-of-Website-Engineering/TinyWaste/commit/51b81a4b524abb10bcde48cee255c1627a88cd77))
+
 ## [1.0.10](https://github.com/School-of-Website-Engineering/TinyWaste/compare/v1.0.9...v1.0.10) (2023-01-31)
 
 
