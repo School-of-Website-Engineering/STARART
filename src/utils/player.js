@@ -10,7 +10,7 @@ class Player {
 		this.Def = Def;
 		//饥饿值
 		this.Hungry = Hungry;
-		//
+		//饥渴度
 		this.Water = Water;
 		//魅力
 		this.Chrs = Chrs;
