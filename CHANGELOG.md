@@ -5,6 +5,7 @@
 
 ### Docs
 
+* **contributor:** contrib-readme-action has updated readme ([fc89a09](https://github.com/School-of-Website-Engineering/TinyWaste/commit/fc89a0903592dcbfc5fa467c34f76a090f029ec8))
 * **contributor:** contrib-readme-action has updated readme ([462f8bc](https://github.com/School-of-Website-Engineering/TinyWaste/commit/462f8bc266ba9ce625c7f4eacc02611bd1249083))
 * **contributor:** contrib-readme-action has updated readme ([5bd65c0](https://github.com/School-of-Website-Engineering/TinyWaste/commit/5bd65c01b33a71ac2f8b02b2ded63a0831687d84))
 
