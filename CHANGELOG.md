@@ -5,6 +5,15 @@
 
 ### Docs
 
+* **contributor:** contrib-readme-action has updated readme ([5bc5576](https://github.com/School-of-Website-Engineering/TinyWaste/commit/5bc557646900e184cb86ccc0a0ef034e910a7e3c))
+* **contributor:** contrib-readme-action has updated readme ([5ee728a](https://github.com/School-of-Website-Engineering/TinyWaste/commit/5ee728a9ee1bae2c079ed36735ec14bce6af3880))
+* **contributor:** contrib-readme-action has updated readme ([628fa6f](https://github.com/School-of-Website-Engineering/TinyWaste/commit/628fa6f8092102a8cd64fc0f9f461638a9a250df))
+
+## [1.2.5](https://github.com/School-of-Website-Engineering/TinyWaste/compare/v1.2.4...v1.2.5) (2023-02-03)
+
+
+### Docs
+
 * **contributor:** contrib-readme-action has updated readme ([5ee728a](https://github.com/School-of-Website-Engineering/TinyWaste/commit/5ee728a9ee1bae2c079ed36735ec14bce6af3880))
 * **contributor:** contrib-readme-action has updated readme ([628fa6f](https://github.com/School-of-Website-Engineering/TinyWaste/commit/628fa6f8092102a8cd64fc0f9f461638a9a250df))
 
