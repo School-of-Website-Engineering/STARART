@@ -7,11 +7,15 @@
 </template>
 
 <script>
-export default {name: "globalStatusBar"}
+export default {
+	name   : "globalStatusBar",
+	methods: {}
+}
 </script>
 
 <style lang="scss" scoped>
 @import "@/assets/scss/_media.scss";
+
 .globalStatus {
 	background: cadetblue;
 	height: $globalStatusBar-height;
