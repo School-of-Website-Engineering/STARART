@@ -7,6 +7,13 @@
 
 * **contributor:** contrib-readme-action has updated readme ([57d1515](https://github.com/School-of-Website-Engineering/TinyWaste/commit/57d1515cc74c3c7ace7733519d3d80ab425eca77))
 
+## [1.2.2](https://github.com/School-of-Website-Engineering/TinyWaste/compare/v1.2.1...v1.2.2) (2023-02-03)
+
+
+### Docs
+
+* **contributor:** contrib-readme-action has updated readme ([57d1515](https://github.com/School-of-Website-Engineering/TinyWaste/commit/57d1515cc74c3c7ace7733519d3d80ab425eca77))
+
 ## [1.2.1](https://github.com/School-of-Website-Engineering/TinyWaste/compare/v1.2.0...v1.2.1) (2023-02-03)
 
 
