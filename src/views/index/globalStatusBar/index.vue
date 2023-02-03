@@ -13,7 +13,10 @@
 </template>
 
 <script>
-export default {name: "globalStatusBar"}
+export default {
+	name   : "globalStatusBar",
+	methods: {}
+}
 </script>
 
 <style lang="scss" scoped>
