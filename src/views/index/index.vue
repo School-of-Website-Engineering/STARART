@@ -33,5 +33,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
+@import "@/assets/scss/_color.scss";
+    body{
+		background: $white;
+	}
 </style>

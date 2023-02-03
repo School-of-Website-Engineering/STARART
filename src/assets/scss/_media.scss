@@ -1,8 +1,14 @@
-$bottomMenu-height: 30vh;
-$event-height: 34vh;
-$globalStatusBar-height: 12vh;
-$shortcutBar-height: 12vh;
-$textOutput-height: 12vh;
+$bottomMenu-height: 26vh;
+$Menu-height: 22vh;
+$eventMenu-height: 32vh;
+$event-height: 28vh;
+$globalStatusBar-height: 4vh;
+$shortcutBar-height: 8vh;
+$textOutput-height: 8vh;
+
+$body-width: 90%;
+$border-radius: 5px;
+$border: .5px;
 
 @media screen and (min-width: 480px) { // 移动设备
 }
