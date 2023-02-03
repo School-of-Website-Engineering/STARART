@@ -28,14 +28,17 @@ export default {name: "globalStatusBar"}
 	margin: 5px;
 	border-bottom: $border solid $tip-color;
 	.property{
-		display: flex;
-		justify-content: flex-start;
 		.attribute-name{
 		    border: $border solid $tip-color;
 			border-radius: 2px;
 			text-align: center;
-			padding: 1px 0px;
+			padding: .015rem 0;
+			margin: 0 .1rem;
 			font-size: .1rem;
+			float: left;
+			&:nth-child(6){
+				float: right;
+			}
 		}
 	}
 }
