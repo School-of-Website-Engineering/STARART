@@ -1,31 +1,6 @@
 <template>
 	<div>
 		<van-row type="flex" class="eventMenu">
-<<<<<<< Updated upstream
-			<van-col span="8" class="text">
-				<div class="events-head">地图</div>
-			</van-col>
-			<van-col span="16" class="event">
-				<div class="events-head">文字栏(事件区)
-				</div>
-			<div class="mainflex">
-				<!-- 主菜单界面 -->
-				<div class="menu-main">
-					<!-- TODO 事件区 -->
-					<div class="menu-list">
-						制作物品
-					</div>
-					<div class="menu-list">
-						天赋加点
-					</div>
-					<div class="menu-list">
-						睡觉休息
-					</div>
-				</div>
-				
-			</div>
-			</van-col>
-=======
 			<van-col span="8" class="text">
 				<div class="events-head">地图</div>
 			</van-col>
@@ -49,11 +24,9 @@
 				
 			</div>
 			</van-col>
->>>>>>> Stashed changes
 		</van-row>
 	</div>
 </template>
-
 
 <script>
 export default {name: "event"}
@@ -61,35 +34,55 @@ export default {name: "event"}
 
 <style lang="scss" scoped>
 @import "@/assets/scss/_media.scss";
-.event{
-	background: cadetblue;
-	height: $event-height;
+@import "@/assets/scss/_color.scss";
+//菜单模板
+.menu-main{
+	float: right;
+}
+.menu-list{
+	width: .8rem;
+	font-size: .1rem;
 	text-align: center;
 	border: $border solid $tip-color;
 	border-radius: 5px;
-	padding:0.1rem;
-	background-color: #fff;
-}
+	margin-top: .2rem;
 
-.mainflex{
-	display: flex;
 }
-
-.menu-main{
+.eventMenu{
 	border: $border solid $tip-color;
 	border-radius: $border-radius;
-	width: 100vh;
-	height: 23vh;
+	width: $body-width;
+	height: $eventMenu-height;
 	margin: 0 auto;
-	top: -3px;
-	left: 6px;
+	display: flex;
+	justify-content: space-around;
 	margin-top: .125rem;
-	margin-left: .125rem;
-	margin-right: .125rem;
-}
-.text{
-	background: rgb(160, 95, 95);
-	height: $event-height;
-	text-align: center;
+	.text{
+	    height: $event-height;
+		border: $border solid $tip-color;
+		border-radius: $border-radius;
+		position: relative;
+		width: 40%;
+		margin-top: .15rem;
+    }
+	.event{
+	    height: $event-height;
+		border: $border solid $tip-color;
+		border-radius: $border-radius;
+		position: relative;
+		width: 50%;
+		margin-top: .15rem;
+    }
+	.events-head{
+		    width: 1.5rem;
+		    font-size: .1rem;
+		    text-align: center;
+		    border: $border solid $tip-color;
+	        border-radius: 5px;
+		    position: absolute;
+		    top: -3px;
+		    left: 6px;
+			background-color: #fff;
+		}
 }
 </style>
