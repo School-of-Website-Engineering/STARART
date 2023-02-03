@@ -3,12 +3,9 @@
 		<van-row type="flex" justify="space-around">
 			<van-col span="24" class="globalStatus">
 				<div class="property">
-					<div class="attribute-name">生命<span>666</span></div>
-					<div class="attribute-name">生命<span>666</span></div>
-					<div class="attribute-name">生命<span>666</span></div>
-					<div class="attribute-name">生命<span>666</span></div>
-					<div class="attribute-name">生命<span>666</span></div>
-					<div class="attribute-name">辐射<span>666</span></div>
+					<!-- 动态定义这里的数据，而不是硬编码 -->
+					<div class="attribute-name">天气：<span>暴风雨</span></div>
+					<div class="attribute-name">生命：<span>100</span></div>
 				</div>
 			</van-col>
 		</van-row>
