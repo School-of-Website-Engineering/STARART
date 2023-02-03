@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.0](https://github.com/School-of-Website-Engineering/TinyWaste/compare/v1.2.8...v1.3.0) (2023-02-03)
+
+
+### Features
+
+* 更新玩家属性及方法，时间系统，时间加速，时间减缓，时间暂停方法 ([808fd23](https://github.com/School-of-Website-Engineering/TinyWaste/commit/808fd2300fc0879b7411c5f500816d35e3ea4528))
+
 ## [1.2.8](https://github.com/School-of-Website-Engineering/TinyWaste/compare/v1.2.7...v1.2.8) (2023-02-03)
 
 
