@@ -39,7 +39,7 @@ export default {
 				// 声明一个Health属性，用于储存玩家的生命值
 				Health  : 100,
 				// 声明一个Defens属性，用于储存玩家的防御值
-				Defens : 20,
+				Defens  : 20,
 				// 声明一个Backpack属性，用于储存玩家的背包容量
 				Backpack: 5,
 				// 声明一个Water属性，用于储存玩家的水量
@@ -105,4 +105,9 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+@import "@/assets/scss/_color.scss";
+    body{
+		background: $white;
+	}
+</style>

@@ -1,5 +1,91 @@
 # Changelog
 
+## [1.2.8](https://github.com/School-of-Website-Engineering/TinyWaste/compare/v1.2.7...v1.2.8) (2023-02-03)
+
+
+### Docs
+
+* **contributor:** contrib-readme-action has updated readme ([bd5117f](https://github.com/School-of-Website-Engineering/TinyWaste/commit/bd5117ff2c6f471322e4e4e3e5df127af4c3292a))
+
+## [1.2.7](https://github.com/School-of-Website-Engineering/TinyWaste/compare/v1.2.6...v1.2.7) (2023-02-03)
+
+
+### Docs
+
+* **contributor:** contrib-readme-action has updated readme ([f18f3a0](https://github.com/School-of-Website-Engineering/TinyWaste/commit/f18f3a0b9f4cd2ffd50f41207ae1075d9a4b0284))
+
+## [1.2.6](https://github.com/School-of-Website-Engineering/TinyWaste/compare/v1.2.5...v1.2.6) (2023-02-03)
+
+
+### Docs
+
+* **contributor:** contrib-readme-action has updated readme ([126032f](https://github.com/School-of-Website-Engineering/TinyWaste/commit/126032f97173535c8473c341940e8dfe1ac058fe))
+* **contributor:** contrib-readme-action has updated readme ([899076f](https://github.com/School-of-Website-Engineering/TinyWaste/commit/899076f28fe1fd5d3f4b6b6c3f82851eb04227a2))
+* **contributor:** contrib-readme-action has updated readme ([f8aaab3](https://github.com/School-of-Website-Engineering/TinyWaste/commit/f8aaab3e809481244f4310386936fbdc272e8346))
+
+## [1.2.6](https://github.com/School-of-Website-Engineering/TinyWaste/compare/v1.2.5...v1.2.6) (2023-02-03)
+
+
+### Docs
+
+* **contributor:** contrib-readme-action has updated readme ([899076f](https://github.com/School-of-Website-Engineering/TinyWaste/commit/899076f28fe1fd5d3f4b6b6c3f82851eb04227a2))
+* **contributor:** contrib-readme-action has updated readme ([f8aaab3](https://github.com/School-of-Website-Engineering/TinyWaste/commit/f8aaab3e809481244f4310386936fbdc272e8346))
+
+## [1.2.5](https://github.com/School-of-Website-Engineering/TinyWaste/compare/v1.2.4...v1.2.5) (2023-02-03)
+
+
+### Docs
+
+* **contributor:** contrib-readme-action has updated readme ([5bc5576](https://github.com/School-of-Website-Engineering/TinyWaste/commit/5bc557646900e184cb86ccc0a0ef034e910a7e3c))
+* **contributor:** contrib-readme-action has updated readme ([5ee728a](https://github.com/School-of-Website-Engineering/TinyWaste/commit/5ee728a9ee1bae2c079ed36735ec14bce6af3880))
+* **contributor:** contrib-readme-action has updated readme ([628fa6f](https://github.com/School-of-Website-Engineering/TinyWaste/commit/628fa6f8092102a8cd64fc0f9f461638a9a250df))
+
+## [1.2.5](https://github.com/School-of-Website-Engineering/TinyWaste/compare/v1.2.4...v1.2.5) (2023-02-03)
+
+
+### Docs
+
+* **contributor:** contrib-readme-action has updated readme ([5ee728a](https://github.com/School-of-Website-Engineering/TinyWaste/commit/5ee728a9ee1bae2c079ed36735ec14bce6af3880))
+* **contributor:** contrib-readme-action has updated readme ([628fa6f](https://github.com/School-of-Website-Engineering/TinyWaste/commit/628fa6f8092102a8cd64fc0f9f461638a9a250df))
+
+## [1.2.4](https://github.com/School-of-Website-Engineering/TinyWaste/compare/v1.2.3...v1.2.4) (2023-02-03)
+
+
+### Docs
+
+* **contributor:** contrib-readme-action has updated readme ([9fe1841](https://github.com/School-of-Website-Engineering/TinyWaste/commit/9fe184135902afc99bcfc53e9617fc491eff9b48))
+* **contributor:** contrib-readme-action has updated readme ([16bd632](https://github.com/School-of-Website-Engineering/TinyWaste/commit/16bd6329c48812f71db524a03018d0fc7e5def99))
+
+## [1.2.3](https://github.com/School-of-Website-Engineering/TinyWaste/compare/v1.2.2...v1.2.3) (2023-02-03)
+
+
+### Docs
+
+* **contributor:** contrib-readme-action has updated readme ([fc89a09](https://github.com/School-of-Website-Engineering/TinyWaste/commit/fc89a0903592dcbfc5fa467c34f76a090f029ec8))
+* **contributor:** contrib-readme-action has updated readme ([462f8bc](https://github.com/School-of-Website-Engineering/TinyWaste/commit/462f8bc266ba9ce625c7f4eacc02611bd1249083))
+* **contributor:** contrib-readme-action has updated readme ([5bd65c0](https://github.com/School-of-Website-Engineering/TinyWaste/commit/5bd65c01b33a71ac2f8b02b2ded63a0831687d84))
+
+## [1.2.2](https://github.com/School-of-Website-Engineering/TinyWaste/compare/v1.2.1...v1.2.2) (2023-02-03)
+
+
+### Docs
+
+* **contributor:** contrib-readme-action has updated readme ([57d1515](https://github.com/School-of-Website-Engineering/TinyWaste/commit/57d1515cc74c3c7ace7733519d3d80ab425eca77))
+
+## [1.2.2](https://github.com/School-of-Website-Engineering/TinyWaste/compare/v1.2.1...v1.2.2) (2023-02-03)
+
+
+### Docs
+
+* **contributor:** contrib-readme-action has updated readme ([57d1515](https://github.com/School-of-Website-Engineering/TinyWaste/commit/57d1515cc74c3c7ace7733519d3d80ab425eca77))
+
+## [1.2.1](https://github.com/School-of-Website-Engineering/TinyWaste/compare/v1.2.0...v1.2.1) (2023-02-03)
+
+
+### Docs
+
+* **contributor:** contrib-readme-action has updated readme ([b7a3572](https://github.com/School-of-Website-Engineering/TinyWaste/commit/b7a357243b2b39511316fa86c1ec3a4b3e3729c5))
+
 ## [1.2.0](https://github.com/School-of-Website-Engineering/TinyWaste/compare/v1.1.2...v1.2.0) (2023-02-02)
 
 
