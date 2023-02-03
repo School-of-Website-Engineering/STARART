@@ -29,36 +29,29 @@ export default {name: "bottomMenu"}
 @import "@/assets/scss/_color.scss";
 
 .bottomLine {
-	border: $border solid $tip-color;
-	border-radius: $border-radius;
 	width: $body-width;
-	height: 10vh;
+	height: 6vh;
 	margin: 0 auto;
-	top: 5px;
 	display: flex;
 	justify-content: space-around;
 	margin-top: 1px;
+	border: $border solid $tip-color;
+	border-radius: 5px;
 	.time-list{
-		width: 0.5rem;
-		height: 5px;
+		width: 1.5rem;
 		font-size: .1rem;
 		margin: auto;
 		text-align: center;
 		border: $border solid $tip-color;
 		border-radius: 5px;
-		padding:0.1rem;
-		background-color: #fff;
 	}
 	.pause{
-		width: 0.5rem;
-		height: 5px;
+		width: 2rem;
 		font-size: .1rem;
 		margin: auto;
 		text-align: center;
 		border: $border solid $tip-color;
 		border-radius: 5px;
-		padding:0.1rem;
-		background-color: #fff;
 	}
 }
 
