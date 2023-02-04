@@ -15,7 +15,7 @@
 			<div class="pause">
 				暂停游戏
 			</div>
-	</van-row>
+		</van-row>
 	</div>
 
 </template>
@@ -31,13 +31,13 @@ export default {name: "bottomMenu"}
 .bottomLine {
 	width: $body-width;
 	height: 6vh;
-	margin: 0 auto;
 	display: flex;
 	justify-content: space-around;
-	margin-top: 1px;
+	margin: 1px auto 0;
 	border: $border solid $tip-color;
 	border-radius: 5px;
-	.time-list{
+	
+	.time-list {
 		width: 1.5rem;
 		font-size: .1rem;
 		margin: auto;
@@ -45,7 +45,8 @@ export default {name: "bottomMenu"}
 		border: $border solid $tip-color;
 		border-radius: 5px;
 	}
-	.pause{
+	
+	.pause {
 		width: 2rem;
 		font-size: .1rem;
 		margin: auto;
@@ -60,37 +61,38 @@ export default {name: "bottomMenu"}
 	border-radius: $border-radius;
 	width: $body-width;
 	height: $bottomMenu-height;
-	margin: 0 auto;
 	display: flex;
 	justify-content: space-around;
-	margin-top: .125rem;
+	margin: .125rem auto 0;
+	
 	.textOutput {
-	    height: $Menu-height;
+		height: $Menu-height;
 		border: $border solid $tip-color;
 		border-radius: $border-radius;
 		position: relative;
 		width: 40%;
 		margin-top: .15rem;
-        }
-
-    .more {
-    	height: $Menu-height;
+	}
+	
+	.more {
+		height: $Menu-height;
 		border: $border solid $tip-color;
 		border-radius: 5px;
 		position: relative;
 		width: 50%;
 		margin-top: .15rem;
-        }
-		.menu-head{
-			width: 1.5rem;
-		    font-size: .1rem;
-		    text-align: center;
-		    border: $border solid $tip-color;
-	        border-radius: 5px;
-		    position: absolute;
-		    top: -3px;
-		    left: 6px;
-			background-color: #fff;
-		}
+	}
+	
+	.menu-head {
+		width: 1.5rem;
+		font-size: .1rem;
+		text-align: center;
+		border: $border solid $tip-color;
+		border-radius: 5px;
+		position: absolute;
+		top: -3px;
+		left: 6px;
+		background-color: #fff;
+	}
 }
 </style>

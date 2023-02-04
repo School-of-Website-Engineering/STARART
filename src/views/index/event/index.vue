@@ -53,10 +53,10 @@ export default {name: "event"}
 	border-radius: $border-radius;
 	width: $body-width;
 	height: $eventMenu-height;
-	margin: 0 auto;
 	display: flex;
 	justify-content: space-around;
-	margin-top: .125rem;
+	margin: .125rem auto 0;
+	
 	.text{
 	    height: $event-height;
 		border: $border solid $tip-color;
