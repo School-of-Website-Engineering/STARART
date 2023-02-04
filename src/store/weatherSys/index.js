@@ -16,20 +16,17 @@ const WEATHER_STATUS = {
 export function generateWeatherStatus() {
 	// 生成随机数
 	const randomNum = Math.random();
-
-	if (randomNum <= 0.4) {
+	// 根据随机数返回天气状态
+	switch (true) {
+	case randomNum <= 0.4:
 		return WEATHER_STATUS.SUNNY;
-	}
-	else if (randomNum <= 0.75) {
+	case randomNum <= 0.75:
 		return WEATHER_STATUS.RAINY;
-	}
-	else if (randomNum <= 0.93) {
+	case randomNum <= 0.93:
 		return WEATHER_STATUS.CLOUDY;
-	}
-	else if (randomNum <= 0.98) {
+	case randomNum <= 0.98:
 		return WEATHER_STATUS.THUNDERSTORM;
-	}
-	else {
+	default:
 		return WEATHER_STATUS.LIGHTENING;
 	}
 }
@@ -54,4 +51,4 @@ const getters = {
 	}
 };
 
-export default {state, mutations, getters};
+export default { state, mutations, getters };
