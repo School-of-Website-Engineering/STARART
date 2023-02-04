@@ -7,10 +7,10 @@ const buffModule = {
 			"adrenalineRise",
 			"fullness",
 			"accurateStrike",
-			"purifyEnergy",
+			"purifyEnergy"
 		],
 		// buff类型
-		buffList: [],
+		buffList: []
 		// buff列表
 	},
 	mutations: {
@@ -29,7 +29,7 @@ const buffModule = {
 					list.splice(i, 1);
 				}
 			}
-		},
+		}
 	},
 	actions: {
 		// 添加buff
@@ -39,8 +39,8 @@ const buffModule = {
 		// 删除buff
 		deleteBuff(context, type) {
 			context.commit("deleteBuff", type);
-		},
-	},
+		}
+	}
 };
 
 export default buffModule;
