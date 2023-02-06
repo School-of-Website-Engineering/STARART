@@ -46,7 +46,7 @@ export default {
 		this.changeTime();
 	},
 	computed: { ...mapGetters("timer", ["worldTime"]) },
-	methods: { ...mapActions("timer", ["changeTime"]) }
+	methods : { ...mapActions("timer", ["changeTime"]) }
 }
 </script>
 
