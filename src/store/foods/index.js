@@ -1,6 +1,9 @@
 //vuex中的食物系统模块，用于存储游戏中的食物数据
-const food = {
-	state: {
+export default {
+	namespaced: true,
+	actions   : {},
+	mutations : {},
+	state     : {
 		foodList: [
 			{
 				name  : "水",
@@ -172,7 +175,7 @@ const food = {
 			}
 		],
 		// 金币计算公式
-		coinRate: { bronze: 1, silver: 100, gold: 1000 }
+		coinRate: {bronze: 1, silver: 100, gold: 1000}
 	},
 	getters: {
 		// 食物列表
@@ -181,5 +184,3 @@ const food = {
 		coinRate: (state) => state.coinRate
 	}
 };
-
-export default food;

@@ -1,19 +1,12 @@
 //游戏时间系统
-//使用方法
-// 1.在组件中使用	actions:
-// 时间开始		this.$store.dispatch('gameTime/changeTime')
-// 加速时间		this.$store.dispatch('gameTime/changeSpeed', speed)
-// 暂停时间		this.$store.dispatch('gameTime/pauseTime')
-//2.在组件中使用		getters：
-// 获取游戏世界时间	const worldTime = this.$store.getters['gameTime/worldTime']
-// 获取当前加速倍数	const speed = this.$store.getters['gameTime/speed']
+// 用于控制游戏世界时间的变化，以及游戏世界时间的加速
 import store from "@/store";
 
 export default {
 	namespaced: true,
 	actions   : {
 		// 改变游戏世界时间，每秒改变一次
-		changeTime({ dispatch, commit, state }) {
+		changeTime({  commit, state }) {
 			let minutes = state.minutes,
 				hours = state.hours;
 			setInterval(() => {
