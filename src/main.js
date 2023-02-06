@@ -4,8 +4,10 @@ import store from "./store";
 import router from "./router";
 import "./assets/scss/global.scss";
 import "amfe-flexible"
-import { Button, Loading, Col, Row } from "vant";
+import {Button, Col, Loading, NoticeBar, Row, Tag} from "vant";
 
+Vue.use(NoticeBar);
+Vue.use(Tag);
 Vue.use(Button);
 Vue.use(Loading);
 Vue.use(Col);
