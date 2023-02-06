@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.3](https://github.com/School-of-Website-Engineering/TinyWaste/compare/v1.3.2...v1.3.3) (2023-02-06)
+
+
+### Reverts
+
+* 回滚故障代码，新布局制作中... ([346e437](https://github.com/School-of-Website-Engineering/TinyWaste/commit/346e437fb55f0c7e5c5229755268a1e5c819a7a8))
+
 ## [1.3.2](https://github.com/School-of-Website-Engineering/TinyWaste/compare/v1.3.1...v1.3.2) (2023-02-06)
 
 
