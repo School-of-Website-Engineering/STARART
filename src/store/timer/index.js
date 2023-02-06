@@ -19,7 +19,7 @@ export default {
 			setInterval(() => {
 				if (state.speed !== 0) {
 					minutes++;
-					if (minutes > 24) {
+					if (minutes > 59) {
 						minutes = 0;
 						hours++;
 						//调用weatherSys vuex模块的mutations中的UPDATE_WEATHER_STATUS
@@ -59,8 +59,8 @@ export default {
 	},
 
 	state: {
-		hours  : 23,
-		minutes: 22,
+		hours  : 0,
+		minutes: 0,
 		speed  : 1 //初始加速为1
 	},
 	getters: {
