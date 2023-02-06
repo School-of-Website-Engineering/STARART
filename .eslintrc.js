@@ -17,6 +17,8 @@ module.exports = {
 	plugins      : ["vue"],
 	// rules 指定自定义的规则
 	rules        : {
+		//自动对齐上下行等号
+		"key-spacing"                : ["error", { beforeColon: false, afterColon: true }],
 		eqeqeq                       : "off",
 		curly                        : "error",
 		quotes                       : ["error", "double"],

@@ -19,9 +19,9 @@ const mutations = {
 		state.currentTime = payload;
 		// 根据当前时间计算世界状态 , 怪物密度 和 生物密度,
 		// 将时间转化成以分钟为单位
-		const timeInMinutes =
-			Math.floor(state.currentTime / 100) * 60 +
-			(state.currentTime % 100);
+		const timeInMinutes
+			= Math.floor(state.currentTime / 100) * 60
+			+ (state.currentTime % 100);
 		if (timeInMinutes >= 0 && timeInMinutes <= 459) {
 			state.worldStatus = "凌晨深夜";
 			state.monsterDensity = 4;
@@ -62,5 +62,4 @@ const actions = {
 	}
 };
 
-// 将 state / mutations / actions 暴露出去提供其他部分调用
 export default {state, mutations, actions};

@@ -10,7 +10,7 @@
 		</van-row>
 		<van-row type="flex" justify="space-around" class="bottomLine">
 			<div class="time-list">
-				11：45
+				{{ worldTime }}
 			</div>
 			<div class="pause">
 				暂停游戏
@@ -21,7 +21,17 @@
 </template>
 
 <script>
-export default {name: "bottomMenu"}
+import {mapGetters, mapActions} from "vuex";
+
+export default {
+	name: "bottomMenu",
+	created() {
+		// 获取timer的游戏世界时间(changeTime)
+		this.changeTime();
+	},
+	computed: {...mapGetters("timer", ["worldTime"])},
+	methods : {...mapActions("timer", ["changeTime"])}
+}
 </script>
 
 <style lang="scss" scoped>
@@ -31,9 +41,8 @@ export default {name: "bottomMenu"}
 .bottomLine {
 	width: $body-width;
 	height: 6vh;
-	display: flex;
-	justify-content: space-around;
-	margin: 1px auto 0;
+	margin: 0 auto;
+	margin-top: 1px;
 	border: $border solid $tip-color;
 	border-radius: 5px;
 	
