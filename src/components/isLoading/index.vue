@@ -69,9 +69,9 @@ export default {
 .isloding {
 	display: flex;
 	position: absolute;
-	left: -240px;
+	left: -40px;
 	top: calc(50% - 65px);
-	transform: scale(0.3);
+	transform: scale(0.7);
 
 	.hex {
 		width: 160px;
@@ -100,11 +100,10 @@ export default {
 
 	.hex span {
 		z-index: 1;
-		font-size: 100px;
+		font-size: 60px;
 		width: 160px;
-		height: 100%;
 		text-align: center;
-		line-height: 140px;
+		line-height:100%;
 		color: white;
 	}
 
