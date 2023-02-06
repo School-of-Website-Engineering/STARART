@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.1](https://github.com/School-of-Website-Engineering/TinyWaste/compare/v1.3.0...v1.3.1) (2023-02-06)
+
+
+### update
+
+* 更新当前天气与时间的显示 ([e880a1d](https://github.com/School-of-Website-Engineering/TinyWaste/commit/e880a1d4a9e1f9c45a63c49c6f8b27b02d247a16))
+
 ## [1.3.0](https://github.com/School-of-Website-Engineering/TinyWaste/compare/v1.2.8...v1.3.0) (2023-02-03)
 
 
