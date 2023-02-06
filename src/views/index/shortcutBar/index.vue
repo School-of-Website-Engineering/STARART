@@ -5,14 +5,6 @@
 				<div class="quick_goods">
 					快捷栏
 				</div>
-				<div class="quick-lattice">
-					<div id="lattice"></div>
-					<div id="lattice"></div>
-					<div id="lattice"></div>
-					<div id="lattice"></div>
-					<div id="lattice"></div>
-					<div id="lattice"></div>
-				</div>
 			</van-col>
 		</van-row>
 	</div>
@@ -41,17 +33,6 @@ export default {name: "shortcutBar"}
 		top: -3px;
 		left: 6px;
 		background-color: #fff;
-	}
-	.quick-lattice{
-		width: 50%;
-		display: flex;
-		margin-top: 20px;
-		#lattice{
-			width: .5rem;
-			height: .5rem;
-			margin: 0 auto;
-			background-color: rgb(218, 218, 218);
-		}
 	}
 }
 </style>
