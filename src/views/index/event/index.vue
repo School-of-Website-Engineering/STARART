@@ -1,5 +1,5 @@
 <template>
-	<div>
+	<div class="eventMenuBox">
 		<van-row type="flex" class="eventMenu">
 			<van-col span="8" class="text">
 				<div class="events-head">地图</div>
@@ -62,7 +62,7 @@ export default {name: "event"}
 		border: $border solid $tip-color;
 		border-radius: $border-radius;
 		position: relative;
-		width: 40%;
+		width: 38%;
 		margin-top: .15rem;
     }
 	.event{
@@ -70,7 +70,7 @@ export default {name: "event"}
 		border: $border solid $tip-color;
 		border-radius: $border-radius;
 		position: relative;
-		width: 50%;
+		width: 59%;
 		margin-top: .15rem;
     }
 	.events-head{

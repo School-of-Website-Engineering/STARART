@@ -1,13 +1,19 @@
 <template>
-	<div>
+	<div class="globalStatusBox">
 		<van-row type="flex" justify="space-around">
 			<van-col span="24" class="globalStatus">
 				<div class="property">
 					<!-- 动态定义这里的数据，而不是硬编码 -->
-					<div class="attribute-name">
-						天气：<span>{{ getWeatherStatus }}</span>
-					</div>
-					<div class="attribute-name">生命：<span>100</span></div>
+					<van-cell class="attribute-name">
+						<van-tag color="#7232dd" plain>天气:{{ getWeatherStatus }}</van-tag>
+						<van-tag color="#2da44e" plain>生命:100</van-tag>
+						<van-tag  type="warning " plain>防御力：100</van-tag>
+						<van-tag type="danger " plain>口渴：0</van-tag>
+						<van-tag type="success " plain>魅力：100</van-tag>
+						<van-tag type="primary" plain>灵巧值：100</van-tag>
+						<van-tag type="primary" plain>背包格子：20</van-tag>
+					</van-cell>
+					
 				</div>
 			</van-col>
 		</van-row>
@@ -28,24 +34,25 @@ export default {
 @import "@/assets/scss/_media.scss";
 @import "@/assets/scss/_color.scss";
 
+.globalStatusBox{
+}
 .globalStatus {
 	height: $globalStatusBar-height;
 	width: $body-width;
 	margin: 5px;
-	border-bottom: $border solid $tip-color;
 
 	.property {
+		height: 100%;
 		.attribute-name {
-			border: $border solid $tip-color;
-			border-radius: 2px;
+			display: flex;
+			justify-content: start;
+			flex-wrap: wrap;
 			text-align: center;
-			padding: 0.015rem 0;
-			margin: 0 0.1rem;
-			font-size: 0.1rem;
 			float: left;
-
-			&:nth-child(6) {
-				float: right;
+			.van-tag {
+				margin-right: 8px;
+				margin-top: 4px;
+				height: 42px;
 			}
 		}
 	}

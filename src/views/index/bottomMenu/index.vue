@@ -1,5 +1,5 @@
 <template>
-	<div>
+	<div class="bottomMenuBox">
 		<van-row type="flex" justify="space-around" class="bottomMenu">
 			<van-col span="12" class="textOutput">
 				<div class="menu-head">文本输出</div>
@@ -41,8 +41,7 @@ export default {
 .bottomLine {
 	width: $body-width;
 	height: 6vh;
-	margin: 0 auto;
-	margin-top: 1px;
+	margin: 1px auto 0;
 	border: $border solid $tip-color;
 	border-radius: 5px;
 	
@@ -79,7 +78,7 @@ export default {
 		border: $border solid $tip-color;
 		border-radius: $border-radius;
 		position: relative;
-		width: 40%;
+		width: 43%;
 		margin-top: .15rem;
 	}
 	
@@ -88,7 +87,7 @@ export default {
 		border: $border solid $tip-color;
 		border-radius: 5px;
 		position: relative;
-		width: 50%;
+		width: 54%;
 		margin-top: .15rem;
 	}
 	
