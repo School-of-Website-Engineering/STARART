@@ -31,9 +31,8 @@ export default {name: "bottomMenu"}
 .bottomLine {
 	width: $body-width;
 	height: 6vh;
-	display: flex;
-	justify-content: space-around;
-	margin: 1px auto 0;
+	margin: 0 auto;
+	margin-top: 1px;
 	border: $border solid $tip-color;
 	border-radius: 5px;
 	
