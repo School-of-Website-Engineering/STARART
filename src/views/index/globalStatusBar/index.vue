@@ -8,6 +8,11 @@
 						天气：<span>{{ getWeatherStatus }}</span>
 					</div>
 					<div class="attribute-name">生命：<span>100</span></div>
+					<div class="attribute-name">生命：<span>100</span></div>
+					<div class="attribute-name">生命：<span>100</span></div>
+				</div>
+				<div class="suspend">
+					<van-icon name="play-circle-o" />
 				</div>
 			</van-col>
 		</van-row>
@@ -48,6 +53,9 @@ export default {
 				float: right;
 			}
 		}
+	}
+	.suspend{
+		float:right;
 	}
 }
 </style>

@@ -1,6 +1,7 @@
 // buff系统模块
-const buffModule = {
-	state: {
+export default {
+	namespaced: true,
+	state     : {
 		buffTypes: [
 			"liveRecovery",
 			"extremeSport",
@@ -42,5 +43,3 @@ const buffModule = {
 		}
 	}
 };
-
-export default buffModule;
