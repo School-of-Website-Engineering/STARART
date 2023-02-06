@@ -22,7 +22,7 @@ export default {
 		Header,
 		Footer,
 		isLoading
-	},
+	}
 	
 };
 </script>
