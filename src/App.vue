@@ -14,7 +14,6 @@
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import isLoading from "@/components/isLoading/index.vue";
-import {food} from "@/utils/foodSys";
 
 export default {
 	name      : "App",
@@ -24,9 +23,6 @@ export default {
 		Footer,
 		isLoading
 	},
-	mounted() {
-		console.log(food.beer)
-	}
 	
 };
 </script>
