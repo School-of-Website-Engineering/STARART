@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.4](https://github.com/School-of-Website-Engineering/TinyWaste/compare/v1.3.3...v1.3.4) (2023-02-06)
+
+
+### update
+
+* 更新页面布局 ([746020d](https://github.com/School-of-Website-Engineering/TinyWaste/commit/746020d86d7f5af5dab577131a3e89304ac9ef7e))
+
 ## [1.3.3](https://github.com/School-of-Website-Engineering/TinyWaste/compare/v1.3.2...v1.3.3) (2023-02-06)
 
 
