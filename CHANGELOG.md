@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.2](https://github.com/School-of-Website-Engineering/TinyWaste/compare/v1.3.1...v1.3.2) (2023-02-06)
+
+
+### Code Refactoring
+
+* 重构vuex模块代码 ([563f09b](https://github.com/School-of-Website-Engineering/TinyWaste/commit/563f09b382a660ac846f451a94af587780cec601))
+
 ## [1.3.1](https://github.com/School-of-Website-Engineering/TinyWaste/compare/v1.3.0...v1.3.1) (2023-02-06)
 
 
