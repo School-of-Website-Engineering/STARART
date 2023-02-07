@@ -139,7 +139,7 @@ export default {name: "shortcutBar"}
 		border: $border solid #7232dd;
 		border-radius: $border-radius;
 		position: absolute;
-		z-index: 99999;
+		z-index: 99;
 		top: -3px;
 		left: 6px;
 	}
