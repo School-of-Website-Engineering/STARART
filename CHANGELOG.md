@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.5](https://github.com/School-of-Website-Engineering/TinyWaste/compare/v1.3.4...v1.3.5) (2023-02-07)
+
+
+### Bug Fixes
+
+* 修复加载动画快捷栏层级 ([fa83f6d](https://github.com/School-of-Website-Engineering/TinyWaste/commit/fa83f6d117c394fe020eb03083f35801751cce01))
+
 ## [1.3.4](https://github.com/School-of-Website-Engineering/TinyWaste/compare/v1.3.3...v1.3.4) (2023-02-06)
 
 
