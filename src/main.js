@@ -3,9 +3,21 @@ import App from "./App.vue";
 import store from "./store";
 import router from "./router";
 import "./assets/scss/global.scss";
-import "amfe-flexible"
-import {Button, Col, Loading, NoticeBar, Row, Tag, Badge, icon, cell} from "vant";
+import "amfe-flexible";
+import {
+	Button,
+	Col,
+	Loading,
+	NoticeBar,
+	Row,
+	Tag,
+	Badge,
+	icon,
+	cell,
+	Overlay
+} from "vant";
 
+Vue.use(Overlay);
 Vue.use(cell);
 Vue.use(icon);
 Vue.use(NoticeBar);
@@ -15,7 +27,6 @@ Vue.use(Loading);
 Vue.use(Col);
 Vue.use(Row);
 Vue.use(Badge);
-
 new Vue({
 	store,
 	router,
