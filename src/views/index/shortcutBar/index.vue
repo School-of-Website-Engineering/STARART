@@ -6,40 +6,40 @@
 					快捷栏
 				</van-tag>
 				<div class="shortccutBarBody">
-					<van-badge :content="5">
+					<van-badge color="#1989fa" :content="5">
 						<div class="child"/>
 					</van-badge>
-					<van-badge :content="5">
+					<van-badge color="#1989fa" :content="5">
 						<div class="child"/>
 					</van-badge>
-					<van-badge :content="5">
+					<van-badge color="#1989fa" :content="5">
 						<div class="child"/>
 					</van-badge>
-					<van-badge :content="5">
+					<van-badge color="#1989fa" :content="5">
 						<div class="child"/>
 					</van-badge>
-					<van-badge :content="5">
+					<van-badge color="#1989fa" :content="5">
 						<div class="child"/>
 					</van-badge>
-					<van-badge :content="5">
+					<van-badge color="#1989fa" :content="5">
 						<div class="child"/>
 					</van-badge>
-					<van-badge :content="5">
+					<van-badge color="#1989fa" :content="5">
 						<div class="child"/>
 					</van-badge>
-					<van-badge :content="5">
+					<van-badge color="#1989fa" :content="5">
 						<div class="child"/>
 					</van-badge>
-					<van-badge :content="5">
+					<van-badge color="#1989fa" :content="5">
 						<div class="child"/>
 					</van-badge>
-					<van-badge :content="5">
+					<van-badge color="#1989fa" :content="5">
 						<div class="child"/>
 					</van-badge>
-					<van-badge :content="5">
+					<van-badge color="#1989fa" :content="5">
 						<div class="child"/>
 					</van-badge>
-					<van-badge :content="5">
+					<van-badge color="#1989fa" :content="5">
 						<div class="child"/>
 					</van-badge>
 				</div>
@@ -72,10 +72,8 @@ export default {name: "shortcutBar"}
 		font-size: 12px;
 		text-align: center;
 		border-radius: $border-radius;
-		&:first-child {
-			margin-left: 80px;
-		}
 	}
+	
 	.van-badge__wrapper {
 		margin-top: 10px;
 		width: 70px;
@@ -84,7 +82,8 @@ export default {name: "shortcutBar"}
 		text-align: center;
 		border: $border solid #7232dd;
 		border-radius: $border-radius;
-		margin-right: 17px;
+		margin-right: 28px;
+		
 		&:first-child {
 			margin-left: 80px;
 		}

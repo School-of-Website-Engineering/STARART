@@ -10,7 +10,7 @@
 		</van-row>
 		<van-row type="flex" justify="space-around" class="bottomLine">
 			<div class="time-list">
-				{{ worldTime }}
+				{{ this.worldTime }}
 			</div>
 			<div class="pause">
 				暂停游戏

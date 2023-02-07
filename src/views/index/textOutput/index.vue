@@ -8,6 +8,7 @@
 				<van-notice-bar
 					background="#fff"
 					left-icon="volume-o"
+					:scrollable="true"
 					text="侦测到暴风雨即将来临，请做好避难准备"
 				/>
 			</van-col>
@@ -31,7 +32,10 @@ export default {name: "textOutput"}
 	margin-top: 10px;
 	.textOut{
 		z-index: 1;
-		width: 80px;
+		width: 70px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
 		height: 98%;
 		font-size: 14px;
 		text-align: center;
@@ -45,7 +49,7 @@ export default {name: "textOutput"}
 	.van-notice-bar{
 		width: 585px;
 		height: 100%;
-		margin-left: 80px;
+		margin-left: 70px;
 	}
 }
 </style>
