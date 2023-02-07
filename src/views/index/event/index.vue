@@ -48,12 +48,11 @@ export default {name: "event"}
 
 .eventMenu {
 	border: $border solid #7232dd;
-	border-radius: $border-radius;
 	width: $body-width;
 	height: $eventMenu-height;
 	display: flex;
 	justify-content: space-around;
-	margin: .125rem auto 0;
+	margin: 0 auto ;
 	
 	.text {
 		height: $event-height;
@@ -61,7 +60,7 @@ export default {name: "event"}
 		border-radius: $border-radius;
 		position: relative;
 		width: 38%;
-		margin-top: .15rem;
+		margin-top: 12px;
 	}
 	
 	.event {
@@ -70,7 +69,7 @@ export default {name: "event"}
 		border-radius: $border-radius;
 		position: relative;
 		width: 59%;
-		margin-top: .15rem;
+		margin-top: 12px;
 	}
 	
 	.events-head {
