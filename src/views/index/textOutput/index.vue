@@ -27,7 +27,6 @@ export default {name: "textOutput"}
 	height: $textOutput-height;
 	width: $body-width;
 	border: $border solid #7232dd;
-	border-radius: $border-radius;
 	position: relative;
 	margin-top: 10px;
 	.textOut{
@@ -40,7 +39,6 @@ export default {name: "textOutput"}
 		font-size: 14px;
 		text-align: center;
 		border: $border solid #7232dd;
-	    border-radius: $border-radius;
 		position: absolute;
 		top: 0px;
 		left: 0px;

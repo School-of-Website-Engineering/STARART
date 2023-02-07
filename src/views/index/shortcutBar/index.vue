@@ -42,6 +42,39 @@
 					<van-badge color="#1989fa" :content="5">
 						<div class="child"/>
 					</van-badge>
+					<van-badge color="#1989fa" :content="5">
+						<div class="child"/>
+					</van-badge>
+					<van-badge color="#1989fa" :content="5">
+						<div class="child"/>
+					</van-badge>
+					<van-badge color="#1989fa" :content="5">
+						<div class="child"/>
+					</van-badge>
+					<van-badge color="#1989fa" :content="5">
+						<div class="child"/>
+					</van-badge>
+					<van-badge color="#1989fa" :content="5">
+						<div class="child"/>
+					</van-badge>
+					<van-badge color="#1989fa" :content="5">
+						<div class="child"/>
+					</van-badge>
+					<van-badge color="#1989fa" :content="5">
+						<div class="child"/>
+					</van-badge>
+					<van-badge color="#1989fa" :content="5">
+						<div class="child"/>
+					</van-badge>
+					<van-badge color="#1989fa" :content="5">
+						<div class="child"/>
+					</van-badge>
+					<van-badge color="#1989fa" :content="5">
+						<div class="child"/>
+					</van-badge>
+					<van-badge color="#1989fa" :content="5">
+						<div class="child"/>
+					</van-badge>
 				</div>
 			</van-col>
 		</van-row>
@@ -63,8 +96,8 @@ export default {name: "shortcutBar"}
 	align-items: start;
 	flex-wrap: wrap;
 	margin-left: 35px;
-	margin-right: 10px;
 	margin-top: 12px;
+	overflow: auto;
 	
 	.child {
 		width: 70px;
@@ -75,17 +108,18 @@ export default {name: "shortcutBar"}
 	}
 	
 	.van-badge__wrapper {
-		margin-top: 10px;
+		margin-top: 17px;
+		margin-bottom:4px;
 		width: 70px;
 		height: 60px;
 		font-size: 12px;
 		text-align: center;
 		border: $border solid #7232dd;
 		border-radius: $border-radius;
-		margin-right: 28px;
+		margin-right: 24px;
 		
 		&:first-child {
-			margin-left: 80px;
+			margin-left: 96.5px;
 		}
 	}
 }
@@ -105,6 +139,7 @@ export default {name: "shortcutBar"}
 		border: $border solid #7232dd;
 		border-radius: $border-radius;
 		position: absolute;
+		z-index: 99999;
 		top: -3px;
 		left: 6px;
 	}

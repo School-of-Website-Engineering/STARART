@@ -4,7 +4,7 @@
 			<van-col span="24" class="globalStatus">
 				<div class="property">
 					<!-- 动态定义这里的数据，而不是硬编码 -->
-					<van-cell class="attribute-name">
+					<div class="attribute-name">
 						<van-tag color="#7232dd" plain>天气:{{ this.getWeatherStatus }}</van-tag>
 						<van-tag color="#2da44e" plain>生命:100</van-tag>
 						<van-tag  type="warning " plain>防御力：100</van-tag>
@@ -12,7 +12,7 @@
 						<van-tag type="success " plain>魅力：100</van-tag>
 						<van-tag type="primary" plain>灵巧值：100</van-tag>
 						<van-tag type="primary" plain>背包格子：20</van-tag>
-					</van-cell>
+					</div>
 				</div>
 			</van-col>
 		</van-row>

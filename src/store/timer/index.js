@@ -54,7 +54,7 @@ export default {
 	state: {
 		hours  : 0,
 		minutes: 0,
-		speed  : 0.08 //初始加速为1
+		speed  : 0.1 //初始加速为1
 	},
 	getters: {
 		// 获取游戏世界时间
