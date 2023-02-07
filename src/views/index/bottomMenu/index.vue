@@ -1,11 +1,81 @@
 <template>
 	<div class="bottomMenuBox">
 		<van-row type="flex" justify="space-around" class="bottomMenu">
+			<van-tag color="#7232dd" class="menu-head bubbleDialogue"
+			>文本输出
+			</van-tag>
 			<van-col span="12" class="textOutput">
-				<van-tag color="#7232dd" class="menu-head bubbleDialogue">文本输出</van-tag>
+				
+				
+				<bubble-dialog
+					class="bubbleDialog"
+					:content="`你拾取了一个东西`"
+					:is-left="true"
+					:avatar-img="require('@/assets/logo.png')"
+				/>
+				<bubble-dialog
+					class="bubbleDialog"
+					:content="`你拾取了大便`"
+					:is-left="true"
+					:avatar-img="require('@/assets/logo.png')"
+				/>
+				<bubble-dialog
+					class="bubbleDialog"
+					:content="`你拾取了馒头`"
+					:is-left="true"
+					:avatar-img="require('@/assets/logo.png')"
+				/>
+				<bubble-dialog
+					class="bubbleDialog"
+					:content="`你拾取了一个木头`"
+					:is-left="true"
+					:avatar-img="require('@/assets/logo.png')"
+				/>
+				<bubble-dialog
+					class="bubbleDialog"
+					:content="`你拾取了只因`"
+					:is-left="true"
+					:avatar-img="require('@/assets/logo.png')"
+				/>
 			</van-col>
 			<van-col span="12" class="more">
 				<van-tag color="#7232dd" class="menu-head">更多</van-tag>
+				<div class="bagBox" @click="bagShow">
+					<img
+						class="bag"
+						:src="
+							bagTab
+								? require('@/assets/bag.png')
+								: require('@/assets/bagClick.png')
+						"
+						alt=""
+					/>
+				</div>
+				
+				<van-button
+					@click="archive"
+					class="archive"
+					:loading="this.archiveLoading"
+					type="info"
+					loading-text="加载中..."
+				>
+					读取存档
+				</van-button>
+				<van-button
+					@click="IllustratedBook"
+					class="World IllustratedBook"
+					color="#7232dd"
+				>世界图鉴
+				</van-button>
+				<van-button
+					@click="exploreNotes"
+					class="exploreNotes"
+					type="primary"
+				>探索笔记
+				</van-button>
+				<van-button @click="aboutUs" class="aboutUs" type="warning"
+				>关于我们
+				</van-button>
 			</van-col>
 		</van-row>
 		<van-row type="flex" justify="space-around" class="bottomLine">
@@ -13,24 +83,65 @@
 				<span>第1天</span>
 				<span>{{ this.worldTime }}</span>
 			</van-tag>
-			<van-button class="pause" type="danger">暂停游戏</van-button>
+			<van-tag class="time-list" plain type="primary">
+				<span>当前时间:</span>
+				<span>清晨时分</span>
+			</van-tag>
+			<van-button
+				@click="pauseBtn"
+				:icon="this.pause ? 'pause' : 'play'"
+				class="pause"
+				type="danger"
+			>暂停游戏
+			</van-button>
 		</van-row>
 	</div>
-
 </template>
 
 <script>
 import {mapActions, mapGetters} from "vuex";
+import bubbleDialog from "@/views/bubbleDialog/index.vue";
 
 export default {
-	name: "bottomMenu",
+	name      : "bottomMenu",
+	components: {bubbleDialog},
+	data() {
+		return {
+			pause         : "false",
+			archiveLoading: false,
+			bagTab        : "false"
+		};
+	},
 	created() {
 		// 获取timer的游戏世界时间(changeTime)
 		this.changeTime();
 	},
 	computed: {...mapGetters("timer", ["worldTime"])},
-	methods : {...mapActions("timer", ["changeTime"])}
-}
+	methods : {
+		...mapActions("timer", ["changeTime"]),
+		pauseBtn() {
+			this.pause = !this.pause;
+		},
+		archive() {
+			this.archiveLoading = true;
+			setTimeout(() => {
+				this.archiveLoading = false;
+			}, 2000);
+		},
+		IllustratedBook() {
+		},
+		exploreNotes() {
+		},
+		aboutUs() {
+		},
+		bagShow() {
+			this.bagTab = !this.bagTab;
+			setTimeout(function() {
+				this.bagTab = !this.bagTab;
+			}, 1200);
+		}
+	}
+};
 </script>
 
 <style lang="scss" scoped>
@@ -52,13 +163,18 @@ export default {
 		margin: auto;
 		text-align: center;
 		border-radius: 5px;
+		
+		&:nth-child(2) {
+			width: 210px;
+		}
 	}
 	
 	.pause {
-		width: 180px;
+		width: 191px;
 		height: 40px;
 		margin: auto;
 		display: flex;
+		font-size: 10px;
 		justify-content: center;
 		align-items: center;
 		border-radius: 5px;
@@ -73,6 +189,28 @@ export default {
 	display: flex;
 	justify-content: space-around;
 	margin: 6px auto 0;
+	position: relative;
+	
+	.bagBox {
+		width: 100px;
+		height: 100px;
+		border: 2px solid #7232dd;
+		border-radius: 50%;
+		position: absolute;
+		z-index: 2;
+		top: 50%;
+		transform: translateY(-50%);
+		
+		img {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			width: 100px;
+			height: 100px;
+			z-index: 2;
+		}
+	}
 	
 	.textOutput {
 		height: $Menu-height;
@@ -81,6 +219,7 @@ export default {
 		position: relative;
 		width: 43%;
 		margin-top: 15px;
+		overflow: auto;
 	}
 	
 	.more {
@@ -90,6 +229,25 @@ export default {
 		position: relative;
 		width: 54%;
 		margin-top: 15px;
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: space-around;
+		
+		.archive,
+		.IllustratedBook,
+		.exploreNotes,
+		.aboutUs {
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+			justify-content: space-around;
+			flex-direction: column-reverse;
+			width: 150px;
+			height: 55px;
+			font-size: 10px;
+			padding: 0;
+		}
 	}
 	
 	.menu-head {
@@ -101,12 +259,14 @@ export default {
 		border: $border solid #7232dd;
 		border-radius: 5px;
 		position: absolute;
-		top: -3px;
+		top: -7px;
 		left: 6px;
+		z-index: 99;
 	}
 	
 	.bubbleDialogue {
 		width: 100px;
+		top:8px;
 	}
 }
 </style>

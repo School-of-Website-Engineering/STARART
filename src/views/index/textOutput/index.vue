@@ -17,19 +17,19 @@
 </template>
 
 <script>
-export default {name: "textOutput"}
+export default { name: "textOutput" };
 </script>
 
 <style lang="scss" scoped>
 @import "@/assets/scss/_media.scss";
 @import "@/assets/scss/_color.scss";
-.textOutput{
+.textOutput {
 	height: $textOutput-height;
 	width: $body-width;
 	border: $border solid #7232dd;
 	position: relative;
 	margin-top: 10px;
-	.textOut{
+	.textOut {
 		z-index: 1;
 		width: 70px;
 		display: flex;
@@ -44,7 +44,7 @@ export default {name: "textOutput"}
 		left: 0px;
 		background-color: #fff;
 	}
-	.van-notice-bar{
+	.van-notice-bar {
 		width: 585px;
 		height: 100%;
 		margin-left: 70px;

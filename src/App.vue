@@ -2,10 +2,10 @@
 	<div class="root">
 		<!-- 加载动画 -->
 		<isLoading></isLoading>
-		<Header v-show="this.$route.path==='/codeling'"></Header>
+		<Header v-show="this.$route.path === '/codeling'"></Header>
 		<!-- 路由出口 -->
 		<router-view></router-view>
-		<Footer v-show="this.$route.path==='/codeling'"></Footer>
+		<Footer v-show="this.$route.path === '/codeling'"></Footer>
 	</div>
 </template>
 
@@ -23,9 +23,7 @@ export default {
 		Footer,
 		isLoading
 	}
-	
 };
 </script>
 
-<style lang="scss" scoped>
-</style>
+<style lang="scss" scoped></style>

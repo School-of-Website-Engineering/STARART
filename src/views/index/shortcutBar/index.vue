@@ -7,73 +7,73 @@
 				</van-tag>
 				<div class="shortccutBarBody">
 					<van-badge color="#1989fa" :content="5">
-						<div class="child"/>
+						<div class="child" />
 					</van-badge>
 					<van-badge color="#1989fa" :content="5">
-						<div class="child"/>
+						<div class="child" />
 					</van-badge>
 					<van-badge color="#1989fa" :content="5">
-						<div class="child"/>
+						<div class="child" />
 					</van-badge>
 					<van-badge color="#1989fa" :content="5">
-						<div class="child"/>
+						<div class="child" />
 					</van-badge>
 					<van-badge color="#1989fa" :content="5">
-						<div class="child"/>
+						<div class="child" />
 					</van-badge>
 					<van-badge color="#1989fa" :content="5">
-						<div class="child"/>
+						<div class="child" />
 					</van-badge>
 					<van-badge color="#1989fa" :content="5">
-						<div class="child"/>
+						<div class="child" />
 					</van-badge>
 					<van-badge color="#1989fa" :content="5">
-						<div class="child"/>
+						<div class="child" />
 					</van-badge>
 					<van-badge color="#1989fa" :content="5">
-						<div class="child"/>
+						<div class="child" />
 					</van-badge>
 					<van-badge color="#1989fa" :content="5">
-						<div class="child"/>
+						<div class="child" />
 					</van-badge>
 					<van-badge color="#1989fa" :content="5">
-						<div class="child"/>
+						<div class="child" />
 					</van-badge>
 					<van-badge color="#1989fa" :content="5">
-						<div class="child"/>
+						<div class="child" />
 					</van-badge>
 					<van-badge color="#1989fa" :content="5">
-						<div class="child"/>
+						<div class="child" />
 					</van-badge>
 					<van-badge color="#1989fa" :content="5">
-						<div class="child"/>
+						<div class="child" />
 					</van-badge>
 					<van-badge color="#1989fa" :content="5">
-						<div class="child"/>
+						<div class="child" />
 					</van-badge>
 					<van-badge color="#1989fa" :content="5">
-						<div class="child"/>
+						<div class="child" />
 					</van-badge>
 					<van-badge color="#1989fa" :content="5">
-						<div class="child"/>
+						<div class="child" />
 					</van-badge>
 					<van-badge color="#1989fa" :content="5">
-						<div class="child"/>
+						<div class="child" />
 					</van-badge>
 					<van-badge color="#1989fa" :content="5">
-						<div class="child"/>
+						<div class="child" />
 					</van-badge>
 					<van-badge color="#1989fa" :content="5">
-						<div class="child"/>
+						<div class="child" />
 					</van-badge>
 					<van-badge color="#1989fa" :content="5">
-						<div class="child"/>
+						<div class="child" />
 					</van-badge>
 					<van-badge color="#1989fa" :content="5">
-						<div class="child"/>
+						<div class="child" />
 					</van-badge>
 					<van-badge color="#1989fa" :content="5">
-						<div class="child"/>
+						<div class="child" />
 					</van-badge>
 				</div>
 			</van-col>
@@ -82,7 +82,7 @@
 </template>
 
 <script>
-export default {name: "shortcutBar"}
+export default { name: "shortcutBar" };
 </script>
 
 <style lang="scss" scoped>
@@ -98,7 +98,7 @@ export default {name: "shortcutBar"}
 	margin-left: 35px;
 	margin-top: 12px;
 	overflow: auto;
-	
+
 	.child {
 		width: 70px;
 		height: 60px;
@@ -106,10 +106,10 @@ export default {name: "shortcutBar"}
 		text-align: center;
 		border-radius: $border-radius;
 	}
-	
+
 	.van-badge__wrapper {
 		margin-top: 17px;
-		margin-bottom:4px;
+		margin-bottom: 4px;
 		width: 70px;
 		height: 60px;
 		font-size: 12px;
@@ -117,7 +117,7 @@ export default {name: "shortcutBar"}
 		border: $border solid #7232dd;
 		border-radius: $border-radius;
 		margin-right: 24px;
-		
+
 		&:first-child {
 			margin-left: 96.5px;
 		}
@@ -130,7 +130,7 @@ export default {name: "shortcutBar"}
 	border-radius: $border-radius;
 	width: $body-width;
 	position: relative;
-	
+
 	.quick_goods {
 		width: 80px;
 		height: 40px;
@@ -139,7 +139,7 @@ export default {name: "shortcutBar"}
 		border: $border solid #7232dd;
 		border-radius: $border-radius;
 		position: absolute;
-		z-index: 99;
+		z-index: 1;
 		top: -3px;
 		left: 6px;
 	}
