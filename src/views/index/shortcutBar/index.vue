@@ -7,7 +7,7 @@
 				</van-tag>
 				<div class="shortccutBarBody">
 					<van-badge
-						v-for="(item, index) in 10"
+						v-for="(item, index) in 30"
 						:key="index"
 						color="#1989fa"
 						:content="index"

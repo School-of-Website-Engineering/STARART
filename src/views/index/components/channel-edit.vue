@@ -4,7 +4,7 @@
 			class="badgeContainer"
 			v-for="(item, index) in Array(39)"
 			:key="index"
-			:content="bagEdit ? `${index}` : 'x'"
+			:content="!bagEdit ? `${index}` : 'x'"
 		>
 			<div class="bagBoxContent">
 				<div class="child" />
@@ -15,16 +15,16 @@
 
 <script>
 export default {
-	name: "shortcutBar",
+	name : "shortcutBar",
 	props: {
 		bagEdit: {
-			type: String,
-			default: true,
-		},
+			type   : Boolean,
+			default: true
+		}
 	},
 	data() {
 		return {};
-	},
+	}
 };
 </script>
 

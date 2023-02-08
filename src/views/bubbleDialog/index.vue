@@ -31,10 +31,13 @@ export default {
 };
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 .chat-message {
-	margin: 30px 0;
+	margin: 25px 0;
 	display: flex;
+	&:nth-child(1) {
+		margin-top: 38px;
+	}
 }
 
 .message-item {
