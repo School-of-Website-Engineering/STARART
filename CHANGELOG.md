@@ -1,5 +1,40 @@
 # Changelog
 
+## [1.3.5](https://github.com/School-of-Website-Engineering/TinyWaste/compare/v1.3.4...v1.3.5) (2023-02-07)
+
+
+### Bug Fixes
+
+* 修复加载动画快捷栏层级 ([fa83f6d](https://github.com/School-of-Website-Engineering/TinyWaste/commit/fa83f6d117c394fe020eb03083f35801751cce01))
+
+## [1.3.4](https://github.com/School-of-Website-Engineering/TinyWaste/compare/v1.3.3...v1.3.4) (2023-02-06)
+
+
+### update
+
+* 更新页面布局 ([746020d](https://github.com/School-of-Website-Engineering/TinyWaste/commit/746020d86d7f5af5dab577131a3e89304ac9ef7e))
+
+## [1.3.3](https://github.com/School-of-Website-Engineering/TinyWaste/compare/v1.3.2...v1.3.3) (2023-02-06)
+
+
+### Reverts
+
+* 回滚故障代码，新布局制作中... ([346e437](https://github.com/School-of-Website-Engineering/TinyWaste/commit/346e437fb55f0c7e5c5229755268a1e5c819a7a8))
+
+## [1.3.2](https://github.com/School-of-Website-Engineering/TinyWaste/compare/v1.3.1...v1.3.2) (2023-02-06)
+
+
+### Code Refactoring
+
+* 重构vuex模块代码 ([563f09b](https://github.com/School-of-Website-Engineering/TinyWaste/commit/563f09b382a660ac846f451a94af587780cec601))
+
+## [1.3.1](https://github.com/School-of-Website-Engineering/TinyWaste/compare/v1.3.0...v1.3.1) (2023-02-06)
+
+
+### update
+
+* 更新当前天气与时间的显示 ([e880a1d](https://github.com/School-of-Website-Engineering/TinyWaste/commit/e880a1d4a9e1f9c45a63c49c6f8b27b02d247a16))
+
 ## [1.3.0](https://github.com/School-of-Website-Engineering/TinyWaste/compare/v1.2.8...v1.3.0) (2023-02-03)
 
 
