@@ -2,11 +2,9 @@
 	<div class="bottomMenuBox">
 		<van-row type="flex" justify="space-around" class="bottomMenu">
 			<van-tag color="#7232dd" class="menu-head bubbleDialogue"
-			>文本输出
+				>文本输出
 			</van-tag>
 			<van-col span="12" class="textOutput">
-				
-				
 				<bubble-dialog
 					class="bubbleDialog"
 					:content="`你拾取了一个东西`"
@@ -51,7 +49,7 @@
 						alt=""
 					/>
 				</div>
-				
+
 				<van-button
 					@click="archive"
 					class="archive"
@@ -65,16 +63,16 @@
 					@click="IllustratedBook"
 					class="World IllustratedBook"
 					color="#7232dd"
-				>世界图鉴
+					>世界图鉴
 				</van-button>
 				<van-button
 					@click="exploreNotes"
 					class="exploreNotes"
 					type="primary"
-				>探索笔记
+					>探索笔记
 				</van-button>
 				<van-button @click="aboutUs" class="aboutUs" type="warning"
-				>关于我们
+					>关于我们
 				</van-button>
 			</van-col>
 		</van-row>
@@ -92,53 +90,76 @@
 				:icon="this.pause ? 'pause' : 'play'"
 				class="pause"
 				type="danger"
-			>暂停游戏
+				>暂停游戏
 			</van-button>
 		</van-row>
+		<van-popup
+			class="bagPopupBox"
+			v-model="bagTab"
+			position="bottom"
+			:style="{ height: '40%' }"
+		>
+			<van-tag class="bagBoxBar" round size="large" type="primary"
+				><span>背</span><span>包</span>
+				<van-icon
+					class="bagEdit"
+					@click="bagEditing"
+					:name="bagEdit ? 'delete' : 'checked'"
+				/>
+			</van-tag>
+			<channel-edit :bag-edit="bagEdit"></channel-edit>
+		</van-popup>
 	</div>
 </template>
 
 <script>
-import {mapActions, mapGetters} from "vuex";
+import { mapActions, mapGetters } from "vuex";
 import bubbleDialog from "@/views/bubbleDialog/index.vue";
+import channelEdit from "@/views/index/components/channel-edit.vue";
 
 export default {
 	name      : "bottomMenu",
-	components: {bubbleDialog},
+	components: { bubbleDialog, channelEdit },
 	data() {
 		return {
-			pause         : "false",
+			pause         : false,
 			archiveLoading: false,
-			bagTab        : "false"
+			bagTab        : false,
+			bagEdit       : "false"
 		};
 	},
 	created() {
 		// 获取timer的游戏世界时间(changeTime)
 		this.changeTime();
 	},
-	computed: {...mapGetters("timer", ["worldTime"])},
-	methods : {
+	computed: {
+		// 获取timer的游戏世界时间(worldTime)
+		...mapGetters("timer", ["worldTime"])
+	},
+	methods: {
+		// 获取timer的游戏世界时间(changeTime)
 		...mapActions("timer", ["changeTime"]),
+		// 暂停游戏
 		pauseBtn() {
 			this.pause = !this.pause;
 		},
+		// 读取存档
 		archive() {
 			this.archiveLoading = true;
 			setTimeout(() => {
 				this.archiveLoading = false;
 			}, 2000);
 		},
-		IllustratedBook() {
-		},
-		exploreNotes() {
-		},
-		aboutUs() {
-		},
+		IllustratedBook() {},
+		exploreNotes() {},
+		aboutUs() {},
+		// 背包显示
 		bagShow() {
 			this.bagTab = !this.bagTab;
-			setTimeout(function() {
-				this.bagTab = !this.bagTab;
-			}, 1200);
+		},
+		// 背包编辑
+		bagEditing() {
+			this.bagEdit = !this.bagEdit;
 		}
 	}
 };
@@ -148,12 +169,33 @@ export default {
 @import "@/assets/scss/_media.scss";
 @import "@/assets/scss/_color.scss";
 
+.bagPopupBox {
+	.bagBoxBar {
+		position: fixed;
+		z-index: 2;
+		width: 95.82%;
+		height: 60px;
+		border: unset;
+		border-top-left-radius: 8px;
+		border-top-right-radius: 8px;
+		align-items: center;
+		justify-content: space-evenly;
+		font-size: 16px;
+
+		.bagEdit {
+			position: absolute;
+			right: 60px;
+			font-size: 18px;
+		}
+	}
+}
+
 .bottomLine {
 	width: $body-width;
 	height: 6vh;
 	margin: 0 auto 0;
 	border: $border solid rgb(114, 50, 221);
-	
+
 	.time-list {
 		display: flex;
 		align-items: center;
@@ -163,12 +205,12 @@ export default {
 		margin: auto;
 		text-align: center;
 		border-radius: 5px;
-		
+
 		&:nth-child(2) {
 			width: 210px;
 		}
 	}
-	
+
 	.pause {
 		width: 191px;
 		height: 40px;
@@ -190,7 +232,7 @@ export default {
 	justify-content: space-around;
 	margin: 6px auto 0;
 	position: relative;
-	
+
 	.bagBox {
 		width: 100px;
 		height: 100px;
@@ -200,7 +242,7 @@ export default {
 		z-index: 2;
 		top: 50%;
 		transform: translateY(-50%);
-		
+
 		img {
 			position: absolute;
 			top: 50%;
@@ -211,7 +253,7 @@ export default {
 			z-index: 2;
 		}
 	}
-	
+
 	.textOutput {
 		height: $Menu-height;
 		border: $border solid #7232dd;
@@ -221,7 +263,7 @@ export default {
 		margin-top: 15px;
 		overflow: auto;
 	}
-	
+
 	.more {
 		height: $Menu-height;
 		border: $border solid #7232dd;
@@ -233,7 +275,7 @@ export default {
 		flex-wrap: wrap;
 		align-items: center;
 		justify-content: space-around;
-		
+
 		.archive,
 		.IllustratedBook,
 		.exploreNotes,
@@ -249,7 +291,7 @@ export default {
 			padding: 0;
 		}
 	}
-	
+
 	.menu-head {
 		width: 60px;
 		display: flex;
@@ -263,10 +305,10 @@ export default {
 		left: 6px;
 		z-index: 99;
 	}
-	
+
 	.bubbleDialogue {
 		width: 100px;
-		top:8px;
+		top: 8px;
 	}
 }
 </style>
