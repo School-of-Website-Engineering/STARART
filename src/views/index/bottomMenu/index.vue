@@ -4,6 +4,7 @@
 			<van-tag color="#7232dd" class="menu-head bubbleDialogue"
 				>文本输出
 			</van-tag>
+			<!--对话框-->
 			<van-col span="12" class="textOutput">
 				<bubble-dialog
 					class="bubbleDialog"
@@ -35,7 +36,20 @@
 					:is-left="true"
 					:avatar-img="require('@/assets/logo.png')"
 				/>
+				<bubble-dialog
+					class="bubbleDialog"
+					:content="`你拾取了蛋蛋`"
+					:is-left="true"
+					:avatar-img="require('@/assets/logo.png')"
+				/>
+				<bubble-dialog
+					class="bubbleDialog"
+					:content="`你拾取了邶贝`"
+					:is-left="true"
+					:avatar-img="require('@/assets/logo.png')"
+				/>
 			</van-col>
+
 			<van-col span="12" class="more">
 				<van-tag color="#7232dd" class="menu-head">更多</van-tag>
 				<div class="bagBox" @click="bagShow">
@@ -66,7 +80,7 @@
 					>世界图鉴
 				</van-button>
 				<van-button
-					@click="exploreNotes"
+					@click="showExploreNotes"
 					class="exploreNotes"
 					type="primary"
 					>探索笔记
@@ -104,10 +118,24 @@
 				<van-icon
 					class="bagEdit"
 					@click="bagEditing"
-					:name="bagEdit ? 'delete' : 'checked'"
+					:name="!bagEdit ? 'delete' : 'checked'"
 				/>
 			</van-tag>
 			<channel-edit :bag-edit="bagEdit"></channel-edit>
+		</van-popup>
+
+		<van-popup
+			class="bagPopupBox"
+			v-model="exploreNotes"
+			position="bottom"
+			:style="{ height: '40%' }"
+		>
+			<van-tag class="bagBoxBar" round size="large" type="primary">
+				<van-icon class="mapDescription" name="description" />
+				<span>探</span><span>索</span><span>笔</span><span>记</span>
+				<van-icon class="mapDescription" name="description" />
+			</van-tag>
+			<exploreNotes :bag-edit="bagEdit"></exploreNotes>
 		</van-popup>
 	</div>
 </template>
@@ -116,16 +144,18 @@
 import { mapActions, mapGetters } from "vuex";
 import bubbleDialog from "@/views/bubbleDialog/index.vue";
 import channelEdit from "@/views/index/components/channel-edit.vue";
+import exploreNotes from "@/views/index/components/exploreNotes.vue";
 
 export default {
 	name      : "bottomMenu",
-	components: { bubbleDialog, channelEdit },
+	components: { bubbleDialog, channelEdit, exploreNotes },
 	data() {
 		return {
 			pause         : false,
 			archiveLoading: false,
 			bagTab        : false,
-			bagEdit       : "false"
+			bagEdit       : false,
+			exploreNotes  : false
 		};
 	},
 	created() {
@@ -151,7 +181,6 @@ export default {
 			}, 2000);
 		},
 		IllustratedBook() {},
-		exploreNotes() {},
 		aboutUs() {},
 		// 背包显示
 		bagShow() {
@@ -160,6 +189,10 @@ export default {
 		// 背包编辑
 		bagEditing() {
 			this.bagEdit = !this.bagEdit;
+		},
+		// 探索笔记
+		showExploreNotes() {
+			this.exploreNotes = !this.exploreNotes;
 		}
 	}
 };
@@ -175,12 +208,14 @@ export default {
 		z-index: 2;
 		width: 95.82%;
 		height: 60px;
-		border: unset;
-		border-top-left-radius: 8px;
-		border-top-right-radius: 8px;
+		border-radius: unset;
 		align-items: center;
 		justify-content: space-evenly;
 		font-size: 16px;
+
+		.mapDescription {
+			font-size: 20px;
+		}
 
 		.bagEdit {
 			position: absolute;
@@ -201,7 +236,7 @@ export default {
 		align-items: center;
 		justify-content: space-between;
 		width: 128px;
-		height: 45px;
+		height: 43px;
 		margin: auto;
 		text-align: center;
 		border-radius: 5px;
@@ -212,8 +247,8 @@ export default {
 	}
 
 	.pause {
-		width: 191px;
-		height: 40px;
+		width: 196px;
+		height: 44px;
 		margin: auto;
 		display: flex;
 		font-size: 10px;
@@ -239,7 +274,7 @@ export default {
 		border: 2px solid #7232dd;
 		border-radius: 50%;
 		position: absolute;
-		z-index: 2;
+		z-index: 1;
 		top: 50%;
 		transform: translateY(-50%);
 
@@ -303,7 +338,7 @@ export default {
 		position: absolute;
 		top: -7px;
 		left: 6px;
-		z-index: 99;
+		z-index: 1;
 	}
 
 	.bubbleDialogue {

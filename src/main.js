@@ -29,6 +29,10 @@ Vue.use(Loading);
 Vue.use(Col);
 Vue.use(Row);
 Vue.use(Badge);
+
+// 全局事件总线
+Vue.prototype.$EventBus = new Vue()
+
 new Vue({
 	store,
 	router,

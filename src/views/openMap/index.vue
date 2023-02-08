@@ -7,9 +7,9 @@
 			text="查看大地图"
 			@click="mapShow = true"
 		/>
-		<van-overlay :show="mapShow" @click="mapShow = false">
+		<van-overlay class="vanOverlay" :show="mapShow" @click="mapShow = false">
 			<div class="wrapper">
-				<div class="block" />
+				<div class="block"/>
 			</div>
 		</van-overlay>
 	</div>
@@ -19,12 +19,19 @@
 export default {
 	name: "openMap",
 	data() {
-		return { mapShow: false };
+		return {
+			// 地图显示
+			mapShow: false
+		};
 	}
 };
 </script>
 
 <style lang="scss" scoped>
+.vanOverlay {
+	z-index: 3;
+}
+
 .mapBtn {
 	position: absolute;
 	bottom: 10px;

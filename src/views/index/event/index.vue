@@ -6,11 +6,47 @@
 				<div class="mapShow">
 					<open-map />
 				</div>
+				<div class="mapBoxContainer">
+					<van-button
+						class="tag home"
+						plain
+						type="info"
+						@click="openMapEvent(home)"
+						>{{ this.home[0] }}
+					</van-button>
+					<van-button
+						class="tag"
+						plain
+						type="primary"
+						@click="openMapEvent(cave)"
+						>{{ this.cave[0] }}
+					</van-button>
+					<van-button
+						class="tag"
+						plain
+						type="default"
+						@click="openMapEvent(ziYin)"
+						>{{ this.ziYin[0] }}
+					</van-button>
+					<van-button
+						class="tag"
+						plain
+						type="warning"
+						@click="openMapEvent(youDoWhat)"
+						>{{ this.youDoWhat[0] }}
+					</van-button>
+					<van-button
+						class="tag"
+						plain
+						type="danger"
+						@click="openMapEvent(pigeonNest)"
+						>{{ pigeonNest[0] }}
+					</van-button>
+				</div>
 			</van-col>
 			<van-col span="16" class="event">
-				<van-tag class="events-head" color="#7232dd">事件</van-tag>
 				<div class="mainflex">
-					<!-- TODO 事件区 -->
+					<!--  事件区 -->
 					<van-tag class="menu-list" type="primary" plain size="large"
 						>制作
 					</van-tag>
@@ -21,6 +57,9 @@
 						>休息
 					</van-tag>
 				</div>
+				<div class="eventContainer">
+					<explore-notes :event="name" />
+				</div>
 			</van-col>
 		</van-row>
 	</div>
@@ -28,10 +67,33 @@
 
 <script>
 import openMap from "@/views/openMap/index.vue";
+import exploreNotes from "@/views/index/components/exploreNotes.vue";
+import { mapGetters } from "vuex";
 
 export default {
-	name      : "event",
-	components: { openMap }
+	name: "event",
+	data: function() {
+		return {
+			name    : [],
+			isRender: true
+		};
+	},
+	components: { openMap, exploreNotes },
+	computed  : {
+		...mapGetters("mapEventName", [
+			"home",
+			"cave",
+			"ziYin",
+			"youDoWhat",
+			"pigeonNest"
+		])
+	},
+
+	methods: {
+		openMapEvent(name) {
+			this.name = name;
+		}
+	}
 };
 </script>
 
@@ -46,11 +108,12 @@ export default {
 	display: flex;
 	flex-wrap: wrap;
 	margin: 0;
+	z-index: 2;
 }
 
 .menu-list {
 	width: 18px;
-	height: 48px;
+	height: 54px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -58,6 +121,11 @@ export default {
 	border-radius: 5px;
 	margin-top: 10px;
 	padding: 8px;
+
+	&:active {
+		background-color: #7232dd;
+		color: #fff;
+	}
 }
 
 .eventMenu {
@@ -75,6 +143,26 @@ export default {
 		position: relative;
 		width: 38%;
 		margin-top: 12px;
+
+		.mapBoxContainer {
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+			overflow: hidden;
+
+			.tag {
+				width: 110px;
+				height: 80px;
+				margin: 12px 18px 12px 8px;
+				font-size: 9px;
+				text-align: center;
+				padding: 0;
+
+				&:nth-child(1) {
+					margin-left: 120px;
+				}
+			}
+		}
 	}
 
 	.event {
