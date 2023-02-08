@@ -24,9 +24,9 @@
 <script>
 export default {
 	props: {
-		content  : {type: String},
-		isLeft   : {type: Boolean},
-		avatarImg: {type: String}
+		content  : { type: String },
+		isLeft   : { type: Boolean },
+		avatarImg: { type: String }
 	}
 };
 </script>
@@ -78,10 +78,10 @@ export default {
 }
 
 .arrow-up-left {
-	width: 0;
-	height: 0;
+	width: 0px;
+	height: 0px;
 	border: 5px solid;
-	border-color: #f8fcff transparent transparent #f8fcff;
+	border-color: #f8fcff transparent transparent #e2e2e2;
 	position: absolute;
 	left: -5px;
 	top: 8px;

@@ -14,9 +14,11 @@ import {
 	Badge,
 	icon,
 	cell,
-	Overlay
+	Overlay,
+	Popup
 } from "vant";
 
+Vue.use(Popup);
 Vue.use(Overlay);
 Vue.use(cell);
 Vue.use(icon);

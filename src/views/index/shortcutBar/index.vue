@@ -6,73 +6,12 @@
 					快捷栏
 				</van-tag>
 				<div class="shortccutBarBody">
-					<van-badge color="#1989fa" :content="5">
-						<div class="child" />
-					</van-badge>
-					<van-badge color="#1989fa" :content="5">
-						<div class="child" />
-					</van-badge>
-					<van-badge color="#1989fa" :content="5">
-						<div class="child" />
-					</van-badge>
-					<van-badge color="#1989fa" :content="5">
-						<div class="child" />
-					</van-badge>
-					<van-badge color="#1989fa" :content="5">
-						<div class="child" />
-					</van-badge>
-					<van-badge color="#1989fa" :content="5">
-						<div class="child" />
-					</van-badge>
-					<van-badge color="#1989fa" :content="5">
-						<div class="child" />
-					</van-badge>
-					<van-badge color="#1989fa" :content="5">
-						<div class="child" />
-					</van-badge>
-					<van-badge color="#1989fa" :content="5">
-						<div class="child" />
-					</van-badge>
-					<van-badge color="#1989fa" :content="5">
-						<div class="child" />
-					</van-badge>
-					<van-badge color="#1989fa" :content="5">
-						<div class="child" />
-					</van-badge>
-					<van-badge color="#1989fa" :content="5">
-						<div class="child" />
-					</van-badge>
-					<van-badge color="#1989fa" :content="5">
-						<div class="child" />
-					</van-badge>
-					<van-badge color="#1989fa" :content="5">
-						<div class="child" />
-					</van-badge>
-					<van-badge color="#1989fa" :content="5">
-						<div class="child" />
-					</van-badge>
-					<van-badge color="#1989fa" :content="5">
-						<div class="child" />
-					</van-badge>
-					<van-badge color="#1989fa" :content="5">
-						<div class="child" />
-					</van-badge>
-					<van-badge color="#1989fa" :content="5">
-						<div class="child" />
-					</van-badge>
-					<van-badge color="#1989fa" :content="5">
-						<div class="child" />
-					</van-badge>
-					<van-badge color="#1989fa" :content="5">
-						<div class="child" />
-					</van-badge>
-					<van-badge color="#1989fa" :content="5">
-						<div class="child" />
-					</van-badge>
-					<van-badge color="#1989fa" :content="5">
-						<div class="child" />
-					</van-badge>
-					<van-badge color="#1989fa" :content="5">
+					<van-badge
+						v-for="(item, index) in 10"
+						:key="index"
+						color="#1989fa"
+						:content="index"
+					>
 						<div class="child" />
 					</van-badge>
 				</div>

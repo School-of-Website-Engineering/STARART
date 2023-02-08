@@ -4,7 +4,7 @@
 			<van-col span="8" class="text">
 				<van-tag class="events-head" color="#7232dd">地图</van-tag>
 				<div class="mapShow">
-					<open-map/>
+					<open-map />
 				</div>
 			</van-col>
 			<van-col span="16" class="event">
@@ -12,13 +12,13 @@
 				<div class="mainflex">
 					<!-- TODO 事件区 -->
 					<van-tag class="menu-list" type="primary" plain size="large"
-					>制作
+						>制作
 					</van-tag>
 					<van-tag class="menu-list" plain type="primary" size="large"
-					>天赋
+						>天赋
 					</van-tag>
 					<van-tag plain class="menu-list" type="primary" size="large"
-					>休息
+						>休息
 					</van-tag>
 				</div>
 			</van-col>
@@ -31,7 +31,7 @@ import openMap from "@/views/openMap/index.vue";
 
 export default {
 	name      : "event",
-	components: {openMap}
+	components: { openMap }
 };
 </script>
 
@@ -67,7 +67,7 @@ export default {
 	display: flex;
 	justify-content: space-around;
 	margin: 0 auto;
-	
+
 	.text {
 		height: $event-height;
 		border: $border solid #7232dd;
@@ -76,7 +76,7 @@ export default {
 		width: 38%;
 		margin-top: 12px;
 	}
-	
+
 	.event {
 		height: $event-height;
 		border: $border solid #7232dd;
@@ -85,7 +85,7 @@ export default {
 		width: 59%;
 		margin-top: 12px;
 	}
-	
+
 	.events-head {
 		display: flex;
 		justify-content: center;
