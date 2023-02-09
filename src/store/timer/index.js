@@ -60,14 +60,17 @@ export default {
 		pauseTime(state) {
 			state.speed = 0;
 		},
+
 		runGroup(state) {
 			// 生存鉴定期--第8天到第12天
 			// 生存高危期--第13天到第16天
 			// 自由探索期--第17天以上
+			let num;
+			let num2;
 			if (state.toDay < 7) {
-				let num = Math.floor(Math.random() * 8 + 1);
+				num = Math.floor(Math.random() * 8 + 1);
 				if (num >= 6) {
-					let num2 = Math.floor(Math.random() * 100 + 1);
+					num2 = Math.floor(Math.random() * 100 + 1);
 					if (num2 <= 20) {
 						state.message =
 							"鉴定骰子为：" +
@@ -93,7 +96,7 @@ export default {
 					state.message = "鉴定骰子为：" + num + "	暂无特殊事件";
 				}
 				else {
-					let num2 = Math.floor(Math.random() * 100 + 1);
+					num2 = Math.floor(Math.random() * 100 + 1);
 					if (num2 <= 40) {
 						state.message =
 							"鉴定骰子为：" +
