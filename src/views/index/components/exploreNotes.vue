@@ -38,6 +38,7 @@ export default {
 .eventsBox {
 	position: relative;
 	top: -170px;
+	width: 380px;
 }
 
 .events-head {

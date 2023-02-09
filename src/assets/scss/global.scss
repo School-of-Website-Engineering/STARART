@@ -9,6 +9,8 @@
 @keyframes alertMsg {
 	50% {
 		background-color: #7736e3;
+		color: #fff;
+		border: unset;
 	}
 }
 
@@ -19,6 +21,8 @@
 @keyframes warnMsg {
 	50% {
 		background-color: #ff976a;
+		color: #fff;
+		border: unset;
 	}
 }
 
@@ -29,6 +33,8 @@
 @keyframes dangerMsg {
 	50% {
 		background-color: #ee0a24;
+		color: #fff;
+		border: unset;
 	}
 }
 
@@ -39,5 +45,7 @@
 @keyframes friendlyMsg {
 	50% {
 		background-color: #07bc5d;
+		color: #fff;
+		border: unset;
 	}
 }

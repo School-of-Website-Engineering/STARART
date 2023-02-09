@@ -5,8 +5,8 @@
 				<div class="property">
 					<!-- 动态定义这里的数据，而不是硬编码 -->
 					<div class="attribute-name">
-						<van-tag color="#7232dd" plain
-							>天气:{{ this.getWeatherStatus }}</van-tag
+						<van-tag color="#7232dd" class="weather" plain
+							>天气:{{ getWeatherStatus }}</van-tag
 						>
 						<van-tag color="#2da44e" plain>生命:100</van-tag>
 						<van-tag type="warning " plain>防御力：100</van-tag>
