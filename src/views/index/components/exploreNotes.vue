@@ -2,16 +2,17 @@
 	<div class="exploreNotes">
 		<van-row>
 			<van-tag class="events-head" color="#7232dd"
-			>{{ event[0] || tips[0] }}
+				>{{ event[0] || tips[0] }}
 			</van-tag>
 			<van-col span="24" class="eventsBox">
 				<van-button
+					ref="eventBtnObjItem"
 					v-for="(item, index) in event"
 					:key="index"
 					:class="'tag' + ' eventBtnObj' + index"
 					plain
 					type="default"
-				>{{ item }}
+					>{{ item }}
 				</van-button>
 			</van-col>
 		</van-row>
@@ -22,26 +23,22 @@
 export default {
 	name: "exploreNotes",
 	data() {
-		return {tips: ["请选择事件"]};
-	}
-	,
+		return { tips: ["请选择事件"] };
+	},
 	props: {
 		event: {
 			type   : Array,
-			default:
-				() => []
+			default: () => []
 		}
-		
 	}
-	
-}
-;
+};
 </script>
 
 <style lang="scss" scoped>
 .eventsBox {
 	position: relative;
 	top: -170px;
+	width: 380px;
 }
 
 .events-head {
@@ -61,7 +58,7 @@ export default {
 .tag {
 	margin: 10px;
 	padding: 0 15px;
-	
+
 	&:first-child {
 		display: none;
 	}
