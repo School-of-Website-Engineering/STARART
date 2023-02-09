@@ -9,7 +9,8 @@
 					background="#fff"
 					left-icon="volume-o"
 					:scrollable="true"
-					text="侦测到暴风雨即将来临，请做好避难准备"
+					delay="3"
+					:text="message"
 				/>
 			</van-col>
 		</van-row>
@@ -17,18 +18,31 @@
 </template>
 
 <script>
-export default { name: "textOutput" };
+import {mapState} from "vuex";
+
+export default {
+	name: "textOutput",
+	data() {
+		return {};
+	},
+	computed: {
+		//引入timer的message
+		...mapState({message: state => state.timer.message})
+	}
+}
 </script>
 
 <style lang="scss" scoped>
 @import "@/assets/scss/_media.scss";
 @import "@/assets/scss/_color.scss";
+
 .textOutput {
 	height: $textOutput-height;
 	width: $body-width;
 	border: $border solid #7232dd;
 	position: relative;
 	margin-top: 10px;
+	
 	.textOut {
 		z-index: 1;
 		width: 70px;
@@ -44,6 +58,7 @@ export default { name: "textOutput" };
 		left: 0px;
 		background-color: #fff;
 	}
+	
 	.van-notice-bar {
 		width: 585px;
 		height: 100%;
