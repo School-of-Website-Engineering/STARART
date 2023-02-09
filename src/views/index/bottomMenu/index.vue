@@ -92,7 +92,7 @@
 		</van-row>
 		<van-row type="flex" justify="space-around" class="bottomLine">
 			<van-tag class="time-list" plain type="primary">
-				<span>第1天</span>
+				<span>第{{ this.toDay }}天</span>
 				<span>{{ this.worldTime }}</span>
 			</van-tag>
 			<van-tag class="time-list" plain type="primary">
@@ -147,15 +147,15 @@ import channelEdit from "@/views/index/components/channel-edit.vue";
 import exploreNotes from "@/views/index/components/exploreNotes.vue";
 
 export default {
-	name      : "bottomMenu",
+	name: "bottomMenu",
 	components: { bubbleDialog, channelEdit, exploreNotes },
 	data() {
 		return {
-			pause         : false,
+			pause: false,
 			archiveLoading: false,
-			bagTab        : false,
-			bagEdit       : false,
-			exploreNotes  : false
+			bagTab: false,
+			bagEdit: false,
+			exploreNotes: false,
 		};
 	},
 	created() {
@@ -163,8 +163,8 @@ export default {
 		this.changeTime();
 	},
 	computed: {
-		// 获取timer的游戏世界时间(worldTime)
-		...mapGetters("timer", ["worldTime"])
+		// 获取timer的游戏世界时间(worldTime，toDay)
+		...mapGetters("timer", ["worldTime", "toDay"]),
 	},
 	methods: {
 		// 获取timer的游戏世界时间(changeTime)
@@ -193,8 +193,8 @@ export default {
 		// 探索笔记
 		showExploreNotes() {
 			this.exploreNotes = !this.exploreNotes;
-		}
-	}
+		},
+	},
 };
 </script>
 

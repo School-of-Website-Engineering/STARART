@@ -1,25 +1,29 @@
 //游戏时间系统
 // 用于控制游戏世界时间的变化，以及游戏世界时间的加速
 import store from "@/store";
+import { addClassName } from "@/utils/flash";
 
 export default {
 	namespaced: true,
 	actions   : {
 		// 改变游戏世界时间，每秒改变一次
-		changeTime({  commit, state }) {
+		changeTime({ commit, state }) {
 			let minutes = state.minutes,
-				hours = state.hours;
+				hours = state.hours,
+				toDay = state.toDay;
 			setInterval(() => {
 				if (state.speed !== 0) {
 					minutes++;
 					if (minutes > 59) {
 						minutes = 0;
 						hours++;
-						//调用weatherSys vuex模块的mutations中的UPDATE_WEATHER_STATUS
-						store.commit("weatherSys/UPDATE_WEATHER_STATUS");
 					}
 					if (hours > 24) {
 						hours = 0;
+						toDay++;
+						//调用weatherSys vuex模块的mutations中的UPDATE_WEATHER_STATUS
+						store.commit("weatherSys/UPDATE_WEATHER_STATUS");
+						addClassName(".time-list", ["alertMsg", ""]);
 					}
 					commit("updateTime", { hours, minutes });
 				}
@@ -41,6 +45,10 @@ export default {
 			state.hours = hours;
 			state.minutes = minutes;
 		},
+		// 更新游戏世界天数
+		updateToDay(state, toDay) {
+			state.toDay = toDay;
+		},
 		// 更新加速参数
 		updateSpeed(state, { speed }) {
 			state.speed = speed;
@@ -54,7 +62,8 @@ export default {
 	state: {
 		hours  : 0,
 		minutes: 0,
-		speed  : 0.1 //初始加速为1
+		speed  : 0.001, //初始加速为1
+		toDay  : 1
 	},
 	getters: {
 		// 获取游戏世界时间
@@ -68,6 +77,10 @@ export default {
 		// 获取当前加速倍数
 		speed: (state) => {
 			return state.speed;
+		},
+		// 获取游戏世界天数
+		toDay: (state) => {
+			return state.toDay;
 		}
 	}
 };

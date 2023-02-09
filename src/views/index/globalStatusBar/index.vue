@@ -38,8 +38,6 @@ export default {
 @import "@/assets/scss/_media.scss";
 @import "@/assets/scss/_color.scss";
 
-.globalStatusBox {
-}
 .globalStatus {
 	height: $globalStatusBar-height;
 	width: $body-width;
