@@ -6,14 +6,29 @@
 					<!-- 动态定义这里的数据，而不是硬编码 -->
 					<div class="attribute-name">
 						<van-tag color="#7232dd" class="weather" plain
-							>天气:{{ getWeatherStatus }}</van-tag
+							>天气:{{ getWeatherStatus }}
+						</van-tag>
+						<van-tag color="#2da44e" plain
+							>生命:{{ Health }}</van-tag
 						>
-						<van-tag color="#2da44e" plain>生命:100</van-tag>
-						<van-tag type="warning " plain>防御力：100</van-tag>
-						<van-tag type="danger " plain>口渴：0</van-tag>
-						<van-tag type="success " plain>魅力：100</van-tag>
-						<van-tag type="primary" plain>灵巧值：100</van-tag>
-						<van-tag type="primary" plain>背包格子：20</van-tag>
+						<van-tag type="warning " plain
+							>防御力：{{ Defens }}</van-tag
+						>
+						<van-tag v-show="this.Hungry > 60" type="warning " plain
+							>饥饿值：{{ Hungry }}</van-tag
+						>
+						<van-tag type="danger " plain
+							>口渴：{{ Water }}</van-tag
+						>
+						<van-tag type="success " plain
+							>魅力：{{ Chars }}</van-tag
+						>
+						<van-tag type="primary" plain
+							>灵巧值：{{ Dex }}</van-tag
+						>
+						<van-tag type="primary" plain
+							>背包格子：{{ Backpack }}</van-tag
+						>
 					</div>
 				</div>
 			</van-col>
@@ -22,7 +37,7 @@
 </template>
 
 <script>
-import { mapGetters } from "vuex";
+import { mapGetters, mapState } from "vuex";
 
 export default {
 	created() {
@@ -30,7 +45,19 @@ export default {
 	},
 	name    : "globalStatusBar",
 	//获取天气状态(getWeatherStatus)
-	computed: { ...mapGetters("weatherSys", ["getWeatherStatus"]) }
+	computed: {
+		...mapGetters("weatherSys", ["getWeatherStatus"]),
+		...mapState("player", [
+			"Health",
+			"Hungry",
+			"Defens",
+			"Backpack",
+			"Water",
+			"Hungry",
+			"Dex",
+			"Chars"
+		])
+	}
 };
 </script>
 
@@ -45,12 +72,14 @@ export default {
 
 	.property {
 		height: 100%;
+
 		.attribute-name {
 			display: flex;
 			justify-content: start;
 			flex-wrap: wrap;
 			text-align: center;
 			float: left;
+
 			.van-tag {
 				margin-right: 8px;
 				margin-top: 4px;
