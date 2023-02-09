@@ -6,7 +6,7 @@ import { addClassName } from "@/utils/flash";
 export default {
 	namespaced: true,
 	actions   : {
-		// 改变游戏世界时间，每秒改变一次
+		// 改变游戏世界时间，每秒改变一次，初始化时调用
 		changeTime({ commit, state }) {
 			let minutes = state.minutes,
 				hours = state.hours,
@@ -38,6 +38,10 @@ export default {
 		// 暂停游戏时间
 		pauseTime({ commit }) {
 			commit("pauseTime");
+		},
+		// 恢复游戏时间
+		resumeTime({ commit }) {
+			commit("updateSpeed", { speed: 1 });
 		}
 	},
 	mutations: {
@@ -59,6 +63,10 @@ export default {
 		// 暂停游戏世界时间
 		pauseTime(state) {
 			state.speed = 0;
+		},
+		// 恢复游戏世界时间
+		resumeTime(state) {
+			state.speed = 1;
 		},
 
 		runGroup(state) {
