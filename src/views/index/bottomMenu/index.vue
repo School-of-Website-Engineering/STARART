@@ -2,7 +2,7 @@
 	<div class="bottomMenuBox">
 		<van-row type="flex" justify="space-around" class="bottomMenu">
 			<van-tag color="#7232dd" class="menu-head bubbleDialogue"
-			>信息
+				>信息
 			</van-tag>
 			<!--对话框-->
 			<van-col span="12" class="textOutput">
@@ -49,7 +49,7 @@
 					:avatar-img="require('@/assets/logo.png')"
 				/>
 			</van-col>
-			
+
 			<van-col span="12" class="more">
 				<van-tag color="#7232dd" class="menu-head">更多</van-tag>
 				<div class="bagBox" @click="bagShow">
@@ -63,7 +63,7 @@
 						alt=""
 					/>
 				</div>
-				
+
 				<van-button
 					@click="archive"
 					class="archive"
@@ -77,16 +77,16 @@
 					@click="IllustratedBook"
 					class="World IllustratedBook"
 					color="#7232dd"
-				>世界图鉴
+					>世界图鉴
 				</van-button>
 				<van-button
 					@click="showExploreNotes"
 					class="exploreNotes"
 					type="primary"
-				>探索笔记
+					>探索笔记
 				</van-button>
 				<van-button @click="aboutUs" class="aboutUs" type="warning"
-				>关于我们
+					>关于我们
 				</van-button>
 			</van-col>
 		</van-row>
@@ -97,14 +97,14 @@
 			</van-tag>
 			<van-tag class="time-list" plain type="primary">
 				<span>当前时间:</span>
-				<span>{{worldStatus}}</span>
+				<span>{{ worldStatus }}</span>
 			</van-tag>
 			<van-button
 				@click="pauseBtn"
-				:icon="this.pause ? 'pause' : 'play'"
+				:icon="!this.pause ? 'pause' : 'play'"
 				class="pause"
 				type="danger"
-			>暂停游戏
+				>暂停游戏
 			</van-button>
 		</van-row>
 		<van-popup
@@ -118,7 +118,7 @@
 				round
 				size="large"
 				type="primary"
-			><span>背</span><span>包</span>
+				><span>背</span><span>包</span>
 				<van-icon
 					class="bagEdit"
 					@click="bagEditing"
@@ -127,7 +127,7 @@
 			</van-tag>
 			<channel-edit :bag-edit="bagEdit"></channel-edit>
 		</van-popup>
-		
+
 		<van-popup
 			class="bagPopupBox"
 			v-model="exploreNotes"
@@ -135,9 +135,9 @@
 			:style="{ height: '40%' }"
 		>
 			<van-tag class="noteBoxBar" round size="large" type="primary">
-				<van-icon class="mapDescription" name="description"/>
+				<van-icon class="mapDescription" name="description" />
 				<span>探</span><span>索</span><span>笔</span><span>记</span>
-				<van-icon class="mapDescription" name="description"/>
+				<van-icon class="mapDescription" name="description" />
 			</van-tag>
 			<exploreNotes :bag-edit="bagEdit"></exploreNotes>
 		</van-popup>
@@ -145,14 +145,14 @@
 </template>
 
 <script>
-import {mapActions, mapGetters, mapState} from "vuex";
+import { mapActions, mapGetters, mapState } from "vuex";
 import bubbleDialog from "@/views/bubbleDialog/index.vue";
 import channelEdit from "@/views/index/components/channel-edit.vue";
 import exploreNotes from "@/views/index/components/exploreNotes.vue";
 
 export default {
 	name      : "bottomMenu",
-	components: {bubbleDialog, channelEdit, exploreNotes},
+	components: { bubbleDialog, channelEdit, exploreNotes },
 	data() {
 		return {
 			pause         : false,
@@ -165,7 +165,7 @@ export default {
 	//监听时间变化并赋值给setCurrentTime
 	watch: {
 		worldTime() {
-			this.setCurrentTime(this.worldTime)
+			this.setCurrentTime(this.worldTime);
 		}
 	},
 	created() {
@@ -179,14 +179,22 @@ export default {
 		...mapState("timeState", ["worldStatus", "worldStatus"])
 	},
 	methods: {
-		// 获取timer的游戏世界时间(changeTime)
-		...mapActions("timer", ["changeTime"]),
+		// 获取timer的游戏世界时间(changeTime,pauseTime,resumeTime)
+		...mapActions("timer", ["changeTime", "pauseTime", "resumeTime"]),
 		//获取timeState的天气(setCurrentTime)
 		...mapActions("timeState", ["setCurrentTime"]),
-		
-		// 暂停游戏
+
+		// 暂停与开始游戏
 		pauseBtn() {
 			this.pause = !this.pause;
+			// 暂停游戏
+			if (this.pause) {
+				this.pauseTime();
+			}
+			else {
+				// 开始游戏
+				this.resumeTime();
+			}
 		},
 		// 读取存档
 		archive() {
@@ -195,10 +203,8 @@ export default {
 				this.archiveLoading = false;
 			}, 2000);
 		},
-		IllustratedBook() {
-		},
-		aboutUs() {
-		},
+		IllustratedBook() {},
+		aboutUs() {},
 		// 背包显示
 		bagShow() {
 			this.bagTab = !this.bagTab;
@@ -224,7 +230,7 @@ export default {
 		border-top-left-radius: 10px;
 		border-top-right-radius: 10px;
 	}
-	
+
 	.noteBoxBar {
 		position: fixed;
 		z-index: 2;
@@ -235,7 +241,7 @@ export default {
 		justify-content: space-evenly;
 		font-size: 16px;
 	}
-	
+
 	.bagBoxBar {
 		position: fixed;
 		z-index: 2;
@@ -244,11 +250,11 @@ export default {
 		align-items: center;
 		justify-content: space-evenly;
 		font-size: 16px;
-		
+
 		.mapDescription {
 			font-size: 20px;
 		}
-		
+
 		.bagEdit {
 			position: absolute;
 			right: 60px;
@@ -262,7 +268,7 @@ export default {
 	height: 6vh;
 	margin: 0 auto 0;
 	border: $border solid rgb(114, 50, 221);
-	
+
 	.time-list {
 		display: flex;
 		align-items: center;
@@ -272,12 +278,12 @@ export default {
 		margin: auto;
 		text-align: center;
 		border-radius: 5px;
-		
+
 		&:nth-child(2) {
 			width: 210px;
 		}
 	}
-	
+
 	.pause {
 		width: 196px;
 		height: 44px;
@@ -299,7 +305,7 @@ export default {
 	justify-content: space-around;
 	margin: 6px auto 0;
 	position: relative;
-	
+
 	.bagBox {
 		width: 100px;
 		height: 100px;
@@ -309,7 +315,7 @@ export default {
 		z-index: 1;
 		top: 50%;
 		transform: translateY(-50%);
-		
+
 		img {
 			position: absolute;
 			top: 50%;
@@ -320,7 +326,7 @@ export default {
 			z-index: 2;
 		}
 	}
-	
+
 	.textOutput {
 		height: $Menu-height;
 		border: $border solid #7232dd;
@@ -330,7 +336,7 @@ export default {
 		margin-top: 15px;
 		overflow: auto;
 	}
-	
+
 	.more {
 		height: $Menu-height;
 		border: $border solid #7232dd;
@@ -342,7 +348,7 @@ export default {
 		flex-wrap: wrap;
 		align-items: center;
 		justify-content: space-around;
-		
+
 		.archive,
 		.IllustratedBook,
 		.exploreNotes,
@@ -358,7 +364,7 @@ export default {
 			padding: 0;
 		}
 	}
-	
+
 	.menu-head {
 		width: 60px;
 		display: flex;
@@ -372,7 +378,7 @@ export default {
 		left: 6px;
 		z-index: 1;
 	}
-	
+
 	.bubbleDialogue {
 		width: 100px;
 		top: 8px;
