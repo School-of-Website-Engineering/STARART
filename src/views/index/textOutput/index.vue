@@ -3,7 +3,7 @@
 		<van-row type="flex" justify="space-around">
 			<van-col span="24" class="textOutput">
 				<van-tag color="#7232dd" class="textOut">
-					新消息
+					消息
 				</van-tag>
 				<van-notice-bar
 					background="#fff"

@@ -1,4 +1,4 @@
-# TinyWaste
+<img src="https://capsule-render.vercel.app/api?type=Waving&color=777&height=200&animation=fadeIn&section=header&text=STARART-星之往昔&fontAlignY=30&desc=探索%20生存-[CodeLing-Stuido]-跑团%20冒险&fontSize=40" />
 
 ![](https://img.shields.io/badge/%E7%8A%B6%E6%80%81-%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%8F%91%E4%B8%AD-green)<!--![](https://img.shields.io/badge/%E7%8A%B6%E6%80%81-%E5%B0%B1%E7%BB%AA-orange)-->
 [![standard-readme compliant](https://img.shields.io/badge/readme%20style-standard-brightgreen.svg?style=flat-square)](https://github.com/RichardLitt/standard-readme)
@@ -6,14 +6,6 @@
 ![](https://img.shields.io/badge/Vue-%5E2.6.14-success)
 ![](https://img.shields.io/badge/Node-%20%5E16.18.0-brightgreen)
 ![](https://img.shields.io/badge/npm-%5E8.19.2-blue)
-
-TinyWaste 的重写版本
-
----
-
-(预览页面)--[Demo-Page](http://sowe.social/TinyWaste/#/)
-
----
 
 ## 内容列表
 
@@ -35,9 +27,9 @@ TinyWaste 的重写版本
 
 ## 背景
 
-`TinyWaste` 最开始因为 [@JDSA Ling](https://github.com/LingASDJ)
+`STARART-星之往昔` 最开始因为 [@JDSA Ling](https://github.com/LingASDJ)
 在 [Rosy-DR-Code-Ling](https://github.com/School-of-Website-Engineering/Rosy-DR-Code-Ling)
-项目中了解到[@Aoyang Liao](https://github.com/liaoaoyang)的 `TinyWaste`项目需要优化，因此我们一拍即合，这个项目也就从这开始了。
+项目中了解到“ERR”需要让我们帮忙接管一个文字游戏，也就是海带酒的 `TinyWaste`项目需要优化。我们经过讨论，我们打算参考这个游戏重写一个，并改名为STARART-星之往昔，这个项目也就从这开始了。
 
 # Git 规范
 

@@ -1,3 +1,4 @@
+//背景闪烁
 //工具方法 增加提示类 增加一个新的类名
 //第一个参数接收被控制的元素类名
 //第二个参数接收需要新增的类名
@@ -32,7 +33,7 @@ export const addClassName = (className, newClassName) => {
 };
 // //使用方法示例：
 // //JS中调用：
-// addClassName(".className", ["alertMsg", "warnMsg"]);
+// addClassName(".className", ["alertMsg", ""]);
 
 // //Vue中：
-// this.addClassName(".className", ["dangerMsg", "friendlyMsg"]);
+// this.addClassName(".className", ["dangerMsg", ""]);
