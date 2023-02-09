@@ -1,5 +1,3 @@
-# STARART-星之往昔
-
 <img src="https://capsule-render.vercel.app/api?type=Waving&color=777&height=200&animation=fadeIn&section=header&text=STARART-星之往昔&fontAlignY=30&desc=探索%20生存-[CodeLing-Stuido]-跑团%20冒险&fontSize=40" />
 
 ![](https://img.shields.io/badge/%E7%8A%B6%E6%80%81-%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%8F%91%E4%B8%AD-green)<!--![](https://img.shields.io/badge/%E7%8A%B6%E6%80%81-%E5%B0%B1%E7%BB%AA-orange)-->
@@ -8,14 +6,6 @@
 ![](https://img.shields.io/badge/Vue-%5E2.6.14-success)
 ![](https://img.shields.io/badge/Node-%20%5E16.18.0-brightgreen)
 ![](https://img.shields.io/badge/npm-%5E8.19.2-blue)
-
-STARART-星之往昔
-
----
-
-(预览页面)--[Demo-Page](http://sowe.social/TinyWaste/#/)
-
----
 
 ## 内容列表
 
