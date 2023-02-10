@@ -37,7 +37,7 @@
 </template>
 
 <script>
-import { mapGetters, mapState,mapActions } from "vuex";
+import { mapGetters, mapState, mapActions } from "vuex";
 
 export default {
 	created() {
@@ -59,7 +59,7 @@ export default {
 		]),
 		//获取weatherSys天气状态weatherStatus
 		...mapState("weatherSys", ["weatherStatus"]),
-		...mapActions("player", ["HealthUp"]),
+		...mapActions("player", ["HealthUp"])
 		//如果为晴天情况下玩家的生命恢复速度上升5%
 	}
 };

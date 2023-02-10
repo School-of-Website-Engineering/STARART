@@ -125,14 +125,14 @@ export default {
 					}
 				}
 			}
-			else if (state.toDay < 12) {
-				state.message = "生存鉴定期--第8天到第12天";
+			else if (state.toDay < 10) {
+				state.message = "更多事件和区域解锁";
 			}
-			else if (state.toDay < 16) {
-				state.message = "生存高危期--第13天到第16天";
+			else if (state.toDay < 13) {
+				state.message = "更多高危事件和隐藏区域解锁";
 			}
 			else {
-				state.message = "自由探索期";
+				state.message = "自由探索开启，无尽的探索才刚刚开始";
 			}
 		}
 	},
@@ -142,7 +142,7 @@ export default {
 		minutes: 0,
 		speed  : 0.0001, //初始加速为1
 		toDay  : 1,
-		message: "生存评估期--第1天到第7天"
+		message: "准备期"
 	},
 	getters: {
 		// 获取游戏世界时间
