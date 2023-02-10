@@ -9,7 +9,7 @@
 					background="#fff"
 					left-icon="volume-o"
 					:scrollable="true"
-					delay="3"
+					delay="2"
 					:text="message"
 				/>
 			</van-col>
