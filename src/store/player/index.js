@@ -1,8 +1,13 @@
 //玩家属性值
 export default {
 	namespaced: true,
-	actions   : {},
-	mutations : {
+	actions   : {
+		// 玩家的生命(Health)恢复速度上升5%
+		HealthUp({commit, state}) {
+			commit("updateHealth", state.Health + 5);
+		}
+	},
+	mutations: {
 		//设置玩家属性值
 		updateHealth(state, payload) {
 			state.Health = payload;
@@ -24,11 +29,16 @@ export default {
 		},
 		updateChar(state, payload) {
 			state.Chars = payload;
+		},
+		//设置玩家buff
+		// 玩家的生命(Health)恢复速度上升5%
+		HealthUp({commit, state}) {
+			commit("updateHealth", state.Health + 5);
 		}
 	},
 	state: {
 		// 生命值
-		Health  : 100,
+		Health  : 50,
 		// 防御值
 		Defens  : 20,
 		// 背包容量

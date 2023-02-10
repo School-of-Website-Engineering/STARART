@@ -37,7 +37,7 @@
 </template>
 
 <script>
-import { mapGetters, mapState } from "vuex";
+import { mapGetters, mapState,mapActions } from "vuex";
 
 export default {
 	created() {
@@ -56,7 +56,11 @@ export default {
 			"Hungry",
 			"Dex",
 			"Chars"
-		])
+		]),
+		//获取weatherSys天气状态weatherStatus
+		...mapState("weatherSys", ["weatherStatus"]),
+		...mapActions("player", ["HealthUp"]),
+		//如果为晴天情况下玩家的生命恢复速度上升5%
 	}
 };
 </script>
@@ -81,7 +85,7 @@ export default {
 			float: left;
 
 			.van-tag {
-				margin-right: 8px;
+				margin-right: 18px;
 				margin-top: 4px;
 				height: 42px;
 			}
