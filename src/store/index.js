@@ -7,8 +7,8 @@ import foods from "@/store/foods";
 import player from "@/store/player";
 import timeState from "@/store/timeState";
 import weatherSys from "@/store/weatherSys";
-import mapEventName from "@/store/mapEventName";
+import mapEvent from "@/store/mapEvent";
 
 Vue.use(Vuex);
 
-export default new Vuex.Store({modules: {isShowLoading, timer, player, foods, basicValue, timeState, weatherSys, mapEventName}});
+export default new Vuex.Store({modules: {isShowLoading, timer, player, foods, basicValue, timeState, weatherSys, mapEvent}});

@@ -2,12 +2,11 @@
 	<div class="exploreNotes">
 		<van-row>
 			<van-tag class="events-head" color="#7232dd"
-				>{{ event[0] || tips[0] }}
+				>{{ mapEventInfo.name || tips[0] }}
 			</van-tag>
 			<van-col span="24" class="eventsBox">
 				<van-button
-					ref="eventBtnObjItem"
-					v-for="(item, index) in event"
+					v-for="(item, index) in mapEventInfo.things"
 					:key="index"
 					:class="'tag' + ' eventBtnObj' + index"
 					plain
@@ -20,17 +19,15 @@
 </template>
 
 <script>
+import { mapState } from "vuex";
+
 export default {
 	name: "exploreNotes",
 	data() {
-		return { tips: ["请选择事件"] };
+		return {tips: ["请选择事件"]};
 	},
-	props: {
-		event: {
-			type   : Array,
-			default: () => []
-		}
-	}
+	//获取mapEvent模块的mapEvent、mapEventInfo
+	computed: {...mapState({ mapEventInfo: (state) => state.mapEvent.mapEventInfo })}
 };
 </script>
 

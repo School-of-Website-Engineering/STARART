@@ -8,39 +8,13 @@
 				</div>
 				<div class="mapBoxContainer">
 					<van-button
-						class="tag home"
-						plain
-						type="info"
-						@click="openMapEvent(home)"
-						>{{ this.home[0] }}
-					</van-button>
-					<van-button
-						class="tag"
-						plain
-						type="primary"
-						@click="openMapEvent(cave)"
-						>{{ this.cave[0] }}
-					</van-button>
-					<van-button
-						class="tag"
-						plain
-						type="default"
-						@click="openMapEvent(ziYin)"
-						>{{ this.ziYin[0] }}
-					</van-button>
-					<van-button
-						class="tag"
-						plain
-						type="warning"
-						@click="openMapEvent(youDoWhat)"
-						>{{ this.youDoWhat[0] }}
-					</van-button>
-					<van-button
+						v-for="(item, index) in mapEvent"
+						:key="index"
 						class="tag"
 						plain
 						type="danger"
-						@click="openMapEvent(pigeonNest)"
-						>{{ pigeonNest[0] }}
+						@click="getEventInfo(item)"
+						>{{ item.name }}
 					</van-button>
 				</div>
 			</van-col>
@@ -58,7 +32,7 @@
 					</van-tag>
 				</div>
 				<div class="eventContainer">
-					<explore-notes :event="name" />
+					<exploreNotes />
 				</div>
 			</van-col>
 		</van-row>
@@ -68,30 +42,26 @@
 <script>
 import openMap from "@/views/openMap/index.vue";
 import exploreNotes from "@/views/index/components/exploreNotes.vue";
-import { mapGetters } from "vuex";
+import { mapMutations, mapState } from "vuex";
 
 export default {
 	name: "event",
 	data: function() {
-		return {
-			name    : [],
-			isRender: true
-		};
+		return { isRender: true };
 	},
 	components: { openMap, exploreNotes },
+	//获取mapEvent模块的mapEvent、mapEventInfo
 	computed  : {
-		...mapGetters("mapEventName", [
-			"home",
-			"cave",
-			"ziYin",
-			"youDoWhat",
-			"pigeonNest"
-		])
+		...mapState({
+			mapEvent    : (state) => state.mapEvent.mapEvent,
+			mapEventInfo: (state) => state.mapEvent.mapEventInfo
+		})
 	},
-
 	methods: {
-		openMapEvent(name) {
-			this.name = name;
+		// 点击后使用commit方法提交一个mutation(setEventInfo)
+		...mapMutations({ setEventInfo: "mapEvent/setEventInfo" }),
+		getEventInfo(item) {
+			this.setEventInfo(item);
 		}
 	}
 };
