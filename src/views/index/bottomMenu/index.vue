@@ -152,6 +152,7 @@ export default {
 		...mapState("timeState", ["worldStatus", "worldStatus"]),
 		// 获取timer模块的chatData
 		...mapState("timer", ["chatData"]),
+
 		// 将chatData转换为list
 		chatList() {
 			// 如果chatData不存在，返回空数组

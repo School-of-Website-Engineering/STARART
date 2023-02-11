@@ -73,6 +73,8 @@ export default {
 	position: relative;
 	display: inline-block;
 	border: 1px solid #e2e2e2;
+	max-width: 220px;
+	text-align: left;
 }
 
 .msg-content {
