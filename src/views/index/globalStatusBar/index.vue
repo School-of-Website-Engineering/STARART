@@ -70,7 +70,17 @@ export default {
 @import "@/assets/scss/_color.scss";
 
 .globalStatus {
+
+	//媒体查询 手机
+	@media only screen and (max-width: 500px) {
 	height: $globalStatusBar-height;
+	}
+
+	//媒体查询 电脑
+	@media only screen and (min-width: 500px) {
+		height: 21px;
+	}
+
 	width: $body-width;
 	margin: 5px;
 
@@ -84,10 +94,22 @@ export default {
 			text-align: center;
 			float: left;
 
-			.van-tag {
-				margin-right: 18px;
-				margin-top: 4px;
-				height: 42px;
+			//手机端
+			@media only screen and (max-width: 500px) {
+				.van-tag {
+					margin-right: 18px;
+					margin-top: 4px;
+					height: 20px;
+				} 
+			}
+
+			//电脑端
+			@media only screen and (min-width: 500px) {
+				.van-tag {
+					margin-right: 18px;
+					margin-top: 4px;
+					height: 20px;
+				} 
 			}
 		}
 	}
