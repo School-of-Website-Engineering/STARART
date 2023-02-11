@@ -42,6 +42,18 @@ export default {
 		// 恢复游戏时间
 		resumeTime({ commit }) {
 			commit("updateSpeed", { speed: 1 });
+		},
+		//添加聊天框
+		addChatBox({ commit }, chatBox) {
+			commit("ADD_CHATBOX", chatBox);
+		},
+		// 删除聊天框
+		deleteChatBox({ commit }, index) {
+			commit("DELETE_CHATBOX", index);
+		},
+		// 更新聊天框
+		updateChatBox({ commit }, payload) {
+			commit("UPDATE_CHATBOX", payload);
 		}
 	},
 	mutations: {
@@ -134,15 +146,58 @@ export default {
 			else {
 				state.message = "自由探索开启，无尽的探索才刚刚开始";
 			}
+		},
+		ADD_CHATBOX(state, chatBox) {
+			// 添加聊天框
+			state.chatData.push(chatBox);
+		},
+		DELETE_CHATBOX(state, index) {
+			// 删除聊天框
+			state.chatData.splice(index, 1);
+		},
+		UPDATE_CHATBOX(state, payload) {
+			// 修改聊天框
+			state.chatData.splice(payload.index, 1, payload.chatBox);
 		}
 	},
 
 	state: {
-		hours  : 0,
-		minutes: 0,
-		speed  : 0.0001, //初始加速为1
-		toDay  : 1,
-		message: "准备期"
+		hours      : 0,
+		minutes    : 0,
+		speed      : 0.0001, //初始加速为1
+		toDay      : 1,
+		message    : "准备期 第1天到第7天",
+		messageInfo: "nisadfads",
+		chatData   : [
+			{
+				id  : 1,
+				text: "你好sdfas"
+			},
+			{
+				id  : 2,
+				text: "dasfasdfwer"
+			},
+			{
+				id  : 3,
+				text: "qwer"
+			},
+			{
+				id  : 4,
+				text: "rqwer"
+			},
+			{
+				id  : 5,
+				text: "qwerew"
+			},
+			{
+				id  : 6,
+				text: "qewr"
+			},
+			{
+				id  : 7,
+				text: "qwer"
+			}
+		]
 	},
 	getters: {
 		// 获取游戏世界时间

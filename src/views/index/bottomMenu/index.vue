@@ -6,48 +6,18 @@
 			</van-tag>
 			<!--对话框-->
 			<van-col span="12" class="textOutput">
-				<bubble-dialog
-					class="bubbleDialog"
-					:content="`你拾取了一个东西`"
-					:is-left="true"
-					:avatar-img="require('@/assets/logo.png')"
-				/>
-				<bubble-dialog
-					class="bubbleDialog"
-					:content="`你拾取了大便`"
-					:is-left="true"
-					:avatar-img="require('@/assets/logo.png')"
-				/>
-				<bubble-dialog
-					class="bubbleDialog"
-					:content="`你拾取了馒头`"
-					:is-left="true"
-					:avatar-img="require('@/assets/logo.png')"
-				/>
-				<bubble-dialog
-					class="bubbleDialog"
-					:content="`你拾取了一个木头`"
-					:is-left="true"
-					:avatar-img="require('@/assets/logo.png')"
-				/>
-				<bubble-dialog
-					class="bubbleDialog"
-					:content="`你拾取了只因`"
-					:is-left="true"
-					:avatar-img="require('@/assets/logo.png')"
-				/>
-				<bubble-dialog
-					class="bubbleDialog"
-					:content="`你拾取了蛋蛋`"
-					:is-left="true"
-					:avatar-img="require('@/assets/logo.png')"
-				/>
-				<bubble-dialog
-					class="bubbleDialog"
-					:content="`你拾取了邶贝`"
-					:is-left="true"
-					:avatar-img="require('@/assets/logo.png')"
-				/>
+				<div class="chat-box">
+					<ul>
+						<li v-for="item in chatList" :key="item.id">
+							<bubble-dialog
+								class="bubbleDialog"
+								:content="item.text"
+								:is-left="true"
+								:avatar-img="require('@/assets/logo.png')"
+							/>
+						</li>
+					</ul>
+				</div>
 			</van-col>
 
 			<van-col span="12" class="more">
@@ -146,7 +116,7 @@
 
 <script>
 import { mapActions, mapGetters, mapState } from "vuex";
-import bubbleDialog from "@/views/bubbleDialog/index.vue";
+import bubbleDialog from "@/views/index/components/bubbleDialog/index.vue";
 import channelEdit from "@/views/index/components/channel-edit.vue";
 import exploreNotes from "@/views/index/components/exploreNotes.vue";
 
@@ -155,10 +125,13 @@ export default {
 	components: { bubbleDialog, channelEdit, exploreNotes },
 	data() {
 		return {
+			//暂停按钮状态
 			pause         : false,
 			archiveLoading: false,
 			bagTab        : false,
+			//背包编辑状态
 			bagEdit       : false,
+			//探索笔记状态
 			exploreNotes  : false
 		};
 	},
@@ -176,7 +149,25 @@ export default {
 		// 获取timer的游戏世界时间(worldTime，toDay)
 		...mapGetters("timer", ["worldTime", "toDay"]),
 		//获取timeState的状态(worldStatus,worldStatus)
-		...mapState("timeState", ["worldStatus", "worldStatus"])
+		...mapState("timeState", ["worldStatus", "worldStatus"]),
+		// 获取timer模块的chatData
+		...mapState("timer", ["chatData"]),
+		// 将chatData转换为list
+		chatList() {
+			// 如果chatData不存在，返回空数组
+			const data = this.chatData || [];
+			// 定义一个空数组
+			const list = [];
+			// 遍历chatData
+			data.forEach((item) => {
+				list.push({
+					id  : item.id,
+					text: item.text
+				});
+			});
+			// 返回list
+			return list;
+		}
 	},
 	methods: {
 		// 获取timer的游戏世界时间(changeTime,pauseTime,resumeTime)
