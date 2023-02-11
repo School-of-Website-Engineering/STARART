@@ -18,14 +18,14 @@
 
 <script>
 import bubbleDialog from "@/views/index/components/bubbleDialog";
-import {mapState} from "vuex";
+import { mapState } from "vuex";
 
 export default {
-	components: {bubbleDialog},
-	computed  : {
+	components: { bubbleDialog },
+	computed: {
 		// 获取timer模块的chatData
 		...mapState("timer", ["chatData"]),
-		
+
 		// 将chatData转换为list
 		chatList() {
 			// 如果chatData不存在，返回空数组
@@ -35,19 +35,18 @@ export default {
 			// 遍历chatData
 			data.forEach((item) => {
 				list.push({
-					id  : item.id,
-					text: item.text
+					id: item.id,
+					text: item.text,
 				});
 			});
 			// 返回list
 			return list;
-		}
-	}
+		},
+	},
 };
 </script>
 
 <style lang="scss" scoped>
-
 @import "@/assets/scss/_media.scss";
 @import "@/assets/scss/_color.scss";
 .textOutput {

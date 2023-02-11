@@ -121,25 +121,25 @@ import channelEdit from "@/views/index/components/channel-edit.vue";
 import exploreNotes from "@/views/index/components/exploreNotes.vue";
 
 export default {
-	name      : "bottomMenu",
+	name: "bottomMenu",
 	components: { bubbleDialog, channelEdit, exploreNotes },
 	data() {
 		return {
 			//暂停按钮状态
-			pause         : false,
+			pause: false,
 			archiveLoading: false,
-			bagTab        : false,
+			bagTab: false,
 			//背包编辑状态
-			bagEdit       : false,
+			bagEdit: false,
 			//探索笔记状态
-			exploreNotes  : false
+			exploreNotes: false,
 		};
 	},
 	//监听时间变化并赋值给setCurrentTime
 	watch: {
 		worldTime() {
 			this.setCurrentTime(this.worldTime);
-		}
+		},
 	},
 	created() {
 		// 获取timer的游戏世界时间(changeTime)
@@ -162,13 +162,13 @@ export default {
 			// 遍历chatData
 			data.forEach((item) => {
 				list.push({
-					id  : item.id,
-					text: item.text
+					id: item.id,
+					text: item.text,
 				});
 			});
 			// 返回list
 			return list;
-		}
+		},
 	},
 	methods: {
 		// 获取timer的游戏世界时间(changeTime,pauseTime,resumeTime)
@@ -182,8 +182,7 @@ export default {
 			// 暂停游戏
 			if (this.pause) {
 				this.pauseTime();
-			}
-			else {
+			} else {
 				// 开始游戏
 				this.resumeTime();
 			}
@@ -208,8 +207,8 @@ export default {
 		// 探索笔记
 		showExploreNotes() {
 			this.exploreNotes = !this.exploreNotes;
-		}
-	}
+		},
+	},
 };
 </script>
 
