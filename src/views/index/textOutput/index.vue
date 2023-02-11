@@ -18,7 +18,7 @@
 </template>
 
 <script>
-import {mapState} from "vuex";
+import { mapState } from "vuex";
 
 export default {
 	name: "textOutput",
@@ -27,9 +27,9 @@ export default {
 	},
 	computed: {
 		//引入timer的message
-		...mapState({message: state => state.timer.message})
+		...mapState({ message: (state) => state.timer.message })
 	}
-}
+};
 </script>
 
 <style lang="scss" scoped>
@@ -42,7 +42,7 @@ export default {
 	border: $border solid #7232dd;
 	position: relative;
 	margin-top: 10px;
-	
+
 	.textOut {
 		z-index: 1;
 		width: 70px;
@@ -58,7 +58,7 @@ export default {
 		left: 0px;
 		background-color: #fff;
 	}
-	
+
 	.van-notice-bar {
 		width: 585px;
 		height: 100%;
