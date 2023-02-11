@@ -39,6 +39,11 @@ export default {
 	transform: translateX(-50%);
 	width: 230px;
 	height: 50px;
+	@media only screen and (min-width: 500px){
+		left: 80%;
+		width: 200px;
+		height: 50px;
+	}
 }
 
 .wrapper {

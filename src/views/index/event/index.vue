@@ -7,28 +7,19 @@
 					<open-map />
 				</div>
 				<div class="mapBoxContainer">
-					<van-button
-						v-for="(item, index) in mapEvent"
-						:key="index"
-						class="tag"
-						plain
-						type="danger"
-						@click="getEventInfo(item)"
-						>{{ item.name }}
+					<van-button v-for="(item, index) in mapEvent" :key="index" class="tag" plain type="danger"
+						@click="getEventInfo(item)">{{ item.name }}
 					</van-button>
 				</div>
 			</van-col>
 			<van-col span="16" class="event">
 				<div class="mainflex">
 					<!--  事件区 -->
-					<van-tag class="menu-list" type="primary" plain size="large"
-						>制作
+					<van-tag class="menu-list" type="primary" plain size="large">制作
 					</van-tag>
-					<van-tag class="menu-list" plain type="primary" size="large"
-						>天赋
+					<van-tag class="menu-list" plain type="primary" size="large">天赋
 					</van-tag>
-					<van-tag plain class="menu-list" type="primary" size="large"
-						>休息
+					<van-tag plain class="menu-list" type="primary" size="large">休息
 					</van-tag>
 				</div>
 				<div class="eventContainer">
@@ -46,14 +37,14 @@ import { mapMutations, mapState } from "vuex";
 
 export default {
 	name: "event",
-	data: function() {
+	data: function () {
 		return { isRender: true };
 	},
 	components: { openMap, exploreNotes },
 	//获取mapEvent模块的mapEvent、mapEventInfo
-	computed  : {
+	computed: {
 		...mapState({
-			mapEvent    : (state) => state.mapEvent.mapEvent,
+			mapEvent: (state) => state.mapEvent.mapEvent,
 			mapEventInfo: (state) => state.mapEvent.mapEventInfo
 		})
 	},
@@ -96,6 +87,11 @@ export default {
 		background-color: #7232dd;
 		color: #fff;
 	}
+
+	@media only screen and (min-width: 500px) {
+		width: 18px;
+		height: 24px;
+	}
 }
 
 .eventMenu {
@@ -111,25 +107,28 @@ export default {
 		border: $border solid #7232dd;
 		border-radius: $border-radius;
 		position: relative;
-		width: 38%;
-		margin-top: 12px;
 
-		.mapBoxContainer {
-			display: flex;
-			flex-wrap: wrap;
-			align-items: center;
-			overflow: hidden;
+		@media only screen and (min-width: 500px) {
+			width: 38%;
+			margin-top: 12px;
 
-			.tag {
-				width: 110px;
-				height: 80px;
-				margin: 12px 18px 12px 8px;
-				font-size: 9px;
-				text-align: center;
-				padding: 0;
+			.mapBoxContainer {
+				display: flex;
+				flex-wrap: wrap;
+				align-items: center;
+				overflow: hidden;
 
-				&:nth-child(1) {
-					margin-left: 120px;
+				.tag {
+					width: 110px;
+					height: 80px;
+					margin: 12px 18px 12px 8px;
+					font-size: 9px;
+					text-align: center;
+					padding: 0;
+
+					&:nth-child(1) {
+						margin-left: 120px;
+					}
 				}
 			}
 		}
@@ -140,22 +139,26 @@ export default {
 		border: $border solid #7232dd;
 		border-radius: $border-radius;
 		position: relative;
-		width: 59%;
-		margin-top: 12px;
+
+		@media only screen and (min-width: 500px) {
+			width: 59%;
+			margin-top: 12px;
+		}
 	}
 
 	.events-head {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		width: 59px;
-		height: 40px;
-		text-align: center;
 		border-radius: 5px;
-		position: absolute;
-		top: -3px;
-		left: 6px;
-		background-color: #fff;
+
+		@media only screen and (min-width: 500px) {
+			width: 59px;
+			height: 40px;
+			display: flex;
+			justify-content: center;
+			line-height: 40px;
+			position: absolute;
+			top: -10px;
+			left: 6px;
+		}
 	}
 }
 </style>

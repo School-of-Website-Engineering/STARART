@@ -1,20 +1,15 @@
 <template>
 	<div class="bottomMenuBox">
 		<van-row type="flex" justify="space-around" class="bottomMenu">
-			<van-tag color="#7232dd" class="menu-head bubbleDialogue"
-				>信息
-			</van-tag>
 			<!--对话框-->
-			<van-col span="12" class="textOutput">
+			<van-tag color="#7232dd" class="menu-head">信息
+			</van-tag>
+			<van-col class="textOutput">
 				<div class="chat-box">
 					<ul>
 						<li v-for="item in chatList" :key="item.id">
-							<bubble-dialog
-								class="bubbleDialog"
-								:content="item.text"
-								:is-left="true"
-								:avatar-img="require('@/assets/logo.png')"
-							/>
+							<bubble-dialog class="bubbleDialog" :content="item.text" :is-left="true"
+								:avatar-img="require('@/assets/logo.png')" />
 						</li>
 					</ul>
 				</div>
@@ -23,40 +18,23 @@
 			<van-col span="12" class="more">
 				<van-tag color="#7232dd" class="menu-head">更多</van-tag>
 				<div class="bagBox" @click="bagShow">
-					<img
-						class="bag"
-						:src="
-							bagTab
-								? require('@/assets/bag.png')
-								: require('@/assets/bagClick.png')
-						"
-						alt=""
-					/>
+					<img class="bag" :src="
+						bagTab
+							? require('@/assets/bag.png')
+							: require('@/assets/bagClick.png')
+					" alt="" />
 				</div>
 
-				<van-button
-					@click="archive"
-					class="archive"
-					:loading="this.archiveLoading"
-					type="info"
-					loading-text="加载中..."
-				>
+				<van-button @click="archive" class="archive" id="button-actiive" :loading="this.archiveLoading"
+					type="info" loading-text="加载中...">
 					读取存档
 				</van-button>
-				<van-button
-					@click="IllustratedBook"
-					class="World IllustratedBook"
-					color="#7232dd"
-					>世界图鉴
+				<van-button @click="IllustratedBook" class="World IllustratedBook" id="button-actiive"
+					color="#7232dd">世界图鉴
 				</van-button>
-				<van-button
-					@click="showExploreNotes"
-					class="exploreNotes"
-					type="primary"
-					>探索笔记
+				<van-button @click="showExploreNotes" class="exploreNotes" id="button-actiive" type="primary">探索笔记
 				</van-button>
-				<van-button @click="aboutUs" class="aboutUs" type="warning"
-					>关于我们
+				<van-button @click="aboutUs" class="aboutUs" id="button-actiive" type="warning">关于我们
 				</van-button>
 			</van-col>
 		</van-row>
@@ -69,41 +47,17 @@
 				<span>当前时间:</span>
 				<span>{{ worldStatus }}</span>
 			</van-tag>
-			<van-button
-				@click="pauseBtn"
-				:icon="!this.pause ? 'pause' : 'play'"
-				class="pause"
-				type="danger"
-				>暂停游戏
+			<van-button @click="pauseBtn" :icon="!this.pause ? 'pause' : 'play'" class="pause" type="danger">暂停游戏
 			</van-button>
 		</van-row>
-		<van-popup
-			class="bagPopupBox"
-			v-model="bagTab"
-			position="bottom"
-			:style="{ height: '40%' }"
-		>
-			<van-tag
-				class="bagBoxBar bagBoxBarBorder"
-				round
-				size="large"
-				type="primary"
-				><span>背</span><span>包</span>
-				<van-icon
-					class="bagEdit"
-					@click="bagEditing"
-					:name="!bagEdit ? 'delete' : 'checked'"
-				/>
+		<van-popup class="bagPopupBox" v-model="bagTab" position="bottom" :style="{ height: '40%' }">
+			<van-tag class="bagBoxBar bagBoxBarBorder" round size="large" type="primary"><span>背</span><span>包</span>
+				<van-icon class="bagEdit" @click="bagEditing" :name="!bagEdit ? 'delete' : 'checked'" />
 			</van-tag>
 			<channel-edit :bag-edit="bagEdit"></channel-edit>
 		</van-popup>
 
-		<van-popup
-			class="bagPopupBox"
-			v-model="exploreNotes"
-			position="bottom"
-			:style="{ height: '40%' }"
-		>
+		<van-popup class="bagPopupBox" v-model="exploreNotes" position="bottom" :style="{ height: '40%' }">
 			<van-tag class="noteBoxBar" round size="large" type="primary">
 				<van-icon class="mapDescription" name="description" />
 				<span>探</span><span>索</span><span>笔</span><span>记</span>
@@ -132,7 +86,7 @@ export default {
 			//背包编辑状态
 			bagEdit: false,
 			//探索笔记状态
-			exploreNotes: false,
+			exploreNotes: false
 		};
 	},
 	//监听时间变化并赋值给setCurrentTime
@@ -163,7 +117,7 @@ export default {
 			data.forEach((item) => {
 				list.push({
 					id: item.id,
-					text: item.text,
+					text: item.text
 				});
 			});
 			// 返回list
@@ -194,8 +148,8 @@ export default {
 				this.archiveLoading = false;
 			}, 2000);
 		},
-		IllustratedBook() {},
-		aboutUs() {},
+		IllustratedBook() { },
+		aboutUs() { },
 		// 背包显示
 		bagShow() {
 			this.bagTab = !this.bagTab;
@@ -273,6 +227,11 @@ export default {
 		&:nth-child(2) {
 			width: 210px;
 		}
+		@media only screen and (min-width: 500px){
+			width: 145px;
+		height: 20px;
+		line-height: 20px;
+		}
 	}
 
 	.pause {
@@ -284,6 +243,10 @@ export default {
 		justify-content: center;
 		align-items: center;
 		border-radius: 5px;
+		@media only screen and (min-width: 500px){
+			width: 200px;
+			height: 20px;
+		}
 	}
 }
 
@@ -316,6 +279,25 @@ export default {
 			height: 100px;
 			z-index: 2;
 		}
+
+		@media only screen and (min-width: 500px) {
+			width: 100px;
+			height: 100px;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+
+		img {
+			width: 100px;
+			height: 100px;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			width: 100px;
+			height: 100px;
+			z-index: 2;
+		}
 	}
 
 	.textOutput {
@@ -323,9 +305,11 @@ export default {
 		border: $border solid #7232dd;
 		border-radius: $border-radius;
 		position: relative;
-		width: 43%;
-		margin-top: 15px;
 		overflow: auto;
+		@media only screen and (min-width: 500px) {
+			width: 43%;
+			margin-top: 15px;
+		}
 	}
 
 	.more {
@@ -334,7 +318,7 @@ export default {
 		border-radius: 5px;
 		position: relative;
 		width: 54%;
-		margin-top: 15px;
+		margin-top: 5px;
 		display: flex;
 		flex-wrap: wrap;
 		align-items: center;
@@ -367,12 +351,19 @@ export default {
 		position: absolute;
 		top: -7px;
 		left: 6px;
-		z-index: 1;
+
+		@media only screen and (min-width: 500px) {
+			width: 60px;
+			top: -7px;
+			left: 6px;
+		}
 	}
 
-	.bubbleDialogue {
-		width: 100px;
-		top: 8px;
+	@media only screen and (min-width: 500px) {
+		#button-actiive {
+			width: 120px;
+			height: 40px;
+		}
 	}
 }
 </style>
