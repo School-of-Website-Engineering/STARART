@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.6](https://github.com/School-of-Website-Engineering/STARART/compare/v1.3.5...v1.3.6) (2023-02-11)
+
+
+### Code Refactoring
+
+* 使用vuex传递数据以便与后端交互，性能优化 ([b9d44ac](https://github.com/School-of-Website-Engineering/STARART/commit/b9d44acaaab0f9a5fb392585c47e146be59ba92a))
+
 ## [1.3.5](https://github.com/School-of-Website-Engineering/STARART/compare/v1.3.4...v1.3.5) (2023-02-07)
 
 
