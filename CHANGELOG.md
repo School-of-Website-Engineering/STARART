@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.0](https://github.com/School-of-Website-Engineering/STARART/compare/v1.3.6...v1.4.0) (2023-02-11)
+
+
+### Features
+
+* 信息动态获取，拆分组件，提升代码可读性，微调快捷栏样式 ([7125354](https://github.com/School-of-Website-Engineering/STARART/commit/7125354a8305446a99753412302bc01da8554be5))
+
 ## [1.3.6](https://github.com/School-of-Website-Engineering/STARART/compare/v1.3.5...v1.3.6) (2023-02-11)
 
 
