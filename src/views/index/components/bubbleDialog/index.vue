@@ -68,6 +68,7 @@ export default {
 	@media only screen and (min-width: 500px) {
 		width: 40px;
 		height: 40px;
+		border: 2mm ridge rgb(7, 255, 85);
 	}	
 	//PE媒体查询
 	@media only screen and (max-width: 500px) {
@@ -76,7 +77,7 @@ export default {
 		
 	}	
 	border-radius: 20px;
-	border: 2px solid #1989fa;	
+	border: 4px solid #1989fa;	
 }
 
 .bubble {
