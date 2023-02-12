@@ -281,10 +281,8 @@ export default {
 		}
 
 		@media only screen and (min-width: 500px) {
-			width: 100px;
-			height: 100px;
-			top: 50%;
-			transform: translateY(-50%);
+			width: 50px;
+			height: 50px;
 		}
 
 		img {
@@ -297,6 +295,10 @@ export default {
 			width: 100px;
 			height: 100px;
 			z-index: 2;
+			@media only screen and (min-width: 500px){
+				width: 50px;
+				height: 50px;
+			}
 		}
 	}
 
@@ -308,7 +310,7 @@ export default {
 		overflow: auto;
 		@media only screen and (min-width: 500px) {
 			width: 43%;
-			margin-top: 15px;
+			margin-top: 11px;
 		}
 	}
 

@@ -101,12 +101,14 @@ export default {
 	display: flex;
 	justify-content: space-around;
 	margin: 0 auto;
+	margin-top: 5px;
 
 	.text {
 		height: $event-height;
 		border: $border solid #7232dd;
 		border-radius: $border-radius;
 		position: relative;
+		margin-top: 12px;
 
 		@media only screen and (min-width: 500px) {
 			width: 38%;
@@ -139,6 +141,7 @@ export default {
 		border: $border solid #7232dd;
 		border-radius: $border-radius;
 		position: relative;
+		margin-top: 12px;
 
 		@media only screen and (min-width: 500px) {
 			width: 59%;
