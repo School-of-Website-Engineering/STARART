@@ -87,14 +87,25 @@ export default {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	border: $border solid;
-	border-radius: 5px;
-	margin-top: 10px;
+	border: 1mm ridge rgba(0, 0, 0, 0.6);
+	margin-top: 8px;
 	padding: 8px;
 
 	&:active {
 		background-color: #7232dd;
 		color: #fff;
+	}
+	//PE媒体查询
+	@media only screen and (max-width: 500px) {
+		width: 24px;
+		height: 24px;
+	}
+	@media only screen and (min-width: 500px) {
+		width: 40px;
+		height: 24px;
+		top: -8px;
+		font-weight: bold;
+		border-radius: 14px;
 	}
 }
 
@@ -105,31 +116,36 @@ export default {
 	display: flex;
 	justify-content: space-around;
 	margin: 0 auto;
+	margin-top: 5px;
 
 	.text {
 		height: $event-height;
 		border: $border solid #7232dd;
 		border-radius: $border-radius;
 		position: relative;
-		width: 38%;
 		margin-top: 12px;
 
-		.mapBoxContainer {
-			display: flex;
-			flex-wrap: wrap;
-			align-items: center;
-			overflow: hidden;
+		@media only screen and (min-width: 500px) {
+			width: 38%;
+			margin-top: 12px;
 
-			.tag {
-				width: 110px;
-				height: 80px;
-				margin: 12px 18px 12px 8px;
-				font-size: 9px;
-				text-align: center;
-				padding: 0;
+			.mapBoxContainer {
+				display: flex;
+				flex-wrap: wrap;
+				align-items: center;
+				overflow: hidden;
 
-				&:nth-child(1) {
-					margin-left: 120px;
+				.tag {
+					width: 110px;
+					height: 80px;
+					margin: 12px 18px 12px 8px;
+					font-size: 9px;
+					text-align: center;
+					padding: 0;
+
+					&:nth-child(1) {
+						margin-left: 120px;
+					}
 				}
 			}
 		}
@@ -140,22 +156,27 @@ export default {
 		border: $border solid #7232dd;
 		border-radius: $border-radius;
 		position: relative;
-		width: 59%;
 		margin-top: 12px;
+
+		@media only screen and (min-width: 500px) {
+			width: 59%;
+			margin-top: 12px;
+		}
 	}
 
 	.events-head {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		width: 59px;
-		height: 40px;
-		text-align: center;
 		border-radius: 5px;
-		position: absolute;
-		top: -3px;
-		left: 6px;
-		background-color: #fff;
+
+		@media only screen and (min-width: 500px) {
+			width: 59px;
+			height: 40px;
+			display: flex;
+			justify-content: center;
+			line-height: 40px;
+			position: absolute;
+			top: -10px;
+			left: 6px;
+		}
 	}
 }
 </style>

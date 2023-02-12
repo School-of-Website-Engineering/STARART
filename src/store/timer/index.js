@@ -1,19 +1,26 @@
 //游戏时间系统
 // 用于控制游戏世界时间的变化，以及游戏世界时间的加速
 import store from "@/store";
-import {addClassName} from "@/utils/flash";
+import { addClassName } from "@/utils/flash";
 
 //随机返回字符串
 function getRandomWeather() {
-	let weather = ["新的一天开始，进行骰子鉴定", "新的一天到来，开始骰子鉴定", "每天开始都会进行骰子鉴定，骰子开始鉴定", "骰子鉴定开始", "骰子开始鉴定", "开始进行骰子鉴定"];
+	let weather = [
+		"新的一天开始，进行骰子鉴定",
+		"新的一天到来，开始骰子鉴定",
+		"每天开始都会进行骰子鉴定，骰子开始鉴定",
+		"骰子鉴定开始",
+		"骰子开始鉴定",
+		"开始进行骰子鉴定"
+	];
 	let num = Math.floor(Math.random() * 6);
 	return weather[num];
-};
+}
 export default {
 	namespaced: true,
 	actions   : {
 		// 改变游戏世界时间，每秒改变一次，初始化时调用
-		changeTime({commit, state}) {
+		changeTime({ commit, state }) {
 			let minutes = state.minutes,
 				hours = state.hours,
 				Day = state.toDay;
@@ -33,39 +40,39 @@ export default {
 						//调用timer vuex模块的mutations中的runGroup
 						store.commit("timer/runGroup");
 					}
-					commit("updateTime", {hours, minutes, Day});
+					commit("updateTime", { hours, minutes, Day });
 				}
 			}, state.speed * 1000);
 		},
 		// 改变加速倍数
-		changeSpeed({commit}, speed) {
-			commit("updateSpeed", {speed});
+		changeSpeed({ commit }, speed) {
+			commit("updateSpeed", { speed });
 		},
 		// 暂停游戏时间
-		pauseTime({commit}) {
+		pauseTime({ commit }) {
 			commit("pauseTime");
 		},
 		// 恢复游戏时间
-		resumeTime({commit}) {
-			commit("updateSpeed", {speed: 1});
+		resumeTime({ commit }) {
+			commit("updateSpeed", { speed: 1 });
 		},
 		//添加聊天框
-		addChatBox({commit}, chatBox) {
+		addChatBox({ commit }, chatBox) {
 			commit("ADD_CHATBOX", chatBox);
 		},
 		// 删除聊天框
-		deleteChatBox({commit}, index) {
+		deleteChatBox({ commit }, index) {
 			commit("DELETE_CHATBOX", index);
 		},
 		// 更新聊天框
-		updateChatBox({commit}, payload) {
+		updateChatBox({ commit }, payload) {
 			commit("UPDATE_CHATBOX", payload);
 		}
 	},
 	mutations: {
 		//设置时间
 		// 更新游戏世界时间
-		updateTime(state, {hours, minutes, Day}) {
+		updateTime(state, { hours, minutes, Day }) {
 			state.hours = hours;
 			state.minutes = minutes;
 			state.toDay = Day;
@@ -75,7 +82,7 @@ export default {
 			state.toDay = toDay;
 		},
 		// 更新加速参数
-		updateSpeed(state, {speed}) {
+		updateSpeed(state, { speed }) {
 			state.speed = speed;
 		},
 		// 暂停游戏世界时间
@@ -149,9 +156,8 @@ export default {
 						id  : state.chatData.length + 1,
 						text: getRandomWeather()
 					}),
-					(state.message = "鉴定骰子为：(" +
-					num +
-					") 暂无特殊事件");
+					(state.message =
+							"鉴定骰子为：(" + num + ") 暂无特殊事件");
 				}
 				else {
 					num2 = Math.floor(Math.random() * 100 + 1);
@@ -213,7 +219,7 @@ export default {
 						text: "第十一天开始"
 					});
 				}
-				(state.message = "更多高危事件和隐藏区域解锁");
+				state.message = "更多高危事件和隐藏区域解锁";
 			}
 			//第十三天开始到第十四天
 			else {
@@ -225,7 +231,7 @@ export default {
 						text: "第十四天到来"
 					});
 				}
-				(state.message = "自由探索开启，无尽的探索才刚刚开始");
+				state.message = "自由探索开启，无尽的探索才刚刚开始";
 			}
 		},
 		ADD_CHATBOX(state, chatBox) {

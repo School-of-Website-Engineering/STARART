@@ -7,7 +7,9 @@ export default [
 	{
 		path     : "/codeling",
 		component: () =>
-			import(/* webpackChunkName: "eggs" */ "@/components/Header/Header.vue"),
+			import(
+				/* webpackChunkName: "eggs" */ "@/components/Header/Header.vue"
+			),
 		name: "codeling"
 	},
 	{

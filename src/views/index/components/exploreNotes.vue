@@ -24,7 +24,7 @@ import { mapState } from "vuex";
 export default {
 	name: "exploreNotes",
 	data() {
-		return {tips: ["请选择事件"]};
+		return { tips: ["请选择事件"] };
 	},
 	//获取mapEvent模块的mapEvent、mapEventInfo
 	computed: {...mapState({ mapEventInfo: (state) => state.mapEvent.mapEventInfo })}
@@ -34,6 +34,10 @@ export default {
 <style lang="scss" scoped>
 .eventsBox {
 	position: relative;
+	//电脑媒体查询
+	@media only screen and (min-width: 500px) {
+		top: -210px;
+	}
 	top: -170px;
 	width: 380px;
 }
@@ -49,7 +53,13 @@ export default {
 	position: absolute;
 	top: -3px;
 	left: 6px;
-	background-color: #fff;
+
+	@media only screen and (min-width: 500px) {
+		width: 124px;
+		height: 40px;
+		top: -10px;
+		left: 6px;
+	}
 }
 
 .tag {
@@ -64,30 +74,63 @@ export default {
 .eventBtnObj0 {
 	border-color: #ff976a;
 	color: #ff976a;
+	//电脑媒体查询
+	@media only screen and (min-width: 500px) {
+		height: 40px;
+	}
 }
 
 .eventBtnObj1 {
 	color: #1989fa;
 	border-color: #1989fa;
+	//电脑媒体查询
+	@media only screen and (min-width: 500px) {
+		height: 40px;
+	}
 }
 
 .eventBtnObj2 {
 	color: #07bc5d;
 	border-color: #07bc5d;
+	//电脑媒体查询
+	@media only screen and (min-width: 500px) {
+		height: 40px;
+	}
 }
 
 .eventBtnObj3 {
 	color: #7e3afb;
 	border-color: #7e3afb;
+	//电脑媒体查询
+	@media only screen and (min-width: 500px) {
+		height: 40px;
+	}
 }
 
 .eventBtnObj4 {
 	color: #ee0a24;
 	border-color: #ee0a24;
+	//电脑媒体查询
+	@media only screen and (min-width: 500px) {
+		height: 40px;
+	}
 }
 
 .eventBtnObj5 {
 	color: #88c1fa;
 	border-color: #88c1fa;
+	//电脑媒体查询
+	@media only screen and (min-width: 500px) {
+		height: 40px;
+	}
+}
+
+.eventBtnObj6 {
+	color: #95a6b8;
+	border-color: #95a6b8;
+	//电脑媒体查询
+	@media only screen and (min-width: 500px) {
+		height: 40px;
+	}
 }
 </style>

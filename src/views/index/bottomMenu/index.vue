@@ -1,11 +1,9 @@
 <template>
 	<div class="bottomMenuBox">
 		<van-row type="flex" justify="space-around" class="bottomMenu">
-			<van-tag color="#7232dd" class="menu-head bubbleDialogue"
-				>信息
-			</van-tag>
 			<!--对话框-->
-			<van-col span="12" class="textOutput">
+			<van-tag color="#7232dd" class="menu-head">信息 </van-tag>
+			<van-col class="textOutput">
 				<div class="chat-box">
 					<ul>
 						<li v-for="item in chatList" :key="item.id">
@@ -27,8 +25,8 @@
 						class="bag"
 						:src="
 							bagTab
-								? require('@/assets/bag.png')
-								: require('@/assets/bagClick.png')
+								? require('@/assets/bag.svg')
+								: require('@/assets/bagClick.svg')
 						"
 						alt=""
 					/>
@@ -37,6 +35,7 @@
 				<van-button
 					@click="archive"
 					class="archive"
+					id="button-actiive"
 					:loading="this.archiveLoading"
 					type="info"
 					loading-text="加载中..."
@@ -46,16 +45,22 @@
 				<van-button
 					@click="IllustratedBook"
 					class="World IllustratedBook"
+					id="button-actiive"
 					color="#7232dd"
 					>世界图鉴
 				</van-button>
 				<van-button
 					@click="showExploreNotes"
 					class="exploreNotes"
+					id="button-actiive"
 					type="primary"
 					>探索笔记
 				</van-button>
-				<van-button @click="aboutUs" class="aboutUs" type="warning"
+				<van-button
+					@click="aboutUs"
+					class="aboutUs"
+					id="button-actiive"
+					type="warning"
 					>关于我们
 				</van-button>
 			</van-col>
@@ -274,10 +279,15 @@ export default {
 		&:nth-child(2) {
 			width: 210px;
 		}
+		@media only screen and (min-width: 500px) {
+			width: 145px;
+			height: 30px;
+			line-height: 20px;
+		}
 	}
 
 	.pause {
-		width: 196px;
+		width: 205px;
 		height: 44px;
 		margin: auto;
 		display: flex;
@@ -285,11 +295,16 @@ export default {
 		justify-content: center;
 		align-items: center;
 		border-radius: 5px;
+		@media only screen and (min-width: 500px) {
+			width: 211px;
+			height: 30px;
+		}
 	}
 }
 
 .bottomMenu {
 	border: $border solid #7232dd;
+
 	width: $body-width;
 	height: $bottomMenu-height;
 	border-bottom: none;
@@ -301,7 +316,7 @@ export default {
 	.bagBox {
 		width: 100px;
 		height: 100px;
-		border: 2px solid #7232dd;
+		border: 2mm ridge rgba(50, 220, 132, 0.3);
 		border-radius: 50%;
 		position: absolute;
 		z-index: 1;
@@ -317,6 +332,31 @@ export default {
 			height: 100px;
 			z-index: 2;
 		}
+
+		@media only screen and (min-width: 500px) {
+			width: 50px;
+			height: 50px;
+		}
+
+		img {
+			width: 100px;
+			height: 100px;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			width: 100px;
+			height: 100px;
+			z-index: 2;
+			@media only screen and (min-width: 500px) {
+				width: 40px;
+				height: 40px;
+			}
+			@media only screen and (max-width: 500px) {
+				width: 45px;
+				height: 45px;
+			}
+		}
 	}
 
 	.textOutput {
@@ -324,9 +364,11 @@ export default {
 		border: $border solid #7232dd;
 		border-radius: $border-radius;
 		position: relative;
-		width: 43%;
-		margin-top: 15px;
 		overflow: auto;
+		@media only screen and (min-width: 500px) {
+			width: 43%;
+			margin-top: 11px;
+		}
 	}
 
 	.more {
@@ -335,7 +377,7 @@ export default {
 		border-radius: 5px;
 		position: relative;
 		width: 54%;
-		margin-top: 15px;
+		margin-top: 5px;
 		display: flex;
 		flex-wrap: wrap;
 		align-items: center;
@@ -368,12 +410,19 @@ export default {
 		position: absolute;
 		top: -7px;
 		left: 6px;
-		z-index: 1;
+
+		@media only screen and (min-width: 500px) {
+			width: 60px;
+			top: -7px;
+			left: 6px;
+		}
 	}
 
-	.bubbleDialogue {
-		width: 100px;
-		top: 8px;
+	@media only screen and (min-width: 500px) {
+		#button-actiive {
+			width: 120px;
+			height: 40px;
+		}
 	}
 }
 </style>
