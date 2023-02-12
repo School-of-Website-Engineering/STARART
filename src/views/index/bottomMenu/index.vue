@@ -20,8 +20,8 @@
 				<div class="bagBox" @click="bagShow">
 					<img class="bag" :src="
 						bagTab
-							? require('@/assets/bag.png')
-							: require('@/assets/bagClick.png')
+							? require('@/assets/bag.svg')
+							: require('@/assets/bagClick.svg')
 					" alt="" />
 				</div>
 
@@ -229,13 +229,13 @@ export default {
 		}
 		@media only screen and (min-width: 500px){
 			width: 145px;
-		height: 20px;
-		line-height: 20px;
+			height: 30px;
+			line-height: 20px;
 		}
 	}
 
 	.pause {
-		width: 196px;
+		width: 205px;
 		height: 44px;
 		margin: auto;
 		display: flex;
@@ -244,14 +244,15 @@ export default {
 		align-items: center;
 		border-radius: 5px;
 		@media only screen and (min-width: 500px){
-			width: 200px;
-			height: 20px;
+			width: 211px;
+			height: 30px;
 		}
 	}
 }
 
 .bottomMenu {
 	border: $border solid #7232dd;
+	
 	width: $body-width;
 	height: $bottomMenu-height;
 	border-bottom: none;
@@ -263,7 +264,7 @@ export default {
 	.bagBox {
 		width: 100px;
 		height: 100px;
-		border: 2px solid #7232dd;
+		border: 2mm ridge rgba(50, 220, 132, 0.3);
 		border-radius: 50%;
 		position: absolute;
 		z-index: 1;
@@ -296,8 +297,12 @@ export default {
 			height: 100px;
 			z-index: 2;
 			@media only screen and (min-width: 500px){
-				width: 50px;
-				height: 50px;
+				width: 40px;
+				height: 40px;
+			}
+			@media only screen and (max-width: 500px){
+				width: 45px;
+				height: 45px;
 			}
 		}
 	}

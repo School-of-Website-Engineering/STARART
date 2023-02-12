@@ -36,6 +36,11 @@ export default {
 	margin: 25px 0;
 	display: flex;
 	&:nth-child(1) {
+	//电脑媒体查询
+	@media only screen and (min-width: 500px) {
+		margin-top: -76px;
+		margin: 15px 0;
+	}	
 		margin-top: 38px;
 	}
 }
@@ -59,10 +64,19 @@ export default {
 }
 
 .avatar-img {
+	//电脑媒体查询
+	@media only screen and (min-width: 500px) {
+		width: 40px;
+		height: 40px;
+	}	
+	//PE媒体查询
+	@media only screen and (max-width: 500px) {
+		width: 24px;
+		height: 24px;
+		
+	}	
 	border-radius: 20px;
-	border: 2px solid #1989fa;
-	width: 40px;
-	height: 40px;
+	border: 2px solid #1989fa;	
 }
 
 .bubble {
