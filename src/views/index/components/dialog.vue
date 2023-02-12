@@ -17,7 +17,7 @@
 </template>
 
 <script>
-import bubbleDialog from "@/views/index/components/bubbleDialog";
+import bubbleDialog from "@/views/index/components/bubbleDialog.vue";
 import { mapState } from "vuex";
 
 export default {

@@ -16,9 +16,11 @@ import {
 	cell,
 	Overlay,
 	Popup,
-	Toast
+	Toast,
+	List
 } from "vant";
 
+Vue.use(List);
 Vue.use(Popup);
 Vue.use(Overlay);
 Vue.use(cell);

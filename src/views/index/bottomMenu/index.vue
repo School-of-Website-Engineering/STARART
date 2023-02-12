@@ -2,7 +2,7 @@
 	<div class="bottomMenuBox">
 		<van-row type="flex" justify="space-around" class="bottomMenu">
 			<!--对话框-->
-			<van-tag color="#7232dd" class="menu-head">信息 </van-tag>
+			<van-tag color="#7232dd" class="menu-head">信息</van-tag>
 			<van-col class="textOutput">
 				<div class="chat-box">
 					<ul>
@@ -82,6 +82,8 @@
 				>暂停游戏
 			</van-button>
 		</van-row>
+
+		<!-- 背包 -->
 		<van-popup
 			class="bagPopupBox"
 			v-model="bagTab"
@@ -103,6 +105,7 @@
 			<channel-edit :bag-edit="bagEdit"></channel-edit>
 		</van-popup>
 
+		<!-- //探索笔记 -->
 		<van-popup
 			class="bagPopupBox"
 			v-model="exploreNotes"
@@ -114,37 +117,39 @@
 				<span>探</span><span>索</span><span>笔</span><span>记</span>
 				<van-icon class="mapDescription" name="description" />
 			</van-tag>
-			<exploreNotes :bag-edit="bagEdit"></exploreNotes>
+			<van-list class="exploreNotes" finished-text="继续探索得到更多笔记">
+				<van-cell v-for="index in 10" :key="index" :title="index" />
+			</van-list>
 		</van-popup>
 	</div>
 </template>
 
 <script>
 import { mapActions, mapGetters, mapState } from "vuex";
-import bubbleDialog from "@/views/index/components/bubbleDialog/index.vue";
+import bubbleDialog from "@/views/index/components/bubbleDialog.vue";
 import channelEdit from "@/views/index/components/channel-edit.vue";
 import exploreNotes from "@/views/index/components/exploreNotes.vue";
 
 export default {
-	name      : "bottomMenu",
+	name: "bottomMenu",
 	components: { bubbleDialog, channelEdit, exploreNotes },
 	data() {
 		return {
 			//暂停按钮状态
-			pause         : false,
+			pause: false,
 			archiveLoading: false,
-			bagTab        : false,
+			bagTab: false,
 			//背包编辑状态
-			bagEdit       : false,
+			bagEdit: false,
 			//探索笔记状态
-			exploreNotes  : false
+			exploreNotes: false,
 		};
 	},
 	//监听时间变化并赋值给setCurrentTime
 	watch: {
 		worldTime() {
 			this.setCurrentTime(this.worldTime);
-		}
+		},
 	},
 	created() {
 		// 获取timer的游戏世界时间(changeTime)
@@ -167,13 +172,13 @@ export default {
 			// 遍历chatData
 			data.forEach((item) => {
 				list.push({
-					id  : item.id,
-					text: item.text
+					id: item.id,
+					text: item.text,
 				});
 			});
 			// 返回list
 			return list;
-		}
+		},
 	},
 	methods: {
 		// 获取timer的游戏世界时间(changeTime,pauseTime,resumeTime)
@@ -187,8 +192,7 @@ export default {
 			// 暂停游戏
 			if (this.pause) {
 				this.pauseTime();
-			}
-			else {
+			} else {
 				// 开始游戏
 				this.resumeTime();
 			}
@@ -213,8 +217,8 @@ export default {
 		// 探索笔记
 		showExploreNotes() {
 			this.exploreNotes = !this.exploreNotes;
-		}
-	}
+		},
+	},
 };
 </script>
 
@@ -222,6 +226,12 @@ export default {
 @import "@/assets/scss/_media.scss";
 @import "@/assets/scss/_color.scss";
 
+.exploreNotes {
+	margin-top: 75px;
+	@media only screen and (min-width: 500px) {
+		margin-top: 0;
+	}
+}
 .bagPopupBox {
 	.bagBoxBarBorder {
 		border-top-left-radius: 10px;
@@ -279,6 +289,7 @@ export default {
 		&:nth-child(2) {
 			width: 210px;
 		}
+
 		@media only screen and (min-width: 500px) {
 			width: 145px;
 			height: 30px;
@@ -371,7 +382,13 @@ export default {
 			margin-top: 11px;
 		}
 	}
+	.aboutUs {
+		margin-top: 75px;
 
+		@media only screen and (min-width: 500px) {
+			margin-top: 0;
+		}
+	}
 	.more {
 		height: $Menu-height;
 		border: $border solid #7232dd;
@@ -411,7 +428,7 @@ export default {
 		position: absolute;
 		top: -7px;
 		left: 6px;
-		
+
 		z-index: 2;
 		@media only screen and (min-width: 500px) {
 			width: 60px;

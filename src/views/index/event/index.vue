@@ -151,7 +151,7 @@ export default {
 		@media only screen and (min-width: 500px) {
 			width: 38%;
 			margin-top: 12px;
-
+			border: $border solid #7232dd;
 			.mapBoxContainer {
 				display: flex;
 				flex-wrap: wrap;
@@ -199,6 +199,7 @@ export default {
 		@media only screen and (min-width: 500px) {
 			width: 59%;
 			margin-top: 12px;
+			border: $border solid #7232dd;
 		}
 	}
 
