@@ -73,12 +73,17 @@ export default {
 
 .mainflex {
 	position: relative;
-	left: 420px;
+	left: 390px;
 	width: 40px;
 	display: flex;
 	flex-wrap: wrap;
 	margin: 0;
 	z-index: 2;
+	
+	//PE媒体查询
+	@media only screen and (max-width: 500px) {
+		left: 420px;
+	}
 }
 
 .menu-list {
@@ -120,7 +125,9 @@ export default {
 	.text {
 		height: $event-height;
 		border: $border solid #7232dd;
-		border-radius: $border-radius;
+		//border-radius: $border-radius;
+		//重置边框
+		border-left: unset;
 		position: relative;
 		margin-top: 12px;
 
@@ -166,8 +173,10 @@ export default {
 	.event {
 		height: $event-height;
 		border: $border solid #7232dd;
-		border-radius: $border-radius;
+		//border-radius: $border-radius;
 		position: relative;
+		border-left: unset;
+		border-right: unset;
 		margin-top: 12px;
 
 		@media only screen and (min-width: 500px) {
@@ -189,7 +198,8 @@ export default {
 			top: -10px;
 			left: 6px;
 		}
-		top: -15px;
+		top: -20px;
+		left: 4px;
 	}
 }
 </style>

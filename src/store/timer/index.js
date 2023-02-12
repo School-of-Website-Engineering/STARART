@@ -11,14 +11,14 @@ function getRandomWeather() {
 		"每天开始都会进行骰子鉴定，骰子开始鉴定",
 		"骰子鉴定开始",
 		"骰子开始鉴定",
-		"开始进行骰子鉴定"
+		"开始进行骰子鉴定",
 	];
 	let num = Math.floor(Math.random() * 6);
 	return weather[num];
 }
 export default {
 	namespaced: true,
-	actions   : {
+	actions: {
 		// 改变游戏世界时间，每秒改变一次，初始化时调用
 		changeTime({ commit, state }) {
 			let minutes = state.minutes,
@@ -67,7 +67,7 @@ export default {
 		// 更新聊天框
 		updateChatBox({ commit }, payload) {
 			commit("UPDATE_CHATBOX", payload);
-		}
+		},
 	},
 	mutations: {
 		//设置时间
@@ -108,88 +108,81 @@ export default {
 					if (num2 <= 20) {
 						//往聊天框里添加消息
 						state.chatData.unshift({
-							id  : state.chatData.length + 1,
-							text: getRandomWeather()
+							id: state.chatData.length + 1,
+							text: getRandomWeather(),
 						}),
-						(state.message =
+							(state.message =
 								"鉴定骰子为：(" +
 								num +
 								") 在xxxx资源地图区资源产出翻倍！");
-					}
-					else if (num2 <= 45) {
+					} else if (num2 <= 45) {
 						//往聊天框里添加消息
 						state.chatData.unshift({
-							id  : state.chatData.length + 1,
-							text: getRandomWeather()
+							id: state.chatData.length + 1,
+							text: getRandomWeather(),
 						}),
-						(state.message =
+							(state.message =
 								"鉴定骰子为：(" +
 								num +
 								") 所有怪物的刷新速度降低20%");
-					}
-					else if (num2 <= 80) {
+					} else if (num2 <= 80) {
 						//往聊天框里添加消息
 						state.chatData.unshift({
-							id  : state.chatData.length + 1,
-							text: getRandomWeather()
+							id: state.chatData.length + 1,
+							text: getRandomWeather(),
 						}),
-						(state.message =
+							(state.message =
 								"鉴定骰子为：(" +
 								num +
 								") 玩家制造物品的速度提升20%");
-					}
-					else {
+					} else {
 						//往聊天框里添加消息
 						state.chatData.unshift({
-							id  : state.chatData.length + 1,
-							text: getRandomWeather()
+							id: state.chatData.length + 1,
+							text: getRandomWeather(),
 						}),
-						(state.message =
+							(state.message =
 								"鉴定骰子为：(" +
 								num +
 								") 我们遇到敌袭，2回合后强制作战");
 					}
-				}
-				else if (num >= 3) {
+				} else if (num >= 3) {
 					//往聊天框里添加消息
 					state.chatData.unshift({
-						id  : state.chatData.length + 1,
-						text: getRandomWeather()
+						id: state.chatData.length + 1,
+						text: getRandomWeather(),
 					}),
-					(state.message =
+						(state.message =
 							"鉴定骰子为：(" + num + ") 暂无特殊事件");
-				}
-				else {
+				} else {
 					num2 = Math.floor(Math.random() * 100 + 1);
 					if (num2 <= 40) {
 						//往聊天框里添加消息
 						state.chatData.unshift({
-							id  : state.chatData.length + 1,
-							text: getRandomWeather()
+							id: state.chatData.length + 1,
+							text: getRandomWeather(),
 						}),
-						(state.message =
+							(state.message =
 								"鉴定骰子为：(" +
 								num +
 								") 今天天气格外炎热，你的口渴程度提升20%");
-					}
-					else if (num2 <= 80) {
+					} else if (num2 <= 80) {
 						//往聊天框里添加消息
 						state.chatData.unshift({
-							id  : state.chatData.length + 1,
-							text: getRandomWeather()
+							id: state.chatData.length + 1,
+							text: getRandomWeather(),
 						}),
-						(state.message =
+							(state.message =
 								"鉴定骰子为：(" +
 								num +
 								") 我们遇到敌袭，1回合后强制作战");
-					}
-					else {
+					} else {
 						//往聊天框里添加消息
 						state.chatData.unshift({
-							id  : state.chatData.length + 1,
-							text: getRandomWeather()
+							id: state.chatData.length + 1,
+							text: getRandomWeather(),
 						}),
-						(state.message =
+							(state.message =
 								"鉴定骰子为：(" +
 								num +
 								") 我们遇到原住民，但对方似乎敌意满满（立刻开始特殊战斗）");
@@ -202,8 +195,8 @@ export default {
 				if (state.toDay === 8) {
 					//往聊天框里添加消息
 					state.chatData.unshift({
-						id  : state.chatData.length + 1,
-						text: "第八天来临"
+						id: state.chatData.length + 1,
+						text: "第八天来临",
 					});
 				}
 
@@ -215,8 +208,8 @@ export default {
 				if (state.toDay === 10) {
 					//往聊天框里添加消息
 					state.chatData.unshift({
-						id  : state.chatData.length + 1,
-						text: "第十一天开始"
+						id: state.chatData.length + 1,
+						text: "第十一天开始",
 					});
 				}
 				state.message = "更多高危事件和隐藏区域解锁";
@@ -227,8 +220,8 @@ export default {
 				if (state.toDay === 13) {
 					//往聊天框里添加消息
 					state.chatData.unshift({
-						id  : state.chatData.length + 1,
-						text: "第十四天到来"
+						id: state.chatData.length + 1,
+						text: "第十四天到来",
 					});
 				}
 				state.message = "自由探索开启，无尽的探索才刚刚开始";
@@ -245,22 +238,22 @@ export default {
 		UPDATE_CHATBOX(state, payload) {
 			// 修改聊天框
 			state.chatData.splice(payload.index, 1, payload.chatBox);
-		}
+		},
 	},
 
 	state: {
-		hours      : 0,
-		minutes    : 0,
-		speed      : 0.0001, //初始加速为1
-		toDay      : 1,
-		message    : "准备期 第1天到第7天",
+		hours: 0,
+		minutes: 0,
+		speed: 0.0001, //初始加速为1
+		toDay: 1,
+		message: "准备期 第1天到第7天",
 		messageInfo: "nisadfads",
-		chatData   : [
+		chatData: [
 			{
-				id  : 1,
-				text: "动态消息test"
-			}
-		]
+				id: 1,
+				text: "动态消息test",
+			},
+		],
 	},
 	getters: {
 		// 获取游戏世界时间
@@ -274,6 +267,6 @@ export default {
 		// 获取当前加速倍数
 		speed: (state) => state.speed,
 		// 获取游戏世界天数
-		toDay: (state) => state.toDay
-	}
+		toDay: (state) => state.toDay,
+	},
 };

@@ -5,12 +5,16 @@
 			<div class="newgame">
 				<font class="maintext">星之往昔</font>
 				<van-button class="newgames mainbutton">新的冒险</van-button>
-				<van-button class="loadinggames mainbutton">载入存档</van-button>
+				<van-button class="loadinggames mainbutton"
+					>载入存档</van-button
+				>
 				<van-button class="gamenews mainbutton">游戏新闻</van-button>
 				<van-button class="onlinesaves mainbutton">云上存档</van-button>
-				<van-button class="regsiterlogins mainbutton">登录注册</van-button>
+				<van-button class="regsiterlogins mainbutton"
+					>登录注册</van-button
+				>
 				<!-- TODO 尝试接入GA -->
-				<font size="4px" class="maintext">{{Version}}</font>
+				<font size="4px" class="maintext">{{ Version }}</font>
 			</div>
 		</div>
 	</div>
@@ -24,9 +28,9 @@ export default {
 	//处理初始化问题
 	name: "Loading",
 	data() {
-		return { 
+		return {
 			first: getItem("isShowLoading"),
-			Version: "v0.0.1.243" 
+			Version: "v0.0.1.243",
 		};
 	},
 	mounted() {
@@ -42,9 +46,11 @@ export default {
 					this.showLoading(false);
 				}, 6500);
 			}
-		}
+		},
 	},
-	computed: {...mapState({ Loading: (state) => state.isShowLoading.isShowLoading })}
+	computed: {
+		...mapState({ Loading: (state) => state.isShowLoading.isShowLoading }),
+	},
 };
 </script>
 
@@ -60,8 +66,6 @@ export default {
 	z-index: 999;
 }
 
-
-
 .newgame {
 	display: flex;
 	margin-top: calc(50% - 75px);
@@ -69,8 +73,8 @@ export default {
 	top: calc(50% - 65px);
 	transform: scale(1.4);
 	flex-direction: column;
-	
-	.maintext{
+
+	.maintext {
 		width: auto;
 		@media only screen and (min-width: 500px) {
 			height: 10px;
@@ -84,7 +88,7 @@ export default {
 		position: relative;
 	}
 
-	.mainbutton{
+	.mainbutton {
 		background-color: #858b91;
 		border-radius: 5px;
 		width: 200px;
@@ -129,7 +133,7 @@ export default {
 		font-size: 60px;
 		width: 160px;
 		text-align: center;
-		line-height:100%;
+		line-height: 100%;
 		color: white;
 	}
 
