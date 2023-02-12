@@ -22,7 +22,7 @@ import { mapState } from "vuex";
 
 export default {
 	components: { bubbleDialog },
-	computed: {
+	computed  : {
 		// 获取timer模块的chatData
 		...mapState("timer", ["chatData"]),
 
@@ -35,14 +35,14 @@ export default {
 			// 遍历chatData
 			data.forEach((item) => {
 				list.push({
-					id: item.id,
-					text: item.text,
+					id  : item.id,
+					text: item.text
 				});
 			});
 			// 返回list
 			return list;
-		},
-	},
+		}
+	}
 };
 </script>
 

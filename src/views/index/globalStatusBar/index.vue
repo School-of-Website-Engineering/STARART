@@ -70,10 +70,9 @@ export default {
 @import "@/assets/scss/_color.scss";
 
 .globalStatus {
-
 	//媒体查询 手机
 	@media only screen and (max-width: 500px) {
-	height: $globalStatusBar-height;
+		height: $globalStatusBar-height;
 	}
 
 	//媒体查询 电脑
@@ -100,7 +99,7 @@ export default {
 					margin-right: 18px;
 					margin-top: 4px;
 					height: 20px;
-				} 
+				}
 			}
 
 			//电脑端
@@ -109,7 +108,7 @@ export default {
 					margin-right: 18px;
 					margin-top: 4px;
 					height: 20px;
-				} 
+				}
 			}
 		}
 	}

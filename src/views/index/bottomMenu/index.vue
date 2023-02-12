@@ -2,14 +2,17 @@
 	<div class="bottomMenuBox">
 		<van-row type="flex" justify="space-around" class="bottomMenu">
 			<!--对话框-->
-			<van-tag color="#7232dd" class="menu-head">信息
-			</van-tag>
+			<van-tag color="#7232dd" class="menu-head">信息 </van-tag>
 			<van-col class="textOutput">
 				<div class="chat-box">
 					<ul>
 						<li v-for="item in chatList" :key="item.id">
-							<bubble-dialog class="bubbleDialog" :content="item.text" :is-left="true"
-								:avatar-img="require('@/assets/logo.png')" />
+							<bubble-dialog
+								class="bubbleDialog"
+								:content="item.text"
+								:is-left="true"
+								:avatar-img="require('@/assets/logo.png')"
+							/>
 						</li>
 					</ul>
 				</div>
@@ -18,23 +21,47 @@
 			<van-col span="12" class="more">
 				<van-tag color="#7232dd" class="menu-head">更多</van-tag>
 				<div class="bagBox" @click="bagShow">
-					<img class="bag" :src="
-						bagTab
-							? require('@/assets/bag.svg')
-							: require('@/assets/bagClick.svg')
-					" alt="" />
+					<img
+						class="bag"
+						:src="
+							bagTab
+								? require('@/assets/bag.svg')
+								: require('@/assets/bagClick.svg')
+						"
+						alt=""
+					/>
 				</div>
 
-				<van-button @click="archive" class="archive" id="button-actiive" :loading="this.archiveLoading"
-					type="info" loading-text="加载中...">
+				<van-button
+					@click="archive"
+					class="archive"
+					id="button-actiive"
+					:loading="this.archiveLoading"
+					type="info"
+					loading-text="加载中..."
+				>
 					读取存档
 				</van-button>
-				<van-button @click="IllustratedBook" class="World IllustratedBook" id="button-actiive"
-					color="#7232dd">世界图鉴
+				<van-button
+					@click="IllustratedBook"
+					class="World IllustratedBook"
+					id="button-actiive"
+					color="#7232dd"
+					>世界图鉴
 				</van-button>
-				<van-button @click="showExploreNotes" class="exploreNotes" id="button-actiive" type="primary">探索笔记
+				<van-button
+					@click="showExploreNotes"
+					class="exploreNotes"
+					id="button-actiive"
+					type="primary"
+					>探索笔记
 				</van-button>
-				<van-button @click="aboutUs" class="aboutUs" id="button-actiive" type="warning">关于我们
+				<van-button
+					@click="aboutUs"
+					class="aboutUs"
+					id="button-actiive"
+					type="warning"
+					>关于我们
 				</van-button>
 			</van-col>
 		</van-row>
@@ -47,17 +74,41 @@
 				<span>当前时间:</span>
 				<span>{{ worldStatus }}</span>
 			</van-tag>
-			<van-button @click="pauseBtn" :icon="!this.pause ? 'pause' : 'play'" class="pause" type="danger">暂停游戏
+			<van-button
+				@click="pauseBtn"
+				:icon="!this.pause ? 'pause' : 'play'"
+				class="pause"
+				type="danger"
+				>暂停游戏
 			</van-button>
 		</van-row>
-		<van-popup class="bagPopupBox" v-model="bagTab" position="bottom" :style="{ height: '40%' }">
-			<van-tag class="bagBoxBar bagBoxBarBorder" round size="large" type="primary"><span>背</span><span>包</span>
-				<van-icon class="bagEdit" @click="bagEditing" :name="!bagEdit ? 'delete' : 'checked'" />
+		<van-popup
+			class="bagPopupBox"
+			v-model="bagTab"
+			position="bottom"
+			:style="{ height: '40%' }"
+		>
+			<van-tag
+				class="bagBoxBar bagBoxBarBorder"
+				round
+				size="large"
+				type="primary"
+				><span>背</span><span>包</span>
+				<van-icon
+					class="bagEdit"
+					@click="bagEditing"
+					:name="!bagEdit ? 'delete' : 'checked'"
+				/>
 			</van-tag>
 			<channel-edit :bag-edit="bagEdit"></channel-edit>
 		</van-popup>
 
-		<van-popup class="bagPopupBox" v-model="exploreNotes" position="bottom" :style="{ height: '40%' }">
+		<van-popup
+			class="bagPopupBox"
+			v-model="exploreNotes"
+			position="bottom"
+			:style="{ height: '40%' }"
+		>
 			<van-tag class="noteBoxBar" round size="large" type="primary">
 				<van-icon class="mapDescription" name="description" />
 				<span>探</span><span>索</span><span>笔</span><span>记</span>
@@ -75,25 +126,25 @@ import channelEdit from "@/views/index/components/channel-edit.vue";
 import exploreNotes from "@/views/index/components/exploreNotes.vue";
 
 export default {
-	name: "bottomMenu",
+	name      : "bottomMenu",
 	components: { bubbleDialog, channelEdit, exploreNotes },
 	data() {
 		return {
 			//暂停按钮状态
-			pause: false,
+			pause         : false,
 			archiveLoading: false,
-			bagTab: false,
+			bagTab        : false,
 			//背包编辑状态
-			bagEdit: false,
+			bagEdit       : false,
 			//探索笔记状态
-			exploreNotes: false
+			exploreNotes  : false
 		};
 	},
 	//监听时间变化并赋值给setCurrentTime
 	watch: {
 		worldTime() {
 			this.setCurrentTime(this.worldTime);
-		},
+		}
 	},
 	created() {
 		// 获取timer的游戏世界时间(changeTime)
@@ -116,13 +167,13 @@ export default {
 			// 遍历chatData
 			data.forEach((item) => {
 				list.push({
-					id: item.id,
+					id  : item.id,
 					text: item.text
 				});
 			});
 			// 返回list
 			return list;
-		},
+		}
 	},
 	methods: {
 		// 获取timer的游戏世界时间(changeTime,pauseTime,resumeTime)
@@ -136,7 +187,8 @@ export default {
 			// 暂停游戏
 			if (this.pause) {
 				this.pauseTime();
-			} else {
+			}
+			else {
 				// 开始游戏
 				this.resumeTime();
 			}
@@ -148,8 +200,8 @@ export default {
 				this.archiveLoading = false;
 			}, 2000);
 		},
-		IllustratedBook() { },
-		aboutUs() { },
+		IllustratedBook() {},
+		aboutUs() {},
 		// 背包显示
 		bagShow() {
 			this.bagTab = !this.bagTab;
@@ -161,8 +213,8 @@ export default {
 		// 探索笔记
 		showExploreNotes() {
 			this.exploreNotes = !this.exploreNotes;
-		},
-	},
+		}
+	}
 };
 </script>
 
@@ -227,7 +279,7 @@ export default {
 		&:nth-child(2) {
 			width: 210px;
 		}
-		@media only screen and (min-width: 500px){
+		@media only screen and (min-width: 500px) {
 			width: 145px;
 			height: 30px;
 			line-height: 20px;
@@ -243,7 +295,7 @@ export default {
 		justify-content: center;
 		align-items: center;
 		border-radius: 5px;
-		@media only screen and (min-width: 500px){
+		@media only screen and (min-width: 500px) {
 			width: 211px;
 			height: 30px;
 		}
@@ -252,7 +304,7 @@ export default {
 
 .bottomMenu {
 	border: $border solid #7232dd;
-	
+
 	width: $body-width;
 	height: $bottomMenu-height;
 	border-bottom: none;
@@ -296,11 +348,11 @@ export default {
 			width: 100px;
 			height: 100px;
 			z-index: 2;
-			@media only screen and (min-width: 500px){
+			@media only screen and (min-width: 500px) {
 				width: 40px;
 				height: 40px;
 			}
-			@media only screen and (max-width: 500px){
+			@media only screen and (max-width: 500px) {
 				width: 45px;
 				height: 45px;
 			}

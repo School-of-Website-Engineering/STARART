@@ -1,11 +1,17 @@
 <template>
 	<div class="exploreNotes">
 		<van-row>
-			<van-tag class="events-head" color="#7232dd">{{ mapEventInfo.name || tips[0] }}
+			<van-tag class="events-head" color="#7232dd"
+				>{{ mapEventInfo.name || tips[0] }}
 			</van-tag>
 			<van-col span="24" class="eventsBox">
-				<van-button v-for="(item, index) in mapEventInfo.things" :key="index"
-					:class="'tag' + ' eventBtnObj' + index" plain type="default">{{ item }}
+				<van-button
+					v-for="(item, index) in mapEventInfo.things"
+					:key="index"
+					:class="'tag' + ' eventBtnObj' + index"
+					plain
+					type="default"
+					>{{ item }}
 				</van-button>
 			</van-col>
 		</van-row>
@@ -21,7 +27,7 @@ export default {
 		return { tips: ["请选择事件"] };
 	},
 	//获取mapEvent模块的mapEvent、mapEventInfo
-	computed: { ...mapState({ mapEventInfo: (state) => state.mapEvent.mapEventInfo }) }
+	computed: {...mapState({ mapEventInfo: (state) => state.mapEvent.mapEventInfo })}
 };
 </script>
 
@@ -71,7 +77,7 @@ export default {
 	//电脑媒体查询
 	@media only screen and (min-width: 500px) {
 		height: 40px;
-	}	
+	}
 }
 
 .eventBtnObj1 {
@@ -82,7 +88,6 @@ export default {
 		height: 40px;
 	}
 }
-
 
 .eventBtnObj2 {
 	color: #07bc5d;
@@ -99,7 +104,7 @@ export default {
 	//电脑媒体查询
 	@media only screen and (min-width: 500px) {
 		height: 40px;
-	}	
+	}
 }
 
 .eventBtnObj4 {
@@ -108,7 +113,7 @@ export default {
 	//电脑媒体查询
 	@media only screen and (min-width: 500px) {
 		height: 40px;
-	}	
+	}
 }
 
 .eventBtnObj5 {
@@ -117,7 +122,7 @@ export default {
 	//电脑媒体查询
 	@media only screen and (min-width: 500px) {
 		height: 40px;
-	}	
+	}
 }
 
 .eventBtnObj6 {
@@ -126,6 +131,6 @@ export default {
 	//电脑媒体查询
 	@media only screen and (min-width: 500px) {
 		height: 40px;
-	}	
+	}
 }
 </style>

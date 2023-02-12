@@ -13,7 +13,7 @@
 						:content="index"
 						class="shortccutBarChild"
 					>
-						<div class="child"/>
+						<div class="child" />
 					</van-badge>
 				</div>
 			</van-col>
@@ -22,7 +22,7 @@
 </template>
 
 <script>
-export default {name: "shortcutBar"};
+export default { name: "shortcutBar" };
 </script>
 
 <style lang="scss" scoped>
@@ -30,7 +30,6 @@ export default {name: "shortcutBar"};
 @import "@/assets/scss/_color.scss";
 
 .shortccutBarBody {
-	
 	height: 170px;
 	display: flex;
 	justify-content: start;
@@ -42,7 +41,7 @@ export default {name: "shortcutBar"};
 	}
 	margin-top: 12px;
 	overflow: auto;
-	
+
 	.child {
 		width: 70px;
 		height: 60px;
@@ -50,9 +49,8 @@ export default {name: "shortcutBar"};
 		text-align: center;
 		border-radius: $border-radius;
 	}
-	
+
 	.van-badge__wrapper {
-		
 		@media only screen and (max-width: 500px) {
 			width: 30px;
 			height: 30px;
@@ -63,12 +61,12 @@ export default {name: "shortcutBar"};
 			border: $border solid #7232dd;
 			border-radius: $border-radius;
 			margin-right: 20px;
-			
+
 			&:first-child {
 				margin-left: 38.5px;
 			}
 		}
-		
+
 		//PC
 		@media only screen and (min-width: 500px) {
 			width: 50px;
@@ -80,13 +78,11 @@ export default {name: "shortcutBar"};
 			border: $border solid #7232dd;
 			border-radius: $border-radius;
 			margin-right: 42px;
-			
+
 			&:first-child {
 				margin-left: 116.5px;
 			}
 		}
-		
-		
 	}
 }
 
@@ -100,7 +96,7 @@ export default {name: "shortcutBar"};
 	border-radius: $border-radius;
 	width: $body-width;
 	position: relative;
-	
+
 	.quick_goods {
 		@media only screen and (min-width: 500px) {
 			width: 80px;

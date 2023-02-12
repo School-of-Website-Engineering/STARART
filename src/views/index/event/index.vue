@@ -7,19 +7,28 @@
 					<open-map />
 				</div>
 				<div class="mapBoxContainer">
-					<van-button v-for="(item, index) in mapEvent" :key="index" class="tag" plain type="danger"
-						@click="getEventInfo(item)">{{ item.name }}
+					<van-button
+						v-for="(item, index) in mapEvent"
+						:key="index"
+						class="tag"
+						plain
+						type="danger"
+						@click="getEventInfo(item)"
+						>{{ item.name }}
 					</van-button>
 				</div>
 			</van-col>
 			<van-col span="16" class="event">
 				<div class="mainflex">
 					<!--  事件区 -->
-					<van-tag class="menu-list" type="primary" plain size="large">制作
+					<van-tag class="menu-list" type="primary" plain size="large"
+						>制作
 					</van-tag>
-					<van-tag class="menu-list" plain type="primary" size="large">天赋
+					<van-tag class="menu-list" plain type="primary" size="large"
+						>天赋
 					</van-tag>
-					<van-tag plain class="menu-list" type="primary" size="large">休息
+					<van-tag plain class="menu-list" type="primary" size="large"
+						>休息
 					</van-tag>
 				</div>
 				<div class="eventContainer">
@@ -37,14 +46,14 @@ import { mapMutations, mapState } from "vuex";
 
 export default {
 	name: "event",
-	data: function () {
+	data: function() {
 		return { isRender: true };
 	},
 	components: { openMap, exploreNotes },
 	//获取mapEvent模块的mapEvent、mapEventInfo
-	computed: {
+	computed  : {
 		...mapState({
-			mapEvent: (state) => state.mapEvent.mapEvent,
+			mapEvent    : (state) => state.mapEvent.mapEvent,
 			mapEventInfo: (state) => state.mapEvent.mapEventInfo
 		})
 	},
@@ -88,10 +97,9 @@ export default {
 	}
 	//PE媒体查询
 	@media only screen and (max-width: 500px) {
-	width: 24px;
-	height: 24px;
-	
-	}	
+		width: 24px;
+		height: 24px;
+	}
 	@media only screen and (min-width: 500px) {
 		width: 40px;
 		height: 24px;
@@ -99,7 +107,6 @@ export default {
 		font-weight: bold;
 		border-radius: 14px;
 	}
-
 }
 
 .eventMenu {
