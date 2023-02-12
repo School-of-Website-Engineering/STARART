@@ -32,7 +32,8 @@
 					</van-tag>
 				</div>
 				<div class="eventContainer">
-					<exploreNotes />
+					<!--事件地图组件-->
+					<eventMap />
 				</div>
 			</van-col>
 		</van-row>
@@ -41,7 +42,7 @@
 
 <script>
 import openMap from "@/views/openMap/index.vue";
-import exploreNotes from "@/views/index/components/exploreNotes.vue";
+import eventMap from "@/views/index/components/eventMap.vue";
 import { mapMutations, mapState } from "vuex";
 
 export default {
@@ -49,7 +50,7 @@ export default {
 	data: function() {
 		return { isRender: true };
 	},
-	components: { openMap, exploreNotes },
+	components: { openMap, eventMap },
 	//获取mapEvent模块的mapEvent、mapEventInfo
 	computed  : {
 		...mapState({
@@ -79,10 +80,27 @@ export default {
 	flex-wrap: wrap;
 	margin: 0;
 	z-index: 2;
-	
+
 	//PE媒体查询
 	@media only screen and (max-width: 500px) {
-		left: 420px;
+		left: 212px;
+	}
+	@media only screen and (max-width: 394px) {
+		left: 223px;
+	}
+	@media only screen and (max-width: 393px) {
+		left: 212px;
+	}
+	//如果宽度为375以下的话left为203px
+	@media only screen and (max-width: 375px) {
+		left: 220px;
+	}
+	//如果宽度为375以下的话left为183px
+	@media only screen and (max-width: 300px) {
+		left: 153px;
+	}
+	@media only screen and (max-width: 360px) {
+		left: 203px;
 	}
 }
 
@@ -121,7 +139,7 @@ export default {
 	display: flex;
 	justify-content: space-around;
 	margin: 5px auto 0;
-	
+
 	.text {
 		height: $event-height;
 		border: $border solid #7232dd;
@@ -134,7 +152,7 @@ export default {
 		@media only screen and (min-width: 500px) {
 			width: 38%;
 			margin-top: 12px;
-
+			border: $border solid #7232dd;
 			.mapBoxContainer {
 				display: flex;
 				flex-wrap: wrap;
@@ -182,6 +200,7 @@ export default {
 		@media only screen and (min-width: 500px) {
 			width: 59%;
 			margin-top: 12px;
+			border: $border solid #7232dd;
 		}
 	}
 

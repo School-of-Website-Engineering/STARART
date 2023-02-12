@@ -18,8 +18,7 @@ export default {
 	//注册组件
 	components: {
 		Header,
-		Footer,
-		isLoading
+		Footer
 	}
 };
 </script>

@@ -2,7 +2,7 @@
 	<div class="bottomMenuBox">
 		<van-row type="flex" justify="space-around" class="bottomMenu">
 			<!--对话框-->
-			<van-tag color="#7232dd" class="menu-head">信息 </van-tag>
+			<van-tag color="#7232dd" class="menu-head">信息</van-tag>
 			<van-col class="textOutput">
 				<div class="chat-box">
 					<ul>
@@ -82,6 +82,8 @@
 				>暂停游戏
 			</van-button>
 		</van-row>
+
+		<!-- 背包 -->
 		<van-popup
 			class="bagPopupBox"
 			v-model="bagTab"
@@ -103,6 +105,7 @@
 			<channel-edit :bag-edit="bagEdit"></channel-edit>
 		</van-popup>
 
+		<!-- //探索笔记 -->
 		<van-popup
 			class="bagPopupBox"
 			v-model="exploreNotes"
@@ -114,14 +117,14 @@
 				<span>探</span><span>索</span><span>笔</span><span>记</span>
 				<van-icon class="mapDescription" name="description" />
 			</van-tag>
-			<exploreNotes :bag-edit="bagEdit"></exploreNotes>
+			<explore-notes></explore-notes>
 		</van-popup>
 	</div>
 </template>
 
 <script>
 import { mapActions, mapGetters, mapState } from "vuex";
-import bubbleDialog from "@/views/index/components/bubbleDialog/index.vue";
+import bubbleDialog from "@/views/index/components/bubbleDialog.vue";
 import channelEdit from "@/views/index/components/channel-edit.vue";
 import exploreNotes from "@/views/index/components/exploreNotes.vue";
 
@@ -222,6 +225,12 @@ export default {
 @import "@/assets/scss/_media.scss";
 @import "@/assets/scss/_color.scss";
 
+.exploreNotes {
+	margin-top: 75px;
+	@media only screen and (min-width: 500px) {
+		margin-top: 0;
+	}
+}
 .bagPopupBox {
 	.bagBoxBarBorder {
 		border-top-left-radius: 10px;
@@ -279,6 +288,7 @@ export default {
 		&:nth-child(2) {
 			width: 210px;
 		}
+
 		@media only screen and (min-width: 500px) {
 			width: 145px;
 			height: 30px;
@@ -371,7 +381,13 @@ export default {
 			margin-top: 11px;
 		}
 	}
+	.aboutUs {
+		margin-top: 75px;
 
+		@media only screen and (min-width: 500px) {
+			margin-top: 0;
+		}
+	}
 	.more {
 		height: $Menu-height;
 		border: $border solid #7232dd;
@@ -411,7 +427,7 @@ export default {
 		position: absolute;
 		top: -7px;
 		left: 6px;
-		
+
 		z-index: 2;
 		@media only screen and (min-width: 500px) {
 			width: 60px;

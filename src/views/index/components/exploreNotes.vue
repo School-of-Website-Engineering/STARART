@@ -1,20 +1,22 @@
+<!--探索笔记列表组件-->
 <template>
-	<div class="exploreNotes">
-		<van-row>
-			<van-tag class="events-head" color="#7232dd"
-				>{{ mapEventInfo.name || tips[0] }}
-			</van-tag>
-			<van-col span="24" class="eventsBox">
-				<van-button
-					v-for="(item, index) in mapEventInfo.things"
-					:key="index"
-					:class="'tag' + ' eventBtnObj' + index"
-					plain
-					type="default"
-					>{{ item }}
-				</van-button>
-			</van-col>
-		</van-row>
+	<div class="exploreNotesBox">
+		<van-list class="exploreNotes" finished-text="继续探索得到更多笔记">
+			<van-cell
+				@click="showListContent(item)"
+				v-for="item in noteList"
+				:key="item.noteId"
+				:title="item.noteTitle"
+				class="exploreNotesCellTitle"
+			>
+				<span>{{ item.noteInfo }}</span>
+			</van-cell>
+			<!--笔记内容-->
+			<van-popup class="noteContent" v-model="showNoteList">
+				<span class="title">{{ currentNoteList.noteTitle }}</span>
+				<span class="content">{{ currentNoteList.noteContent }}</span>
+			</van-popup>
+		</van-list>
 	</div>
 </template>
 
@@ -23,114 +25,49 @@ import { mapState } from "vuex";
 
 export default {
 	name: "exploreNotes",
+
 	data() {
-		return { tips: ["请选择事件"] };
+		return {
+			showNoteList   : false,
+			currentNoteList: {}
+		};
 	},
-	//获取mapEvent模块的mapEvent、mapEventInfo
-	computed: {...mapState({ mapEventInfo: (state) => state.mapEvent.mapEventInfo })}
+	computed: {
+		//获取exploreNotes模块的noteList
+		...mapState({ noteList: (state) => state.exploreNotes.noteList })
+	},
+	methods: {
+		//添加currentNoteList笔记
+		showListContent(item) {
+			this.showNoteList = true;
+			this.currentNoteList = item;
+			console.log(this.currentNoteList);
+		}
+	}
 };
 </script>
 
 <style lang="scss" scoped>
-.eventsBox {
-	position: relative;
-	//电脑媒体查询
-	@media only screen and (min-width: 500px) {
-		top: -210px;
-	}
-	top: -170px;
-	width: 380px;
-}
+.exploreNotesBox {
+	margin-top: 75px;
 
-.events-head {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	width: 124px;
-	height: 40px;
-	text-align: center;
-	border-radius: 5px;
-	position: absolute;
-	top: -3px;
-	left: 6px;
+	.noteContent {
+		top: 500px;
+		height: 300px;
+		width: 90%;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		align-items: center;
 
-	@media only screen and (min-width: 500px) {
-		width: 124px;
-		height: 40px;
-		top: -10px;
-		left: 6px;
-	}
-}
+		.title {
+			font-size: 20px;
+			font-weight: bold;
+		}
 
-.tag {
-	margin: 10px;
-	padding: 0 15px;
-
-	&:first-child {
-		display: none;
-	}
-}
-
-.eventBtnObj0 {
-	border-color: #ff976a;
-	color: #ff976a;
-	//电脑媒体查询
-	@media only screen and (min-width: 500px) {
-		height: 40px;
-	}
-}
-
-.eventBtnObj1 {
-	color: #1989fa;
-	border-color: #1989fa;
-	//电脑媒体查询
-	@media only screen and (min-width: 500px) {
-		height: 40px;
-	}
-}
-
-.eventBtnObj2 {
-	color: #07bc5d;
-	border-color: #07bc5d;
-	//电脑媒体查询
-	@media only screen and (min-width: 500px) {
-		height: 40px;
-	}
-}
-
-.eventBtnObj3 {
-	color: #7e3afb;
-	border-color: #7e3afb;
-	//电脑媒体查询
-	@media only screen and (min-width: 500px) {
-		height: 40px;
-	}
-}
-
-.eventBtnObj4 {
-	color: #ee0a24;
-	border-color: #ee0a24;
-	//电脑媒体查询
-	@media only screen and (min-width: 500px) {
-		height: 40px;
-	}
-}
-
-.eventBtnObj5 {
-	color: #88c1fa;
-	border-color: #88c1fa;
-	//电脑媒体查询
-	@media only screen and (min-width: 500px) {
-		height: 40px;
-	}
-}
-
-.eventBtnObj6 {
-	color: #95a6b8;
-	border-color: #95a6b8;
-	//电脑媒体查询
-	@media only screen and (min-width: 500px) {
-		height: 40px;
+		.content {
+			font-size: 14px;
+		}
 	}
 }
 </style>
