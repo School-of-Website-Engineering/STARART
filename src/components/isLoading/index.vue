@@ -1,26 +1,16 @@
 <template>
-	<div class="loading" v-show="Loading">
+	<!--div class="loading" v-show="Loading"-->
+	<div class="maingame">
 		<div class="isloding">
-			<div class="hex" style="--d: 0;">
-				<span>L</span>
-			</div>
-			<div class="hex" style="--d: 1;">
-				<span>O</span>
-			</div>
-			<div class="hex" style="--d: 2;">
-				<span>A</span>
-			</div>
-			<div class="hex" style="--d: 3;">
-				<span>D</span>
-			</div>
-			<div class="hex" style="--d: 4;">
-				<span>I</span>
-			</div>
-			<div class="hex" style="--d: 5;">
-				<span>N</span>
-			</div>
-			<div class="hex" style="--d: 6;">
-				<span>G</span>
+			<div class="newgame">
+				<font class="maintext">星之往昔</font>
+				<van-button class="newgames mainbutton">新的冒险</van-button>
+				<van-button class="loadinggames mainbutton">载入存档</van-button>
+				<van-button class="gamenews mainbutton">游戏新闻</van-button>
+				<van-button class="onlinesaves mainbutton">云上存档</van-button>
+				<van-button class="regsiterlogins mainbutton">登录注册</van-button>
+				<!-- TODO 尝试接入GA -->
+				<font size="4px" class="maintext">{{Version}}</font>
 			</div>
 		</div>
 	</div>
@@ -31,9 +21,13 @@ import { mapMutations, mapState } from "vuex";
 import { getItem } from "@/utils/sessionStorage";
 
 export default {
+	//处理初始化问题
 	name: "Loading",
 	data() {
-		return { first: getItem("isShowLoading") };
+		return { 
+			first: getItem("isShowLoading"),
+			Version: "v0.0.1.243" 
+		};
 	},
 	mounted() {
 		this.isLoading();
@@ -56,22 +50,53 @@ export default {
 
 <style lang="scss" scoped>
 //遮罩，覆盖整个页面
-.loading {
+.maingame {
 	position: fixed;
 	top: 0;
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background: #fff;
+	background: #807f7f;
 	z-index: 999;
 }
 
-.isloding {
+
+
+.newgame {
 	display: flex;
-	position: absolute;
-	left: -40px;
+	margin-top: calc(50% - 75px);
+	left: calc(50% - 75px);
 	top: calc(50% - 65px);
-	transform: scale(0.7);
+	transform: scale(1.4);
+	flex-direction: column;
+	
+	.maintext{
+		width: auto;
+		@media only screen and (min-width: 500px) {
+			height: 10px;
+			margin: 2% auto;
+			bottom: 360px;
+			font-size: 24px;
+		}
+		height: 100px;
+		margin: 1% auto;
+		color: white;
+		position: relative;
+	}
+
+	.mainbutton{
+		background-color: #858b91;
+		border-radius: 5px;
+		width: 200px;
+		@media only screen and (min-width: 500px) {
+			height: 40px;
+			margin: 1% auto;
+			bottom: 320px;
+		}
+		height: 100px;
+		margin: 1% auto;
+		color: white;
+	}
 
 	.hex {
 		width: 160px;
@@ -82,7 +107,8 @@ export default {
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		margin-left: -35px;
+		margin: 0 auto;
+		text-align: center;
 	}
 
 	.hex:nth-child(2n + 1) {
