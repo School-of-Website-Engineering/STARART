@@ -82,7 +82,24 @@ export default {
 	
 	//PE媒体查询
 	@media only screen and (max-width: 500px) {
-		left: 420px;
+		left: 212px;
+	}
+	@media only screen and (max-width: 394px) {
+		left: 223px;
+	}
+	@media only screen and (max-width: 393px) {
+		left: 212px;
+	}
+	//如果宽度为375以下的话left为203px
+	@media only screen and (max-width: 375px) {
+		left: 220px;
+	}
+	//如果宽度为375以下的话left为183px
+	@media only screen and (max-width: 300px) {
+		left: 153px;
+	}
+	@media only screen and (max-width: 360px) {
+		left: 203px;
 	}
 }
 
