@@ -33,15 +33,16 @@ export default {
 
 <style scoped lang="scss">
 .chat-message {
-	margin: 25px 0;
+	margin: 18px 0;
 	display: flex;
+
 	&:nth-child(1) {
-	//电脑媒体查询
-	@media only screen and (min-width: 500px) {
-		margin-top: -76px;
-		margin: 15px 0;
-	}	
-		margin-top: 38px;
+		//电脑媒体查询
+		@media only screen and (min-width: 500px) {
+			margin-top: -76px;
+			margin: 15px 0;
+		}
+		margin-top: 35px;
 	}
 }
 
@@ -53,8 +54,9 @@ export default {
 .message-item.left {
 	margin-left: 0;
 	margin-right: 10px;
-	flex-direction: row-reverse;
-	text-align: right;
+	display: flex;
+	flex-direction: inherit;
+	text-align: left;
 }
 
 .message-item.right {
@@ -69,15 +71,14 @@ export default {
 		width: 40px;
 		height: 40px;
 		border: 2mm ridge rgb(7, 255, 85);
-	}	
+	}
 	//PE媒体查询
 	@media only screen and (max-width: 500px) {
 		width: 24px;
 		height: 24px;
-		
-	}	
+	}
 	border-radius: 20px;
-	border: 4px solid #1989fa;	
+	border: 4px solid #1989fa;
 }
 
 .bubble {
@@ -88,7 +89,7 @@ export default {
 	position: relative;
 	display: inline-block;
 	border: 1px solid #e2e2e2;
-	max-width: 220px;
+	max-width: 180px;
 	text-align: left;
 }
 

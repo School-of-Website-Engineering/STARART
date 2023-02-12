@@ -79,6 +79,11 @@ export default {
 	flex-wrap: wrap;
 	margin: 0;
 	z-index: 2;
+	
+	//PE媒体查询
+	@media only screen and (max-width: 500px) {
+		left: 420px;
+	}
 }
 
 .menu-list {
@@ -87,7 +92,7 @@ export default {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	border: 1mm ridge rgba(0, 0, 0, 0.6);
+	border: 1mm ridge #1989fa;
 	margin-top: 8px;
 	padding: 8px;
 
@@ -115,13 +120,14 @@ export default {
 	height: $eventMenu-height;
 	display: flex;
 	justify-content: space-around;
-	margin: 0 auto;
-	margin-top: 5px;
-
+	margin: 5px auto 0;
+	
 	.text {
 		height: $event-height;
 		border: $border solid #7232dd;
-		border-radius: $border-radius;
+		//border-radius: $border-radius;
+		//重置边框
+		border-left: unset;
 		position: relative;
 		margin-top: 12px;
 
@@ -150,12 +156,27 @@ export default {
 			}
 		}
 	}
-
+	.mapBoxContainer {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		overflow: auto;
+		.tag {
+			width: 110px;
+			height: 65px;
+			font-size: 9px;
+			text-align: center;
+			padding: 0;
+			margin: 5px;
+		}
+	}
 	.event {
 		height: $event-height;
 		border: $border solid #7232dd;
-		border-radius: $border-radius;
+		//border-radius: $border-radius;
 		position: relative;
+		border-left: unset;
+		border-right: unset;
 		margin-top: 12px;
 
 		@media only screen and (min-width: 500px) {
@@ -177,6 +198,8 @@ export default {
 			top: -10px;
 			left: 6px;
 		}
+		top: -20px;
+		left: 4px;
 	}
 }
 </style>

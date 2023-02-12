@@ -2,7 +2,7 @@ export default [
 	//重定向
 	{
 		path    : "/",
-		redirect: "/index"
+		redirect: "/mainView"
 	},
 	{
 		path     : "/codeling",
@@ -17,5 +17,12 @@ export default [
 		component: () =>
 			import(/* webpackChunkName: "index" */ "@/views/index/index.vue"),
 		name: "index"
+	},
+	//游戏主界面
+	{
+		path     : "/mainView",
+		component: () =>
+			import(/* webpackChunkName: "game" */ "@/components/isLoading"),
+		name: "mainView"
 	}
 ];

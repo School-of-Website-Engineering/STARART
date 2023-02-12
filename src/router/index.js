@@ -47,4 +47,18 @@ const router = new VueRouter({
 	mode: "hash"
 });
 
+//路由守卫
+router.beforeEach((to, from, next) => {
+	// to: 即将要进入的目标路由对象
+	// from: 当前导航正要离开的路由对象
+	// next: Function, 一定要调用该方法来resolve这个钩子
+	const isShowLoading = sessionStorage.getItem("isShowLoading");
+	if (to.path === "/index" && !isShowLoading) {
+		next({ path: "/mainView" });
+	}
+	else {
+		next();
+	}
+});
+
 export default router;

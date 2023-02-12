@@ -81,8 +81,8 @@ export default {
 	}
 
 	width: $body-width;
-	margin: 5px;
-
+	margin: 5px 5px 8px;
+	
 	.property {
 		height: 100%;
 

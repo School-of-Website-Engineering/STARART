@@ -304,7 +304,6 @@ export default {
 
 .bottomMenu {
 	border: $border solid #7232dd;
-
 	width: $body-width;
 	height: $bottomMenu-height;
 	border-bottom: none;
@@ -361,6 +360,8 @@ export default {
 
 	.textOutput {
 		height: $Menu-height;
+		margin-top: 4px;
+		width: 300px;
 		border: $border solid #7232dd;
 		border-radius: $border-radius;
 		position: relative;
@@ -410,11 +411,13 @@ export default {
 		position: absolute;
 		top: -7px;
 		left: 6px;
-
+		
+		z-index: 2;
 		@media only screen and (min-width: 500px) {
 			width: 60px;
 			top: -7px;
 			left: 6px;
+			z-index: 2;
 		}
 	}
 
