@@ -15,7 +15,8 @@ import {
 	icon,
 	cell,
 	Overlay,
-	Popup
+	Popup,
+	Toast
 } from "vant";
 
 Vue.use(Popup);
@@ -29,6 +30,7 @@ Vue.use(Loading);
 Vue.use(Col);
 Vue.use(Row);
 Vue.use(Badge);
+Vue.use(Toast);
 
 // 全局事件总线
 Vue.prototype.$EventBus = new Vue();

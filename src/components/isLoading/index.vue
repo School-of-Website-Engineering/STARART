@@ -1,20 +1,28 @@
 <template>
 	<!--div class="loading" v-show="Loading"-->
-	<div class="maingame">
+	<div class="maingame" v-if="Loading">
 		<div class="isloding">
 			<div class="newgame">
 				<font class="maintext">星之往昔</font>
-				<van-button class="newgames mainbutton">新的冒险</van-button>
-				<van-button class="loadinggames mainbutton"
-					>载入存档</van-button
+				<van-button class="newgames mainbutton" @click="jumpNewGame"
+					>新的冒险</van-button
 				>
-				<van-button class="gamenews mainbutton">游戏新闻</van-button>
-				<van-button class="onlinesaves mainbutton">云上存档</van-button>
-				<van-button class="regsiterlogins mainbutton"
-					>登录注册</van-button
+				<van-button
+					class="loadinggames mainbutton"
+					@click="jumpLoadGame"
+					>载入存档
+				</van-button>
+				<van-button class="gamenews mainbutton" @click="gameNews"
+					>游戏新闻</van-button
 				>
+				<van-button class="onlinesaves mainbutton" @click="coludGame"
+					>云上存档</van-button
+				>
+				<van-button class="regsiterlogins mainbutton" @click="regLogin"
+					>登录注册
+				</van-button>
 				<!-- TODO 尝试接入GA -->
-				<font size="4px" class="maintext">{{ Version }}</font>
+				<font size="4px" class="maintext">Beta {{ Version }}</font>
 			</div>
 		</div>
 	</div>
@@ -23,34 +31,71 @@
 <script>
 import { mapMutations, mapState } from "vuex";
 import { getItem } from "@/utils/sessionStorage";
+import { getGithubReleases } from "@/api";
 
 export default {
 	//处理初始化问题
 	name: "Loading",
 	data() {
 		return {
-			first: getItem("isShowLoading"),
-			Version: "v0.0.1.243",
+			first  : getItem("isShowLoading"),
+			Version: "v0.0.1.243"
 		};
 	},
-	mounted() {
+	created() {
 		this.isLoading();
+		//如果跳转到路径为index，就不显示loading界面
+		if (this.$route.path === "/index") {
+			this.showLoading(false);
+		}
+		else {
+			this.showLoading(true);
+		}
+		//获取版本号
+		this.getVersion();
 	},
 	methods: {
 		...mapMutations({ showLoading: "isShowLoading/setIsShowLoading" }),
 		isLoading() {
-			//第一次进入页面，显示加载动画
+			//第一次进入页面，显示主页面
 			if (this.first === null) {
 				this.showLoading(true);
-				setTimeout(() => {
-					this.showLoading(false);
-				}, 6500);
 			}
 		},
+		//跳转到新游戏页面
+		jumpNewGame() {
+			//跳转index界面
+			this.$router.push("/index");
+			this.isLoading(false);
+		},
+		//获取版本号
+		async getVersion() {
+			const { data } = await getGithubReleases();
+			this.Version = data[0].tag_name;
+			console.log(this.Version);
+		},
+		//跳转到载入存档页面
+		jumpLoadGame() {
+			//提示功能未开放
+			this.$toast("功能未开放");
+		},
+		//跳转到游戏新闻页面
+		gameNews() {
+			//提示功能未开放
+			this.$toast("功能未开放");
+		},
+		//跳转到云上存档页面
+		coludGame() {
+			//提示功能未开放
+			this.$toast("功能未开放");
+		},
+		//跳转到登录注册页面
+		regLogin() {
+			//提示功能未开放
+			this.$toast("功能未开放");
+		}
 	},
-	computed: {
-		...mapState({ Loading: (state) => state.isShowLoading.isShowLoading }),
-	},
+	computed: {...mapState({ Loading: (state) => state.isShowLoading.isShowLoading })}
 };
 </script>
 

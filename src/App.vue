@@ -1,7 +1,5 @@
 <template>
 	<div class="root">
-		<!-- 加载动画 -->
-		<isLoading></isLoading>
 		<Header v-show="this.$route.path === '/codeling'"></Header>
 		<!-- 路由出口 -->
 		<router-view></router-view>

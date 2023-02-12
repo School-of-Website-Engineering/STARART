@@ -1,7 +1,7 @@
 <template>
 	<div class="chat-message">
 		<div class="message-item left" v-if="isLeft">
-			<img class="avatar-img" :src="avatarImg"/>
+			<img class="avatar-img" :src="avatarImg" />
 			<div class="bubble">
 				<div class="msg-content">
 					{{ content }}
@@ -10,7 +10,7 @@
 			</div>
 		</div>
 		<div class="message-item right" v-else>
-			<img class="avatar-img" :src="avatarImg"/>
+			<img class="avatar-img" :src="avatarImg" />
 			<div class="bubble">
 				<div class="msg-content">
 					{{ content }}
@@ -24,9 +24,9 @@
 <script>
 export default {
 	props: {
-		content: {type: String},
-		isLeft: {type: Boolean},
-		avatarImg: {type: String}
+		content  : { type: String },
+		isLeft   : { type: Boolean },
+		avatarImg: { type: String }
 	}
 };
 </script>
@@ -35,7 +35,7 @@ export default {
 .chat-message {
 	margin: 18px 0;
 	display: flex;
-	
+
 	&:nth-child(1) {
 		//电脑媒体查询
 		@media only screen and (min-width: 500px) {
@@ -76,7 +76,6 @@ export default {
 	@media only screen and (max-width: 500px) {
 		width: 24px;
 		height: 24px;
-		
 	}
 	border-radius: 20px;
 	border: 4px solid #1989fa;
