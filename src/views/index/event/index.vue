@@ -32,7 +32,8 @@
 					</van-tag>
 				</div>
 				<div class="eventContainer">
-					<exploreNotes />
+					<!--事件地图组件-->
+					<eventMap />
 				</div>
 			</van-col>
 		</van-row>
@@ -41,7 +42,7 @@
 
 <script>
 import openMap from "@/views/openMap/index.vue";
-import exploreNotes from "@/views/index/components/exploreNotes.vue";
+import eventMap from "@/views/index/components/eventMap.vue";
 import { mapMutations, mapState } from "vuex";
 
 export default {
@@ -49,7 +50,7 @@ export default {
 	data: function() {
 		return { isRender: true };
 	},
-	components: { openMap, exploreNotes },
+	components: { openMap, eventMap },
 	//获取mapEvent模块的mapEvent、mapEventInfo
 	computed  : {
 		...mapState({
@@ -79,7 +80,7 @@ export default {
 	flex-wrap: wrap;
 	margin: 0;
 	z-index: 2;
-	
+
 	//PE媒体查询
 	@media only screen and (max-width: 500px) {
 		left: 212px;
@@ -138,7 +139,7 @@ export default {
 	display: flex;
 	justify-content: space-around;
 	margin: 5px auto 0;
-	
+
 	.text {
 		height: $event-height;
 		border: $border solid #7232dd;

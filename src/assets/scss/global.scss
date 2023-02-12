@@ -3,49 +3,56 @@
 @import "@/assets/scss/_media.scss";
 
 .alertMsg {
-	animation: alertMsg 1s 2;
+  animation: alertMsg 1s 2;
 }
 
 @keyframes alertMsg {
-	50% {
-		background-color: #7736e3;
-		color: #fff;
-		border: unset;
-	}
+  50% {
+    background-color: #7736e3;
+    color: #fff;
+    border: unset;
+  }
 }
 
 .warnMsg {
-	animation: warnMsg 1s 2;
+  animation: warnMsg 1s 2;
 }
 
 @keyframes warnMsg {
-	50% {
-		background-color: #ff976a;
-		color: #fff;
-		border: unset;
-	}
+  50% {
+    background-color: #ff976a;
+    color: #fff;
+    border: unset;
+  }
+}
+
+.van-overlay {
+  //只作用于第二个元素
+    &:nth-child(2) {
+      background-color: rgba(0, 0, 0, .1) !important;
+    }
 }
 
 .dangerMsg {
-	animation: dangerMsg 1s 2;
+  animation: dangerMsg 1s 2;
 }
 
 @keyframes dangerMsg {
-	50% {
-		background-color: #ee0a24;
-		color: #fff;
-		border: unset;
-	}
+  50% {
+    background-color: #ee0a24;
+    color: #fff;
+    border: unset;
+  }
 }
 
 .friendlyMsg {
-	animation: friendlyMsg 1s 2;
+  animation: friendlyMsg 1s 2;
 }
 
 @keyframes friendlyMsg {
-	50% {
-		background-color: #07bc5d;
-		color: #fff;
-		border: unset;
-	}
+  50% {
+    background-color: #07bc5d;
+    color: #fff;
+    border: unset;
+  }
 }

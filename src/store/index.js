@@ -8,7 +8,7 @@ import player from "@/store/player";
 import timeState from "@/store/timeState";
 import weatherSys from "@/store/weatherSys";
 import mapEvent from "@/store/mapEvent";
-import messageInfo from "@/store/messageInfo";
+import exploreNotes from "@/store/exploreNotes";
 
 Vue.use(Vuex);
 
@@ -22,6 +22,6 @@ export default new Vuex.Store({
 		timeState,
 		weatherSys,
 		mapEvent,
-		messageInfo
+		exploreNotes
 	}
 });
