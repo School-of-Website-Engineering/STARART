@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.4.1](https://github.com/School-of-Website-Engineering/STARART/compare/v1.4.0...v1.4.1) (2023-02-12)
+
+
+### update
+
+* 动态获取版本号，添加游戏主界面路由守卫，添加路由，优化代码 ([ed6c04f](https://github.com/School-of-Website-Engineering/STARART/commit/ed6c04facdf9648e6620cb2a32d6f171726e822b))
+
+
+### Docs
+
+* **contributor:** contrib-readme-action has updated readme ([27acc46](https://github.com/School-of-Website-Engineering/STARART/commit/27acc46bf1df78a355c6dd00a8e6d4755959251f))
+
 ## [1.4.0](https://github.com/School-of-Website-Engineering/STARART/compare/v1.3.6...v1.4.0) (2023-02-11)
 
 
