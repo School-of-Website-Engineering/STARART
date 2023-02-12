@@ -1,5 +1,31 @@
 # Changelog
 
+## [1.4.1](https://github.com/School-of-Website-Engineering/STARART/compare/v1.4.0...v1.4.1) (2023-02-12)
+
+
+### update
+
+* 动态获取版本号，添加游戏主界面路由守卫，添加路由，优化代码 ([ed6c04f](https://github.com/School-of-Website-Engineering/STARART/commit/ed6c04facdf9648e6620cb2a32d6f171726e822b))
+
+
+### Docs
+
+* **contributor:** contrib-readme-action has updated readme ([27acc46](https://github.com/School-of-Website-Engineering/STARART/commit/27acc46bf1df78a355c6dd00a8e6d4755959251f))
+
+## [1.4.0](https://github.com/School-of-Website-Engineering/STARART/compare/v1.3.6...v1.4.0) (2023-02-11)
+
+
+### Features
+
+* 信息动态获取，拆分组件，提升代码可读性，微调快捷栏样式 ([7125354](https://github.com/School-of-Website-Engineering/STARART/commit/7125354a8305446a99753412302bc01da8554be5))
+
+## [1.3.6](https://github.com/School-of-Website-Engineering/STARART/compare/v1.3.5...v1.3.6) (2023-02-11)
+
+
+### Code Refactoring
+
+* 使用vuex传递数据以便与后端交互，性能优化 ([b9d44ac](https://github.com/School-of-Website-Engineering/STARART/commit/b9d44acaaab0f9a5fb392585c47e146be59ba92a))
+
 ## [1.3.5](https://github.com/School-of-Website-Engineering/STARART/compare/v1.3.4...v1.3.5) (2023-02-07)
 
 
