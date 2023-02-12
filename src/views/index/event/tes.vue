@@ -24,13 +24,13 @@ export default {
 			// 遍历chatData
 			data.forEach((item) => {
 				list.push({
-					id: item.id,
-					text: item.text,
+					id  : item.id,
+					text: item.text
 				});
 			});
 			// 返回list
 			return list;
-		},
-	},
+		}
+	}
 };
 </script>
