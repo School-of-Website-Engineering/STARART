@@ -32,8 +32,7 @@
 					</van-tag>
 				</div>
 				<div class="eventContainer">
-					<!--事件地图组件-->
-					<eventMap />
+					<exploreNotes />
 				</div>
 			</van-col>
 		</van-row>
@@ -42,7 +41,7 @@
 
 <script>
 import openMap from "@/views/openMap/index.vue";
-import eventMap from "@/views/index/components/eventMap.vue";
+import exploreNotes from "@/views/index/components/exploreNotes.vue";
 import { mapMutations, mapState } from "vuex";
 
 export default {
@@ -50,7 +49,7 @@ export default {
 	data: function() {
 		return { isRender: true };
 	},
-	components: { openMap, eventMap },
+	components: { openMap, exploreNotes },
 	//获取mapEvent模块的mapEvent、mapEventInfo
 	computed  : {
 		...mapState({
@@ -80,28 +79,6 @@ export default {
 	flex-wrap: wrap;
 	margin: 0;
 	z-index: 2;
-
-	//PE媒体查询
-	@media only screen and (max-width: 500px) {
-		left: 212px;
-	}
-	@media only screen and (max-width: 394px) {
-		left: 223px;
-	}
-	@media only screen and (max-width: 393px) {
-		left: 212px;
-	}
-	//如果宽度为375以下的话left为203px
-	@media only screen and (max-width: 375px) {
-		left: 220px;
-	}
-	//如果宽度为375以下的话left为183px
-	@media only screen and (max-width: 300px) {
-		left: 153px;
-	}
-	@media only screen and (max-width: 360px) {
-		left: 203px;
-	}
 }
 
 .menu-list {
@@ -110,25 +87,14 @@ export default {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	border: 1mm ridge #1989fa;
-	margin-top: 8px;
+	border: $border solid;
+	border-radius: 5px;
+	margin-top: 10px;
 	padding: 8px;
 
 	&:active {
 		background-color: #7232dd;
 		color: #fff;
-	}
-	//PE媒体查询
-	@media only screen and (max-width: 500px) {
-		width: 24px;
-		height: 24px;
-	}
-	@media only screen and (min-width: 500px) {
-		width: 40px;
-		height: 24px;
-		top: -8px;
-		font-weight: bold;
-		border-radius: 14px;
 	}
 }
 
@@ -138,87 +104,58 @@ export default {
 	height: $eventMenu-height;
 	display: flex;
 	justify-content: space-around;
-	margin: 5px auto 0;
+	margin: 0 auto;
 
 	.text {
 		height: $event-height;
 		border: $border solid #7232dd;
-		//border-radius: $border-radius;
-		//重置边框
-		border-left: unset;
+		border-radius: $border-radius;
 		position: relative;
+		width: 38%;
 		margin-top: 12px;
 
-		@media only screen and (min-width: 500px) {
-			width: 38%;
-			margin-top: 12px;
-			border: $border solid #7232dd;
-			.mapBoxContainer {
-				display: flex;
-				flex-wrap: wrap;
-				align-items: center;
-				overflow: hidden;
+		.mapBoxContainer {
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+			overflow: hidden;
 
-				.tag {
-					width: 110px;
-					height: 80px;
-					margin: 12px 18px 12px 8px;
-					font-size: 9px;
-					text-align: center;
-					padding: 0;
+			.tag {
+				width: 110px;
+				height: 80px;
+				margin: 12px 18px 12px 8px;
+				font-size: 9px;
+				text-align: center;
+				padding: 0;
 
-					&:nth-child(1) {
-						margin-left: 120px;
-					}
+				&:nth-child(1) {
+					margin-left: 120px;
 				}
 			}
 		}
 	}
-	.mapBoxContainer {
-		display: flex;
-		flex-wrap: wrap;
-		align-items: center;
-		overflow: auto;
-		.tag {
-			width: 110px;
-			height: 65px;
-			font-size: 9px;
-			text-align: center;
-			padding: 0;
-			margin: 5px;
-		}
-	}
+
 	.event {
 		height: $event-height;
 		border: $border solid #7232dd;
-		//border-radius: $border-radius;
+		border-radius: $border-radius;
 		position: relative;
-		border-left: unset;
-		border-right: unset;
+		width: 59%;
 		margin-top: 12px;
-
-		@media only screen and (min-width: 500px) {
-			width: 59%;
-			margin-top: 12px;
-			border: $border solid #7232dd;
-		}
 	}
 
 	.events-head {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 59px;
+		height: 40px;
+		text-align: center;
 		border-radius: 5px;
-
-		@media only screen and (min-width: 500px) {
-			width: 59px;
-			height: 40px;
-			display: flex;
-			justify-content: center;
-			line-height: 40px;
-			position: absolute;
-			top: -10px;
-			left: 6px;
-		}
-		top: -20px;
-		left: 4px;
+		position: absolute;
+		top: -3px;
+		left: 6px;
+		background-color: #fff;
 	}
 }
 </style>
