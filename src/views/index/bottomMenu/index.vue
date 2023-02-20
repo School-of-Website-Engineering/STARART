@@ -279,7 +279,7 @@ export default {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		width: 145px;
+		width: 150px;
 		height: 43px;
 		margin: auto;
 		text-align: center;

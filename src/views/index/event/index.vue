@@ -32,7 +32,7 @@
 					</van-tag>
 				</div>
 				<div class="eventContainer">
-					<exploreNotes />
+					<eventMap />
 				</div>
 			</van-col>
 		</van-row>
@@ -41,7 +41,7 @@
 
 <script>
 import openMap from "@/views/openMap/index.vue";
-import exploreNotes from "@/views/index/components/exploreNotes.vue";
+import eventMap from "@/views/index/components/eventMap.vue";
 import { mapMutations, mapState } from "vuex";
 
 export default {
@@ -49,7 +49,7 @@ export default {
 	data: function() {
 		return { isRender: true };
 	},
-	components: { openMap, exploreNotes },
+	components: { openMap, eventMap },
 	//获取mapEvent模块的mapEvent、mapEventInfo
 	computed  : {
 		...mapState({
