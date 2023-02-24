@@ -34,8 +34,8 @@ Vue.use(Row);
 Vue.use(Badge);
 Vue.use(Toast);
 
-// 全局事件总线
-Vue.prototype.$EventBus = new Vue();
+// // 全局事件总线
+// Vue.prototype.$EventBus = new Vue();
 
 new Vue({
 	store,
