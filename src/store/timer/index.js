@@ -13,7 +13,6 @@ function getRandomWeather() {
 		"骰子开始鉴定",
 		"开始进行骰子鉴定"
 	];
-	//随机返回0-5之间的整数
 	let num = Math.floor(Math.random() * 6);
 	return weather[num];
 }
@@ -100,7 +99,8 @@ export default {
 			// 生存鉴定期--第8天到第10天(更多事件和区域解锁)
 			// 生存高危期--第11天到第13天(更多高危事件和隐藏区域解锁)
 			// 生存探索期--第14天以上(自由探索开启，无尽的探索才刚刚开始)
-			let num, num2;
+			let num;
+			let num2;
 			if (state.toDay < 7) {
 				num = Math.floor(Math.random() * 8 + 1);
 				if (num >= 6) {

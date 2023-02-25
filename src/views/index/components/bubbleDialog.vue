@@ -39,6 +39,7 @@ export default {
 	&:nth-child(1) {
 		//电脑媒体查询
 		@media only screen and (min-width: 500px) {
+			margin-top: -76px;
 			margin: 15px 0;
 		}
 		margin-top: 35px;
