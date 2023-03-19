@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.2](https://github.com/School-of-Website-Engineering/STARART/compare/v1.4.1...v1.4.2) (2023-03-19)
+
+
+### CI
+
+* Add .deepsource.toml ([3e663cb](https://github.com/School-of-Website-Engineering/STARART/commit/3e663cb0f9fb4cd180d9e31934a9429abcbe51f0))
+
 ## [1.4.1](https://github.com/School-of-Website-Engineering/STARART/compare/v1.4.0...v1.4.1) (2023-02-12)
 
 
