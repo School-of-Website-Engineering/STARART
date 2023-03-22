@@ -7,11 +7,10 @@
 ![](https://img.shields.io/badge/Node-%20%5E16.18.0-brightgreen)
 ![](https://img.shields.io/badge/npm-%5E8.19.2-blue)
 
+## 项目简介
+STARART 是一个基于 Vue2.6 的文字游戏，目前正在开发中，欢迎大家加入我们的开发。
 ## 内容列表
 
-- [TinyWaste](#tinywaste)
-  - [内容列表](#内容列表)
-  - [背景](#背景)
 - [Git 规范](#git-规范)
   - [Git 分支命名](#git-分支命名)
 - [Git Commit Message 格式](#git-commit-message-格式)
